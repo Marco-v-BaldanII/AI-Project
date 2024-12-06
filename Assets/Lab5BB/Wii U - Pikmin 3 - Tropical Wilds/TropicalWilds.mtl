@@ -1,0 +1,877 @@
+# Blender MTL File: 'None'
+# Material Count: 63
+
+newmtl A_grdA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_0__grdA_a.png
+map_Ka dirt_0__grdA_a.png
+map_d dirt_0__grdA_a.png
+refl dirt_0__grdA_n.png
+
+newmtl A_grdB
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_0__grdB_a.png
+map_Ka dirt_0__grdB_a.png
+map_d dirt_0__grdB_a.png
+refl dirt_0__grdB_n.png
+
+newmtl A_grdD
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_0__grdD_a.png
+map_Ka dirt_0__grdD_a.png
+map_d dirt_0__grdD_a.png
+refl dirt_0__grdD_n.png
+
+newmtl A_grdE
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_0__grdE_a.png
+map_Ka dirt_0__grdE_a.png
+map_d dirt_0__grdE_a.png
+refl dirt_0__grdE_n.png
+
+newmtl A_grdF
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_0__grdF_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka dirt_0__grdF_a.png
+map_d dirt_0__grdF_a.png
+
+newmtl A_grdG
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd grass_0__grdG_a.png
+map_Ka grass_0__grdG_a.png
+map_d grass_0__grdG_a.png
+refl grass_0__grdG_n.png
+
+newmtl A_palmtreeA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd wood_0__palmtreeA_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka wood_0__palmtreeA_a.png
+map_d wood_0__palmtreeA_a.png
+
+newmtl A_palmtreeB
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd wood_0__palmtreeB_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka wood_0__palmtreeB_a.png
+map_d wood_0__palmtreeB_a.png
+
+newmtl A_palmtreeC
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd wood_0__palmtreeC_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka wood_0__palmtreeC_a.png
+map_d wood_0__palmtreeC_a.png
+
+newmtl A_pot01
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd rock_0__pod00_a.png
+map_Ka rock_0__pod00_a.png
+map_d rock_0__pod00_a.png
+refl rock_0__pod00_n.png
+
+newmtl A_rockA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd rock_0__rockA_a.png
+map_Ka rock_0__rockA_a.png
+map_d rock_0__rockA_a.png
+refl rock_0__rockA_n.png
+
+newmtl A_rockB
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd rock_0__rockB_a.png
+map_Ka rock_0__rockB_a.png
+map_d rock_0__rockB_a.png
+refl rock_0__rockB_n.png
+
+newmtl A_rockC
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd rock_0__rockC_a.png
+map_Ka rock_0__rockC_a.png
+map_d rock_0__rockC_a.png
+refl rock_0__rockC_n.png
+
+newmtl A_rockD
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd rock_0__rockD_a.png
+map_Ka rock_0__rockD_a.png
+map_d rock_0__rockD_a.png
+refl rock_0__rockD_n.png
+
+newmtl A_rockE
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd rock_0__rockE_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka rock_0__rockE_a.png
+map_d rock_0__rockE_a.png
+
+newmtl A_rockF
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd rock_0__rockF_a.png
+map_Ka rock_0__rockF_a.png
+map_d rock_0__rockF_a.png
+refl rock_0__rockF_n.png
+
+newmtl A_rockG
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd rock_0__rockG_a.png
+map_Ka rock_0__rockG_a.png
+map_d rock_0__rockG_a.png
+refl rock_0__rockG_n.png
+
+newmtl A_sandA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_2__sandA_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka dirt_2__sandA_a.png
+map_d dirt_2__sandA_a.png
+
+newmtl A_sandAcircle
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_2__sandA_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka dirt_2__sandA_a.png
+map_d dirt_2__sandA_a.png
+
+newmtl A_sandAcircleUFO
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_2__sandA_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka dirt_2__sandA_a.png
+map_d dirt_2__sandA_a.png
+
+newmtl A_sandB
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_2__sandB_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka dirt_2__sandB_a.png
+map_d dirt_2__sandB_a.png
+
+newmtl A_treeA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd wood_0__treeA_a.png
+map_Ka wood_0__treeA_a.png
+map_d wood_0__treeA_a.png
+refl wood_0__treeA_n.png
+
+newmtl A_treeAa
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd wood_0__treeA_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka wood_0__treeA_a.png
+map_d wood_0__treeA_a.png
+
+newmtl A_treeB
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd wood_0__treeB_a.png
+map_Ka wood_0__treeB_a.png
+map_d wood_0__treeB_a.png
+refl wood_0__treeB_n.png
+
+newmtl A_uprA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_0__uprA_a.png
+map_Ka dirt_0__uprA_a.png
+map_d dirt_0__uprA_a.png
+refl dirt_0__uprA_n.png
+
+newmtl A_uprB
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_0__uprB_a.png
+map_Ka dirt_0__uprB_a.png
+map_d dirt_0__uprB_a.png
+refl dirt_0__uprB_n.png
+
+newmtl A_wallA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_0__wallA_a.png
+map_Ka dirt_0__wallA_a.png
+map_d dirt_0__wallA_a.png
+refl dirt_0__wallA_n.png
+
+newmtl A_wallD
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_0__wallD_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka dirt_0__wallD_a.png
+map_d dirt_0__wallD_a.png
+
+newmtl A_wallE
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_2__wallE_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka dirt_2__wallE_a.png
+map_d dirt_2__wallE_a.png
+
+newmtl Aa_kakiwari
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd kakiwari.png
+map_Ka kakiwari.png
+map_d kakiwari.png
+
+newmtl Aa_treeA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd wood_0__treeA_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka wood_0__treeA_a.png
+map_d wood_0__treeA_a.png
+
+newmtl Ba_flowerA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd grass_0__flowerA_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka grass_0__flowerA_a.png
+map_d grass_0__flowerA_a.png
+
+newmtl Ba_haikeiA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd grass_0__haikeiA_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka grass_0__haikeiA_a.png
+map_d grass_0__haikeiA_a.png
+
+newmtl Ba_haikeiB
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd grass_0__haikeiB_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka grass_0__haikeiB_a.png
+map_d grass_0__haikeiB_a.png
+
+newmtl Ba_haikeiC
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd grass_0__haikeiC_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka grass_0__haikeiC_a.png
+map_d grass_0__haikeiC_a.png
+
+newmtl Ba_haikeiE
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd kakiwari3_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka kakiwari3_a.png
+map_d kakiwari3_a.png
+
+newmtl Ba_hekiga_1
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd pikipic_red1_a.png
+map_Ka pikipic_red1_a.png
+map_d pikipic_red1_a.png
+refl pikipic_red1_n.png
+
+newmtl Ba_hekiga_2
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd pikipic_red3_a.png
+map_Ka pikipic_red3_a.png
+map_d pikipic_red3_a.png
+refl pikipic_red3_n.png
+
+newmtl Ba_hekiga_3
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd pikipic_red2_a.png
+map_Ka pikipic_red2_a.png
+map_d pikipic_red2_a.png
+refl pikipic_red2_n.png
+
+newmtl Ba_kokeB
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd grass_0__kokehoushi_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka grass_0__kokehoushi_a.png
+map_d grass_0__kokehoushi_a.png
+
+newmtl Ba_madokadura
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd grass_0__madoka_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka grass_0__madoka_a.png
+map_d grass_0__madoka_a.png
+
+newmtl Ba_plamtA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd jb_plant_00_a_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka jb_plant_00_a_a.png
+map_d jb_plant_00_a_a.png
+
+newmtl Ba_sidaA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd grass_0__sidaA_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka grass_0__sidaA_a.png
+map_d grass_0__sidaA_a.png
+
+newmtl Ba_sidaB
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd grass_0__sidaB_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka grass_0__sidaB_a.png
+map_d grass_0__sidaB_a.png
+
+newmtl Ba_susukiA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd grass_0__susukiA_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka grass_0__susukiA_a.png
+map_d grass_0__susukiA_a.png
+
+newmtl Ba_tidome
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd grass_0__tidomeLeaf_a.png
+map_Ka grass_0__tidomeLeaf_a.png
+map_d grass_0__tidomeLeaf_a.png
+refl grass_0__tidomeLeaf_n.png
+
+newmtl Bb_koke_fin
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd jb_koke_fin_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka jb_koke_fin_a.png
+map_d jb_koke_fin_a.png
+refl jb_koke_fin_s.png
+
+newmtl CC_Cloud01
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd mapA_cloud01.png
+map_Ka mapA_cloud01.png
+map_d mapA_cloud01.png
+
+newmtl C_WallD
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_0__wallD_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka dirt_0__wallD_a.png
+map_d dirt_0__wallD_a.png
+
+newmtl C_exitlight
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd exit_light.png
+map_Ka exit_light.png
+map_d exit_light.png
+
+newmtl C_grdA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_0__grdA_a.png
+map_Ka dirt_0__grdA_a.png
+map_d dirt_0__grdA_a.png
+refl dirt_0__grdA_n.png
+
+newmtl C_grdB
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_0__grdB_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka dirt_0__grdB_a.png
+map_d dirt_0__grdB_a.png
+
+newmtl C_grdE
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_0__grdE_a.png
+map_Ka dirt_0__grdE_a.png
+map_d dirt_0__grdE_a.png
+refl dirt_0__grdE_n.png
+
+newmtl C_kokeA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd grass_0__koke_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka grass_0__koke_a.png
+map_d grass_0__koke_a.png
+
+newmtl C_rockC
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd rock_0__rockC_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka rock_0__rockC_a.png
+map_d rock_0__rockC_a.png
+
+newmtl C_sandA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_2__sandA_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka dirt_2__sandA_a.png
+map_d dirt_2__sandA_a.png
+
+newmtl C_sandB
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_2__sandB_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka dirt_2__sandB_a.png
+map_d dirt_2__sandB_a.png
+
+newmtl C_wallA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd dirt_0__wallA_a.png
+map_Ka dirt_0__wallA_a.png
+map_d dirt_0__wallA_a.png
+refl dirt_0__wallA_n.png
+
+newmtl hirugao
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd grass_0__GunbaiLeaf_a.png
+map_Bump C:\\Users\\minti\\Desktop\\Normal_Bump_Normal_Bump.tga
+map_Ka grass_0__GunbaiLeaf_a.png
+map_d grass_0__GunbaiLeaf_a.png
+
+newmtl pothosA
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd grass_0__pothosA_a.png
+map_Ka grass_0__pothosA_a.png
+map_d grass_0__pothosA_a.png
+refl grass_0__pothosA_n.png
+
+newmtl sky
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd test.png
+map_Ka test.png
+map_d test.png
+
+newmtl wire_255255000
+Ns 31.372549
+Ka 0.666667 0.666667 0.666667
+Kd 1.000000 1.000000 0.000000
+Ks 0.350000 0.350000 0.350000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl yabu
+Ns 9.803922
+Ka 0.588000 0.588000 0.588000
+Kd 0.588000 0.588000 0.588000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd yabu_a.png
+map_Ka yabu_a.png
+map_d yabu_a.png
+refl yabu_n.png
