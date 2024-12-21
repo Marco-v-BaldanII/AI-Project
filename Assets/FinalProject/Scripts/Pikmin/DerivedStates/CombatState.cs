@@ -1,18 +1,27 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CombatState : MonoBehaviour
+public class CombatState : IState
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	void IState.Enter() 
+	{
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	}
+
+	void IState.Exit()
+	{
+	}
+
+
+	void IState.Process()
+	{
+
+	}
+
+	void IState.PhysicsProcess()
+	{
+
+	}
+
 }
