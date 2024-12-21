@@ -4,22 +4,30 @@ using UnityEngine;
 
 public class CombatState : IState
 {
-	void IState.Enter() 
+	public Pikmin myPikmin;
+	
+	public CombatState(Pikmin pikmin)
+	{
+		myPikmin = pikmin;
+	}
+	
+	
+	void Enter() 
 	{
 
 	}
 
-	void IState.Exit()
+	void Exit()
 	{
 	}
 
 
-	void IState.Process()
+	void Process()
 	{
 
 	}
 
-	void IState.PhysicsProcess()
+	void PhysicsProcess()
 	{
 
 	}

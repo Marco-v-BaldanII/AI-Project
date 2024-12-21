@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -46,7 +46,11 @@ public class PikminManager : MonoBehaviour
         {
             Vector3 random_vec = new Vector3(UnityEngine.Random.Range(10, -10), 0, UnityEngine.Random.Range(5, -5));
 
-            Instantiate(PikminPrefs[ UnityEngine.Random.Range(0, PikminPrefs.Length) ], transform.position + random_vec, Quaternion.identity, floor.transform) ;
+	        units.Add ( Instantiate(
+		        PikminPrefs[ UnityEngine.Random.Range(0, PikminPrefs.Length) ],
+		        transform.position + random_vec, Quaternion.identity, floor.transform)
+		        .GetComponent<Pikmin>() );
+		        
             Debug.Log("pikmin spawned");
         }
 

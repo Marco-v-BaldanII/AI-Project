@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,13 +12,14 @@ public enum State
     THROWN
 }
 
-public interface IState 
+public class IState 
 {
-    void Enter();
+	
+	public virtual void Enter() {}
 
-    void Exit();
+	public virtual void Exit() {}
 
-    void Process();
+	public virtual void Process() {}
 
-    void PhysicsProcess();
+	public virtual void PhysicsProcess() {}
 }

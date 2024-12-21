@@ -1,25 +1,31 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrabState : IState
-{
-    void IState.Enter() 
+public class GrabState : IState{
+	public Pikmin myPikmin;
+	
+	public GrabState(Pikmin pikmin)
+	{
+		myPikmin = pikmin;
+	}
+	
+    void Enter() 
     {
 
     }
 
-    void IState.Exit()
+    void Exit()
     {
 
     }
 
-    void IState.Process()
+    void Process()
     {
 
     }
 
-    void IState.PhysicsProcess()
+    void PhysicsProcess()
     {
 
     }

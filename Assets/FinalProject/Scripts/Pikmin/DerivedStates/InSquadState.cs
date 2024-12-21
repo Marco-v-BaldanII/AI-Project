@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class InSquadState : IState
@@ -28,16 +29,22 @@ public class InSquadState : IState
 
     public PikColor myColor;
 
-    private GameObject followPos;
+	private GameObject followPos;
+	
+	public InSquadState(Pikmin pikmin)
+	{
+		myPikmin = pikmin;
+		transform = myPikmin.transform;
+	}
 
-	void IState.Enter()
+	public override void Enter()
     {
-        //rigid = GetComponent<Rigidbody>();
-        //animator = GetComponent<Animator>();
+	    rigid = myPikmin.rigid;
+	    animator = myPikmin.animator;
 
 	    //PikminManager.instance.units.Add(this);
 
-
+	    RandomizeSpeed();
 	    // maybe change to use a async method for this
 	    //InvokeRepeating("RandomizeSpeed", 0, UnityEngine.Random.Range(1.8f, 2.5f));
 
@@ -48,15 +55,11 @@ public class InSquadState : IState
     }
     
 
-    private void Start()
-    {
-        followPos = PikminManager.instance.GetFollowPosition();
-    }
-
     Vector3 vCaptain = Vector3.zero;
  
-	void IState.PhysicsProcess()
-    {
+	public override void PhysicsProcess()
+	{
+		if (!myPikmin.followPos){ myPikmin.followPos = PikminManager.instance.GetFollowPosition();}
 
         Vector3 vCohesion = Vector3.zero;
         Vector3 vSeparation = Vector3.zero;
@@ -66,13 +69,13 @@ public class InSquadState : IState
 
         if (Vector3.Distance(transform.position, PikminManager.instance.transform.position) > 2 + PikminManager.instance.numPikmin / 10)
         {
-            vCaptain = followPos.transform.position - transform.position;
+	        vCaptain = myPikmin.followPos.transform.position - transform.position;
             speedMultipliyer = 1;
         }
         else if (UnityEngine.Random.Range(0, 100) < 1)
         {
             Debug.Log("changin offset");
-            vCaptain = followPos.transform.position - transform.position;
+	        vCaptain = myPikmin.followPos.transform.position - transform.position;
             Vector3 captainOffset = new Vector3(UnityEngine.Random.Range(-0.1f, 0.1f), 0, UnityEngine.Random.Range(-0.1f, 0.1f));
             vCaptain += captainOffset;
             speed *= 0.4f;
@@ -104,9 +107,9 @@ public class InSquadState : IState
         vFlocking = vFlocking.normalized * speed * speedMultipliyer;
 
 
-        rigid.velocity = new Vector3( vFlocking.x,  rigid.velocity.y, vFlocking.z);
+		myPikmin.rigid.velocity = new Vector3( vFlocking.x,  myPikmin.rigid.velocity.y, vFlocking.z);
 
-        animator.SetFloat("velocity", Mathf.Abs(rigid.velocity.x) + Mathf.Abs(rigid.velocity.z) / 2.0f);
+		myPikmin.animator.SetFloat("velocity", Mathf.Abs(myPikmin.rigid.velocity.x) + Mathf.Abs(myPikmin.rigid.velocity.z) / 2.0f);
 
 
 
@@ -115,10 +118,11 @@ public class InSquadState : IState
 
     
 
-    private void RandomizeSpeed()
+	public async Task RandomizeSpeed()
     {
         // Gets called at different intervals for each pikmin
-        speed = UnityEngine.Random.Range(minSpeed, maxSpedd) * GetColorSpeedModifier() ;
+	    speed = UnityEngine.Random.Range(minSpeed, maxSpedd) * GetColorSpeedModifier() ;
+	    await Task.Delay((int) (UnityEngine.Random.Range(1.8f, 2.5f) * 1000f));
     }
 
 
@@ -147,8 +151,8 @@ public class InSquadState : IState
         return 1;
     }
     
-	void IState.Exit(){}
+	public override void Exit(){}
 
-	void IState.Process(){}
+    public override void Process(){}
 
 }

@@ -560,13 +560,16 @@ PrefabInstance:
       addedObject: {fileID: 7529860157695475422}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 535db578411e6744e8d91d542692d418, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3040451893527300878}
+      addedObject: {fileID: 192563831592752698}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 535db578411e6744e8d91d542692d418, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8378213532833567571}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 535db578411e6744e8d91d542692d418, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4015978606786722615}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 535db578411e6744e8d91d542692d418, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 530487220186851125}
   m_SourcePrefab: {fileID: 100100000, guid: 535db578411e6744e8d91d542692d418, type: 3}
 --- !u!1 &2654472598560514855 stripped
 GameObject:
@@ -594,7 +597,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3040451893527300878
+--- !u!114 &192563831592752698
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -606,7 +609,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5a057a19607f44582ae47478bcb27f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myColor: 3
+  speed: 200
+  rigid: {fileID: 8378213532833567571}
+  animator: {fileID: 7529860157695475422}
+  myColor: 0
 --- !u!54 &8378213532833567571
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -655,6 +661,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0005, y: 0.0008342563, z: 0.0005}
   m_Center: {x: 0, y: 0.0004415055, z: 0}
+--- !u!114 &530487220186851125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2654472598560514855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a989b179dfc7341935b8a6a0e821ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateTypes: 04000000
+  startingState: 4
+  pikmin: {fileID: 192563831592752698}
 --- !u!4 &9201270345927926360 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2907487305069052882, guid: 535db578411e6744e8d91d542692d418, type: 3}
