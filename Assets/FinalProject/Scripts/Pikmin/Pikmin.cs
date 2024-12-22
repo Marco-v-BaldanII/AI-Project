@@ -6,28 +6,20 @@ using UnityEngine;
 
 public class Pikmin : MonoBehaviour
 {
-
+	[Header("SquadState fields fields")]
+	
 	public float speed = 200;
-
     private float minSpeed = 1.5f * 3;
     private float maxSpedd = 3.0f * 3;
-
 	public Rigidbody rigid;
 	public Animator animator;
-    public enum PikColor
-    {
-        RED,
-        YELLOW,
-        BLUE,
-        PURPLE,
-        WHITE,
-        PINK,
-        ROCK
-    }
-
     public PikColor myColor;
-
 	public GameObject followPos;
+	
+	
+	[Header("Grabing State fields")]
+	
+	public GameObject targetObject;
 
     private void Awake()
     {
@@ -46,3 +38,14 @@ public class Pikmin : MonoBehaviour
 
 
 }
+
+public enum PikColor
+    {
+	    RED,
+	    YELLOW,
+	    BLUE,
+	    PURPLE,
+	    WHITE,
+	    PINK,
+	    ROCK
+    }

@@ -4,28 +4,30 @@ using UnityEngine;
 
 public class GrabState : IState{
 	public Pikmin myPikmin;
-	
+    public Vector3 velocity;
 	public GrabState(Pikmin pikmin)
 	{
 		myPikmin = pikmin;
 	}
 	
-    void Enter() 
+    public override void Enter() 
+    {
+	    var direction= myPikmin.targetObject.transform.position - myPikmin.transform.position;
+	    direction.Normalize();
+	    velocity = direction * 5;
+    }
+
+    public override void Exit()
     {
 
     }
 
-    void Exit()
+    public override void Process()
     {
-
+        myPikmin.rigid.velocity = velocity;
     }
 
-    void Process()
-    {
-
-    }
-
-    void PhysicsProcess()
+    public override void PhysicsProcess()
     {
 
     }

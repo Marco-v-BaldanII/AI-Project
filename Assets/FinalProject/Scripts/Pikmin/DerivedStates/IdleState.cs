@@ -31,5 +31,16 @@ public class IdleState : IState
     {
 
     }
+    
+	public override void OnAreaEnter(Collider collision)
+	{
+		if (collision.tag == "Pellet")
+		{
+			myPikmin.targetObject = collision.gameObject;
+			CallTransition(State.GRAB, this);
+		}
+	}
+
+    
 
 }

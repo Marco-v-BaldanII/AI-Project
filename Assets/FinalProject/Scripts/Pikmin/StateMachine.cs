@@ -39,7 +39,9 @@ public class StateMachine : MonoBehaviour
 	            
             	
             }
-            
+	        // each state should subscribe to the OnChild Transition
+	        // therefore when Transitioned is meitted by any state, the exit() and enter() occur automatically
+	        new_state.Transition += OnChildTransitionEvent;
 	        states[state] = new_state;
         }
         
@@ -72,4 +74,20 @@ public class StateMachine : MonoBehaviour
 		currentState = states[new_state_type];
 		
 	}
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        currentState?.OnAreaEnter(collision);
+    }
+
+    private void OnTriggerExit(Collider collision)
+    {
+        currentState?.OnAreaExit(collision);
+    }
+
+    private void OnTriggerStay(Collider collision)
+    {
+        currentState?.OnAreaStay(collision);
+    }
+
 }
