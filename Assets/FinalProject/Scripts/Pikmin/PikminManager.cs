@@ -19,6 +19,7 @@ public class PikminManager : MonoBehaviour
     public float speedMultiplier; /* make pikmin go slower when i'm not walking */
     public  List<Pikmin> units;
 
+	[SerializeField]private Whistle pikminCursor;
 
     [Header("Boid Wights")]
 
@@ -82,5 +83,10 @@ public class PikminManager : MonoBehaviour
     {
         return speedMultiplier;
     }
+    
+	public Vector3 GetCursorPosition()
+	{
+		return pikminCursor.transform.position;
+	}
 
 }

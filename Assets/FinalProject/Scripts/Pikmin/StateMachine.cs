@@ -12,7 +12,7 @@ public class StateMachine : MonoBehaviour
 	
 	public State startingState ;
 	
-	private IState currentState;
+	public IState currentState;
     
 	public Pikmin pikmin;
 
@@ -35,6 +35,9 @@ public class StateMachine : MonoBehaviour
 	            break;
             case State.IN_SQUAD:
 	            new_state = new InSquadState(pikmin) ;
+	            break;
+            case State.THROWN:
+	            new_state = new ThrownState(pikmin);
 	            break;
 	            
             	
@@ -65,6 +68,17 @@ public class StateMachine : MonoBehaviour
 		currentState?.PhysicsProcess();
 	}
 	
+	// Call sparingly from non-state classes , be careful
+	public void OnChildTransitionEvent(State new_state_type )
+	{
+
+		currentState.Exit();
+		states[new_state_type]?.Enter();
+		currentState = states[new_state_type];
+		
+	}
+	
+	
 	private void OnChildTransitionEvent(State new_state_type, IState prev_state )
 	{
 		if (currentState != prev_state) {return;}
@@ -89,5 +103,18 @@ public class StateMachine : MonoBehaviour
     {
         currentState?.OnAreaStay(collision);
     }
+    
+	public State GetCurrentState()
+	{
+		foreach (var entry in states)
+		{
+			if (entry.Value == currentState)
+			{
+				return entry.Key;
+			}
+		}
+		
+		return State.IDLE;
+	}
 
 }

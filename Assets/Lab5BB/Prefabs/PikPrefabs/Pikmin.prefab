@@ -626,9 +626,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2654472598560514855}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -678,8 +678,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a989b179dfc7341935b8a6a0e821ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateTypes: 040000000100000000000000
-  startingState: 1
+  stateTypes: 04000000010000000000000005000000
+  startingState: 4
   pikmin: {fileID: 192563831592752698}
 --- !u!135 &404556188502040357
 SphereCollider:
