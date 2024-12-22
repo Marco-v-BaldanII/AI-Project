@@ -34,5 +34,8 @@ public class IState
 	public virtual void OnAreaStay(Collider collision){}
 	public virtual void OnAreaExit(Collider collision){}
 	
-	
+	// vale Marco , cuando vuelvas, que throw overridee OnBodyEnter, y que al chocar contra el suelo transicione a idle
+	public virtual void OnBodyEnter(Collider collison){}
+	public virtual void OnBodyStay(Collider collison) {}
+
 }

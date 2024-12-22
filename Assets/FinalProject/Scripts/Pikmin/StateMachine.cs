@@ -15,6 +15,8 @@ public class StateMachine : MonoBehaviour
 	public IState currentState;
     
 	public Pikmin pikmin;
+	
+	[SerializeField] State checkState;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +40,9 @@ public class StateMachine : MonoBehaviour
 	            break;
             case State.THROWN:
 	            new_state = new ThrownState(pikmin);
+	            break;
+            case State.CARRYING:
+	            new_state = new CarryingState(pikmin);
 	            break;
 	            
             	
@@ -74,6 +79,7 @@ public class StateMachine : MonoBehaviour
 
 		currentState.Exit();
 		states[new_state_type]?.Enter();
+		checkState = new_state_type;
 		currentState = states[new_state_type];
 		
 	}
@@ -85,6 +91,7 @@ public class StateMachine : MonoBehaviour
 
 		prev_state.Exit();
 		states[new_state_type]?.Enter();
+		checkState = new_state_type;
 		currentState = states[new_state_type];
 		
 	}
@@ -103,8 +110,17 @@ public class StateMachine : MonoBehaviour
     {
         currentState?.OnAreaStay(collision);
     }
-    
-	public State GetCurrentState()
+
+    private void OnCollisionEnter(Collision collision)
+    {
+		currentState?.OnBodyEnter(collision.collider);
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        currentState?.OnBodyStay(collision.collider);
+    }
+
+    public State GetCurrentState()
 	{
 		foreach (var entry in states)
 		{

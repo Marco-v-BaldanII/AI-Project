@@ -678,9 +678,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a989b179dfc7341935b8a6a0e821ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateTypes: 04000000010000000000000005000000
+  stateTypes: 0400000001000000000000000500000003000000
   startingState: 4
   pikmin: {fileID: 192563831592752698}
+  checkState: 0
 --- !u!135 &404556188502040357
 SphereCollider:
   m_ObjectHideFlags: 0
