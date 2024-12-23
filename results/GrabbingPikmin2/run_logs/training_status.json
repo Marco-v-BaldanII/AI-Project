@@ -1,0 +1,29 @@
+{
+    "GrabbingPikmin2": {
+        "checkpoints": [
+            {
+                "steps": 8597,
+                "file_path": "results\\GrabbingPikmin2\\GrabbingPikmin2\\GrabbingPikmin2-8597.onnx",
+                "reward": null,
+                "creation_time": 1734976805.7329783,
+                "auxillary_file_paths": [
+                    "results\\GrabbingPikmin2\\GrabbingPikmin2\\GrabbingPikmin2-8597.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 8597,
+            "file_path": "results\\GrabbingPikmin2\\GrabbingPikmin2.onnx",
+            "reward": null,
+            "creation_time": 1734976805.7329783,
+            "auxillary_file_paths": [
+                "results\\GrabbingPikmin2\\GrabbingPikmin2\\GrabbingPikmin2-8597.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

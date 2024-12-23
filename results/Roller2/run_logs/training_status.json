@@ -1,0 +1,29 @@
+{
+    "Roller2": {
+        "checkpoints": [
+            {
+                "steps": 24986,
+                "file_path": "results\\Roller2\\Roller2\\Roller2-24986.onnx",
+                "reward": -100.0,
+                "creation_time": 1734981752.929235,
+                "auxillary_file_paths": [
+                    "results\\Roller2\\Roller2\\Roller2-24986.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 24986,
+            "file_path": "results\\Roller2\\Roller2.onnx",
+            "reward": -100.0,
+            "creation_time": 1734981752.929235,
+            "auxillary_file_paths": [
+                "results\\Roller2\\Roller2\\Roller2-24986.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

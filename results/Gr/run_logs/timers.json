@@ -1,0 +1,49 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1734978552",
+        "python_version": "3.10.12 | packaged by Anaconda, Inc. | (main, Jul  5 2023, 19:01:18) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\marco\\miniconda3\\envs\\GrabPellet\\Scripts\\mlagents-learn config/grabbing_pikmin.yaml --run-id=Gr --resume",
+        "mlagents_version": "1.1.0",
+        "mlagents_envs_version": "1.1.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.5.1+cpu",
+        "numpy_version": "1.23.5",
+        "end_time_seconds": "1734978565"
+    },
+    "total": 12.619700099996408,
+    "count": 1,
+    "self": 0.013986599995405413,
+    "children": {
+        "run_training.setup": {
+            "total": 0.10010750000219559,
+            "count": 1,
+            "self": 0.10010750000219559
+        },
+        "TrainerController.start_learning": {
+            "total": 12.505605999998807,
+            "count": 1,
+            "self": 0.00014419999934034422,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 12.307080600003246,
+                    "count": 1,
+                    "self": 12.307080600003246
+                },
+                "TrainerController._save_models": {
+                    "total": 0.19838119999621995,
+                    "count": 1,
+                    "self": 0.019863499990606215,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.17851770000561373,
+                            "count": 1,
+                            "self": 0.17851770000561373
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

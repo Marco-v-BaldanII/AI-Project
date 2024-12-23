@@ -18,9 +18,14 @@ public class StateMachine : MonoBehaviour
 	
 	[SerializeField] State checkState;
 
+	bool initialized = false;
+
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
+		if (initialized) { return; }
+		initialized = true;
+
 		states = new Dictionary<State, IState>();
 
         foreach (var state in stateTypes)
@@ -30,8 +35,8 @@ public class StateMachine : MonoBehaviour
             switch (state)
             {
             case State.GRAB:
-            	new_state = new GrabState(pikmin);
-            	break;
+	            	new_state = new GrabState(pikmin);
+	            	break;
             case State.IDLE:
 	            new_state = new IdleState(pikmin);
 	            break;
@@ -77,11 +82,11 @@ public class StateMachine : MonoBehaviour
 	public void OnChildTransitionEvent(State new_state_type )
 	{
 
-		currentState.Exit();
-		states[new_state_type]?.Enter();
-		checkState = new_state_type;
-		currentState = states[new_state_type];
-		
+		currentState?.Exit();
+		//states[new_state_type]?.Enter();
+		//checkState = new_state_type;
+		//currentState = states[new_state_type];
+		return;
 	}
 	
 	

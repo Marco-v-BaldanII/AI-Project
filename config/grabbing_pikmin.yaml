@@ -1,0 +1,25 @@
+behaviors:
+  Separation7:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 64
+      buffer_size: 2048
+      learning_rate: 3.0e-4
+      learning_rate_schedule: linear  # Keeps learning rate decaying over time
+      beta: 1.0e-4  # Reduced entropy coefficient to encourage more exploitation
+      beta_schedule: linear  # Gradually decay beta (exploration factor) over time
+      epsilon: 0.1  # Reduced epsilon for tighter clipping
+      epsilon_schedule: linear  # Gradually decay epsilon to make actions more deterministic
+      lambd: 0.99
+      num_epoch: 5
+    network_settings:
+      normalize: true
+      hidden_units: 128
+      num_layers: 2
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    max_steps: 1000000
+    time_horizon: 128
+    summary_freq: 10000

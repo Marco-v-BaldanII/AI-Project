@@ -34,7 +34,10 @@ public class Pikmin : MonoBehaviour
         followPos = PikminManager.instance.GetFollowPosition();
     }
 
-
+    private void Update()
+    {
+        //((rigid.velocity = Vector3.right * 20;
+    }
 
 
 }

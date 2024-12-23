@@ -1,0 +1,29 @@
+{
+    "Roller4": {
+        "checkpoints": [
+            {
+                "steps": 37492,
+                "file_path": "results\\Roller4\\Roller4\\Roller4-37492.onnx",
+                "reward": -100.0,
+                "creation_time": 1734982947.930895,
+                "auxillary_file_paths": [
+                    "results\\Roller4\\Roller4\\Roller4-37492.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 37492,
+            "file_path": "results\\Roller4\\Roller4.onnx",
+            "reward": -100.0,
+            "creation_time": 1734982947.930895,
+            "auxillary_file_paths": [
+                "results\\Roller4\\Roller4\\Roller4-37492.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

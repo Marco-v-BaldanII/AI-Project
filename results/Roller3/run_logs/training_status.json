@@ -1,0 +1,29 @@
+{
+    "Roller3": {
+        "checkpoints": [
+            {
+                "steps": 2198,
+                "file_path": "results\\Roller3\\Roller3\\Roller3-2198.onnx",
+                "reward": null,
+                "creation_time": 1734981952.8613596,
+                "auxillary_file_paths": [
+                    "results\\Roller3\\Roller3\\Roller3-2198.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2198,
+            "file_path": "results\\Roller3\\Roller3.onnx",
+            "reward": null,
+            "creation_time": 1734981952.8613596,
+            "auxillary_file_paths": [
+                "results\\Roller3\\Roller3\\Roller3-2198.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

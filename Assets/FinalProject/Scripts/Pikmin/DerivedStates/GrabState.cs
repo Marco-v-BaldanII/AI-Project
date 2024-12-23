@@ -20,19 +20,15 @@ public class GrabState : IState{
 	
     public override void Enter() 
     {
-	    var direction= myPikmin.targetObject.transform.position - myPikmin.transform.position;
-	    direction.Normalize();
-	    velocity = direction * 5;
-	    
-	    targetObject = myPikmin.targetObject;
-	    transform = myPikmin.transform;
-	    rigid = myPikmin.GetComponent<Rigidbody>();
+	    GrabAgent agent = myPikmin.GetComponent<GrabAgent>();
+	    agent.enabled = true;
+	    if ( targetObject) agent.targetObject = targetObject;
 	    
 
     }
     public override void PhysicsProcess()
     {
-	    Pursuit();
+	    //Pursuit();
     }
     
 	private void Pursuit()
@@ -72,11 +68,16 @@ public class GrabState : IState{
 
     public override void OnBodyStay(Collider collison)
     {
-        if (collison.tag == "Pellet")
-        {
-            GrabObject();
-        }
+        //if (collison.tag == "Pellet")
+        //{
+        //    GrabObject();
+        //}
     }
 
+	public override void Exit()
+	{
+		GrabAgent agent = myPikmin.GetComponent<GrabAgent>();
+		//if (agent) agent.enabled = false;
+	}
 
 }

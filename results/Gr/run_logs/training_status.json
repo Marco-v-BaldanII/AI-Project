@@ -1,0 +1,29 @@
+{
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    },
+    "Gr": {
+        "checkpoints": [
+            {
+                "steps": 0,
+                "file_path": "results\\Gr\\Gr\\Gr-0.onnx",
+                "reward": null,
+                "creation_time": 1734978565.4397395,
+                "auxillary_file_paths": [
+                    "results\\Gr\\Gr\\Gr-0.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 0,
+            "file_path": "results\\Gr\\Gr.onnx",
+            "reward": null,
+            "creation_time": 1734978565.4397395,
+            "auxillary_file_paths": [
+                "results\\Gr\\Gr\\Gr-0.pt"
+            ]
+        }
+    }
+}
