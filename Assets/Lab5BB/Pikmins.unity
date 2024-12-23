@@ -1619,6 +1619,51 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1136822548}
   m_SourcePrefab: {fileID: 100100000, guid: 5c869e900dfc06a408626d95f5954245, type: 3}
+--- !u!1 &1374217162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1374217164}
+  - component: {fileID: 1374217163}
+  m_Layer: 0
+  m_Name: EpisodeManager+
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1374217163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374217162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b573a17c6eeabf44880afe94e09ec59a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agents: []
+--- !u!4 &1374217164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374217162}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.6694736, y: -18.642565, z: -8.010741}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1403607599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1997,7 +2042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   num_pikmin: 0
-  weight: 3
+  weight: 4
   speed: 5
   goal: {fileID: 1637087546}
 --- !u!1 &1637087535 stripped
@@ -2488,7 +2533,7 @@ PrefabInstance:
       objectReference: {fileID: 1679656432}
     - target: {fileID: 9033323826639626387, guid: 705a0b9cb1649cd4997a14c1d5cd9210, type: 3}
       propertyPath: numPikmin
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9033323826639626387, guid: 705a0b9cb1649cd4997a14c1d5cd9210, type: 3}
       propertyPath: pikminCursor
@@ -2528,3 +2573,4 @@ SceneRoots:
   - {fileID: 786808130}
   - {fileID: 1697462594}
   - {fileID: 606245211}
+  - {fileID: 1374217164}

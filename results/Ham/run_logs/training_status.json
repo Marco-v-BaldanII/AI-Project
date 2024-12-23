@@ -1,0 +1,29 @@
+{
+    "Ham": {
+        "checkpoints": [
+            {
+                "steps": 951,
+                "file_path": "results\\Ham\\Ham\\Ham-951.onnx",
+                "reward": -204.76050200285735,
+                "creation_time": 1734987722.6944435,
+                "auxillary_file_paths": [
+                    "results\\Ham\\Ham\\Ham-951.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 951,
+            "file_path": "results\\Ham\\Ham.onnx",
+            "reward": -204.76050200285735,
+            "creation_time": 1734987722.6944435,
+            "auxillary_file_paths": [
+                "results\\Ham\\Ham\\Ham-951.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

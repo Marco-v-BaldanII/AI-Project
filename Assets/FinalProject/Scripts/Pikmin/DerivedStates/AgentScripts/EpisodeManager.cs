@@ -11,7 +11,7 @@ public class EpisodeManager : MonoBehaviour
 		// Flag to determine if the episode should end for all agents
 	public bool EpisodeEndFlag { get; private set; } = false;
 		
-	public GrabAgent[] agents;
+	public List<GrabAgent> agents;
 
 		// Awake is called when the script instance is being loaded
 		private void Awake()
@@ -31,7 +31,7 @@ public class EpisodeManager : MonoBehaviour
 	
 	public void ResetEpisode(float points)
 	{
-		for (int i = 0; i < agents.Length; ++i)
+		for (int i = 0; i < agents.Count; ++i)
 		{
 		
 			agents[i].AddReward(points);

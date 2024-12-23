@@ -31,9 +31,16 @@ public class GrabAgent : Agent
 	private float prev_distance;
 
 	float time = 0;
-	public override void OnEpisodeBegin()
+	
+	bool arrived = false;
+
+    public void Awake()
+    {
+        EpisodeManager.Instance.agents.Add(this);
+    }
+    public override void OnEpisodeBegin()
 	{
-		
+		arrived = false;
 		if (!targetObject){targetObject = GameObject.Find("Posy") ;}
 		
 
@@ -91,7 +98,8 @@ public class GrabAgent : Agent
 
 	void Update()
 	{
-
+		if(arrived){myPikmin.rigid.velocity = Vector3.zero; return;}
+		
 		time += Time.deltaTime;
 
 		if(time >= 8f)
@@ -134,13 +142,17 @@ public class GrabAgent : Agent
 	private void OnCollisionEnter(Collision collision)
 	{
 		// grant reward when grabbing object
-		if (collision.gameObject.tag == "Pellet"){
+		if (collision.gameObject.tag == "Pellet" && arrived == false){
 
 			var pellet = collision.gameObject.GetComponent <GrabbableObject > ();
+			pellet.AddPikmin(myPikmin);
+			arrived = true;
+			
 			if (pellet.num_pikmin == PikminManager.instance.units.Count)
 			{
 
 				EpisodeManager.Instance.ResetEpisode(200f);
+				pellet.num_pikmin = 0;
 				//AddReward(1000f);
 				//EndEpisode();
 			}
