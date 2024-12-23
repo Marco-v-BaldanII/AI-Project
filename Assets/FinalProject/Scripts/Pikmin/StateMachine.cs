@@ -5,23 +5,23 @@ using UnityEngine;
 public class StateMachine : MonoBehaviour
 {
 
-    [SerializeField] State[] stateTypes;
+    [SerializeField] StateType[] stateTypes;
 
 	
-	private Dictionary<State, IState> states;
+	private Dictionary<StateType, IState> states;
 	
-	public State startingState ;
+	public StateType startingState ;
 	
 	public IState currentState;
     
 	public Pikmin pikmin;
 	
-	[SerializeField] State checkState;
+	[SerializeField] StateType checkState;
 
     // Start is called before the first frame update
     void Start()
     {
-		states = new Dictionary<State, IState>();
+		states = new Dictionary<StateType, IState>();
 
         foreach (var state in stateTypes)
         {
@@ -29,19 +29,19 @@ public class StateMachine : MonoBehaviour
         	
             switch (state)
             {
-            case State.GRAB:
-            	new_state = new GrabState(pikmin);
+            case StateType.GRAB:
+            	new_state = new DeprecatedGrabState(pikmin);
             	break;
-            case State.IDLE:
+            case StateType.IDLE:
 	            new_state = new IdleState(pikmin);
 	            break;
-            case State.IN_SQUAD:
+            case StateType.IN_SQUAD:
 	            new_state = new InSquadState(pikmin) ;
 	            break;
-            case State.THROWN:
+            case StateType.THROWN:
 	            new_state = new ThrownState(pikmin);
 	            break;
-            case State.CARRYING:
+            case StateType.CARRYING:
 	            new_state = new CarryingState(pikmin);
 	            break;
 	            
@@ -74,9 +74,12 @@ public class StateMachine : MonoBehaviour
 	}
 	
 	// Call sparingly from non-state classes , be careful
-	public void OnChildTransitionEvent(State new_state_type )
+	public void OnChildTransitionEvent(StateType new_state_type )
 	{
-
+		if (new_state_type == StateType.GRAB)
+		{
+			
+		}
 		currentState.Exit();
 		states[new_state_type]?.Enter();
 		checkState = new_state_type;
@@ -85,7 +88,7 @@ public class StateMachine : MonoBehaviour
 	}
 	
 	
-	private void OnChildTransitionEvent(State new_state_type, IState prev_state )
+	private void OnChildTransitionEvent(StateType new_state_type, IState prev_state )
 	{
 		if (currentState != prev_state) {return;}
 
@@ -120,7 +123,7 @@ public class StateMachine : MonoBehaviour
         currentState?.OnBodyStay(collision.collider);
     }
 
-    public State GetCurrentState()
+    public StateType GetCurrentState()
 	{
 		foreach (var entry in states)
 		{
@@ -130,7 +133,7 @@ public class StateMachine : MonoBehaviour
 			}
 		}
 		
-		return State.IDLE;
+		return StateType.IDLE;
 	}
 
 }

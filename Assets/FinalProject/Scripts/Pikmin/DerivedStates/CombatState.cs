@@ -12,24 +12,30 @@ public class CombatState : IState
 	}
 	
 	
-	void Enter() 
+	void IState.Enter()
 	{
 
 	}
 
-	void Exit()
-	{
-	}
-
-
-	void Process()
+	void IState.Exit()
 	{
 
 	}
 
-	void PhysicsProcess()
+	void IState.Process()
 	{
 
 	}
 
+	void IState.PhysicsProcess()
+	{
+
+	}
+    
+	public  void IState.OnAreaEnter(Collider collision){}
+	public  void IState.OnAreaStay(Collider collision){}
+	public  void IState.OnAreaExit(Collider collision){}
+	
+	public  void IState.OnBodyEnter(Collider collison){}
+	public  void IState.OnBodyStay(Collider collison) {}
 }

@@ -37,7 +37,7 @@ public class InSquadState : IState
 		transform = myPikmin.transform;
 	}
 
-	public override void Enter()
+	public void IState.Enter()
     {
 	    rigid = myPikmin.rigid;
 	    animator = myPikmin.animator;
@@ -57,7 +57,7 @@ public class InSquadState : IState
 
     Vector3 vCaptain = Vector3.zero;
  
-	public override void PhysicsProcess()
+	public void IState.PhysicsProcess()
 	{
 		if (!myPikmin.followPos){ myPikmin.followPos = PikminManager.instance.GetFollowPosition();}
 
@@ -151,8 +151,24 @@ public class InSquadState : IState
         return 1;
     }
     
-	public override void Exit(){}
 
-    public override void Process(){}
+	void IState.Exit()
+	{
 
+	}
+
+	void IState.Process()
+	{
+
+	}
+
+    
+	public  void IState.OnAreaEnter(Collider collision){}
+	public  void IState.OnAreaStay(Collider collision){}
+	public  void IState.OnAreaExit(Collider collision){}
+	
+	public  void IState.OnBodyEnter(Collider collison){}
+	public  void IState.OnBodyStay(Collider collison) {}
+
+	public  void IState.CallTransition(StateType new_state_type, IState prev_){}
 }

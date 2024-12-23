@@ -27,9 +27,9 @@ public class Whistle : MonoBehaviour
 	    	foreach (var pikmin in PikminManager.instance.units)
 	    	{
 	    		StateMachine state_machine = pikmin.GetComponent<StateMachine>();
-	    		if (state_machine.GetCurrentState() == State.IN_SQUAD)
+	    		if (state_machine.GetCurrentState() == StateType.IN_SQUAD)
 	    		{
-	    			state_machine.OnChildTransitionEvent(State.THROWN);
+	    			state_machine.OnChildTransitionEvent(StateType.THROWN);
 	    			break;
 	    		}
 	    	}

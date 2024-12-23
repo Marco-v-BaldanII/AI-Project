@@ -367,7 +367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 41c1475eb6ce6fa43b8d55b1e22bf3cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.9
+      value: -1.49
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 41c1475eb6ce6fa43b8d55b1e22bf3cc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -375,7 +375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 41c1475eb6ce6fa43b8d55b1e22bf3cc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.67
+      value: -17.49
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 41c1475eb6ce6fa43b8d55b1e22bf3cc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2382,8 +2382,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1679656432}
     - target: {fileID: 9033323826639626387, guid: 705a0b9cb1649cd4997a14c1d5cd9210, type: 3}
+      propertyPath: wCaptain
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9033323826639626387, guid: 705a0b9cb1649cd4997a14c1d5cd9210, type: 3}
       propertyPath: numPikmin
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9033323826639626387, guid: 705a0b9cb1649cd4997a14c1d5cd9210, type: 3}
+      propertyPath: wSeparation
+      value: 7000
       objectReference: {fileID: 0}
     - target: {fileID: 9033323826639626387, guid: 705a0b9cb1649cd4997a14c1d5cd9210, type: 3}
       propertyPath: pikminCursor

@@ -12,32 +12,37 @@ public class IdleState : IState
 	}
 	
 	
-    void Enter()
+	void IState.Enter()
     {
 
     }
 
-    void Exit()
+    void IState.Exit()
     {
 
     }
 
-    void Process()
+    void IState.Process()
     {
 
     }
 
-    void PhysicsProcess()
+    void IState.PhysicsProcess()
     {
 
     }
     
-	public override void OnAreaEnter(Collider collision)
+	public  void IState.OnAreaExit(Collider collision){}
+	
+	public  void IState.OnBodyEnter(Collider collison){}
+	public  void IState.OnBodyStay(Collider collison) {}
+    
+	public void IState.OnAreaEnter(Collider collision)
 	{
 		CheckIfGrabObject(collision);
 	}
 
-	public override void OnAreaStay(Collider collision)
+	public void IState.OnAreaStay(Collider collision)
 	{
 		CheckIfGrabObject(collision);
 	}
@@ -47,8 +52,9 @@ public class IdleState : IState
 		if (collision.tag == "Pellet")
 		{
 			myPikmin.targetObject = collision.gameObject;
-			CallTransition(State.GRAB, this);
+			CallTransition(StateType.GRAB, this);
 		}
 	}
-
+	¨
+	public void IState.CallTransition(StateType new_state_type, IState prev_){}
 }

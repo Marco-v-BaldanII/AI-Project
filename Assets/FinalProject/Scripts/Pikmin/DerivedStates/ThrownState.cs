@@ -12,7 +12,7 @@ public class ThrownState : IState{
 		myPikmin = pikmin;
 	}
 	
-	public override void Enter() 
+	public void IState.Enter() 
 	{
 		Vector3 startPos = PikminManager.instance.transform.position;
 		myPikmin.transform.position = startPos;
@@ -21,23 +21,6 @@ public class ThrownState : IState{
 		myPikmin.rigid.velocity =   CalculateVelocity(startPos, PikminManager.instance.GetCursorPosition(), ANGLE);
 	}
 
-	public override void Exit()
-	{
-
-	}
-
-	public override void Process()
-	{
-
-	}
-
-	public override void PhysicsProcess()
-	{
-		//if(myPikmin.rigid.velocity.y == 0) /* I've landed */
-		//{
-		//	CallTransition(State.IDLE, this);
-		//}
-	}
 	
 	public Transform target; // Assign the target position in the Unity Inspector
 	public Transform launchPoint; // Point from where the projectile is launched
@@ -97,10 +80,34 @@ public class ThrownState : IState{
 		return velocity;
 	}
 	
-	public override void OnBodyEnter(Collider collider)
+	public void IState.OnBodyEnter(Collider collider)
 	{
-		CallTransition(State.IDLE, this);
+		CallTransition(StateType.IDLE, this);
 	}
+
+	void IState.Exit()
+	{
+
+	}
+
+	void IState.Process()
+	{
+
+	}
+
+	void IState.PhysicsProcess()
+	{
+
+	}
+    
+	public  void IState.OnAreaEnter(Collider collision){}
+	public  void IState.OnAreaStay(Collider collision){}
+	public  void IState.OnAreaExit(Collider collision){}
+	
+
+	public  void IState.OnBodyStay(Collider collison) {}
+
+	public  void CallTransition(StateType new_state_type, IState prev_){}
 
 	//public void FireProjectile(float angle)
 	//{

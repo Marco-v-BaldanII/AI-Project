@@ -12,23 +12,34 @@ public class CarryingState : IState
 	}
 	
 	
-	void Enter()
+	void IState.Enter()
 	{
 
 	}
 
-	void Exit()
+	void IState.Exit()
 	{
 
 	}
 
-	void Process()
+	void IState.Process()
 	{
 
 	}
 
-	void PhysicsProcess()
+	void IState.PhysicsProcess()
 	{
 
 	}
+    
+	public  void IState.OnAreaEnter(Collider collision){}
+	public  void IState.OnAreaStay(Collider collision){}
+	public  void IState.OnAreaExit(Collider collision){}
+	
+	public  void IState.OnBodyEnter(Collider collison){}
+	public  void IState.OnBodyStay(Collider collison) {}
+	
+	public  void CallTransition(StateType new_state_type, IState prev_){}
+	
+	
 }

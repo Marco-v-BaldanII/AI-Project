@@ -560,6 +560,9 @@ PrefabInstance:
       addedObject: {fileID: 7529860157695475422}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 535db578411e6744e8d91d542692d418, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1697054608961057589}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 535db578411e6744e8d91d542692d418, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 192563831592752698}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 535db578411e6744e8d91d542692d418, type: 3}
       insertIndex: -1
@@ -573,6 +576,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 535db578411e6744e8d91d542692d418, type: 3}
       insertIndex: -1
       addedObject: {fileID: 404556188502040357}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 535db578411e6744e8d91d542692d418, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6133850324150847454}
   m_SourcePrefab: {fileID: 100100000, guid: 535db578411e6744e8d91d542692d418, type: 3}
 --- !u!1 &2654472598560514855 stripped
 GameObject:
@@ -600,6 +606,26 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1697054608961057589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2654472598560514855}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4b0f1cf65217fa4db75f0b2fb244c75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentParameters:
+    maxStep: 0
+  hasUpgradedFromAgentParameters: 1
+  MaxStep: 0
+  myPikmin: {fileID: 192563831592752698}
+  targetObject: {fileID: 0}
+  separationWeight: 200
+  pursuitWeight: 100
 --- !u!114 &192563831592752698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -678,10 +704,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a989b179dfc7341935b8a6a0e821ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateTypes: 0400000001000000000000000500000003000000
+  stateTypes: 04000000010000000500000003000000
   startingState: 4
   pikmin: {fileID: 192563831592752698}
-  checkState: 0
+  checkState: 4
 --- !u!135 &404556188502040357
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -703,6 +729,36 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.006
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6133850324150847454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2654472598560514855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d1c4e0b1822b495aa52bc52839ecb30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BrainParameters:
+    VectorObservationSize: 1
+    NumStackedVectorObservations: 1
+    m_ActionSpec:
+      m_NumContinuousActions: 0
+      BranchSizes: 01000000
+    VectorActionSize: 01000000
+    VectorActionDescriptions: []
+    VectorActionSpaceType: 0
+    hasUpgradedBrainParametersWithActionSpec: 1
+  m_Model: {fileID: 0}
+  m_InferenceDevice: 0
+  m_BehaviorType: 0
+  m_BehaviorName: My Behavior
+  TeamId: 0
+  m_UseChildSensors: 1
+  m_UseChildActuators: 1
+  m_ObservableAttributeHandling: 0
 --- !u!4 &9201270345927926360 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -2907487305069052882, guid: 535db578411e6744e8d91d542692d418, type: 3}
