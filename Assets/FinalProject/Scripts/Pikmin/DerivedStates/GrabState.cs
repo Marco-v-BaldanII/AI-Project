@@ -23,7 +23,10 @@ public class GrabState : IState{
 	    GrabAgent agent = myPikmin.GetComponent<GrabAgent>();
 	    agent.enabled = true;
 	    // from the pikmin assing to the state and the agent the target object
-	    if ( myPikmin.targetObject) targetObject = myPikmin.targetObject; agent.targetObject = targetObject;
+	    if ( myPikmin.targetObject != null) {
+	    	targetObject = myPikmin.targetObject; 
+	    	agent.targetObject = targetObject;
+	    }
 	    
 
     }
@@ -78,7 +81,7 @@ public class GrabState : IState{
 	public override void Exit()
 	{
 		GrabAgent agent = myPikmin.GetComponent<GrabAgent>();
-		if (agent) agent.enabled = false;
+		//if (agent) agent.enabled = false;
 	}
 
 }

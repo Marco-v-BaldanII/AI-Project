@@ -1,0 +1,29 @@
+{
+    "GrabPellet10": {
+        "checkpoints": [
+            {
+                "steps": 68835,
+                "file_path": "results\\GrabPellet10\\GrabPellet10\\GrabPellet10-68835.onnx",
+                "reward": 704789.625,
+                "creation_time": 1735125081.5039053,
+                "auxillary_file_paths": [
+                    "results\\GrabPellet10\\GrabPellet10\\GrabPellet10-68835.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 68835,
+            "file_path": "results\\GrabPellet10\\GrabPellet10.onnx",
+            "reward": 704789.625,
+            "creation_time": 1735125081.5039053,
+            "auxillary_file_paths": [
+                "results\\GrabPellet10\\GrabPellet10\\GrabPellet10-68835.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

@@ -53,7 +53,7 @@ public class GrabAgent : Agent
 
 		myPikmin.rigid.angularVelocity = Vector3.zero;
 		myPikmin.rigid.velocity = Vector3.zero;
-		this.transform.position = new Vector3(0, PikminManager.instance.transform.position.y, 0);
+		this.transform.position = new Vector3(Random.Range(-7,7), PikminManager.instance.transform.position.y, Random.Range(-7,7));
 
 		targetObject.transform.localPosition = new Vector3(Random.value * 8 - 4, targetObject.transform.localPosition.y, Random.value * 8 - 4);
 
