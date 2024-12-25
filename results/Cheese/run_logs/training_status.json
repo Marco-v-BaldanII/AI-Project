@@ -1,0 +1,29 @@
+{
+    "Cheese": {
+        "checkpoints": [
+            {
+                "steps": 101274,
+                "file_path": "results\\Cheese\\Cheese\\Cheese-101274.onnx",
+                "reward": 188.85652435679495,
+                "creation_time": 1734988969.1446264,
+                "auxillary_file_paths": [
+                    "results\\Cheese\\Cheese\\Cheese-101274.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 101274,
+            "file_path": "results\\Cheese\\Cheese.onnx",
+            "reward": 188.85652435679495,
+            "creation_time": 1734988969.1446264,
+            "auxillary_file_paths": [
+                "results\\Cheese\\Cheese\\Cheese-101274.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

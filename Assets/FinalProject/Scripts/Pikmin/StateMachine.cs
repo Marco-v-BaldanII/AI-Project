@@ -83,9 +83,9 @@ public class StateMachine : MonoBehaviour
 	{
 
 		currentState?.Exit();
-		//states[new_state_type]?.Enter();
-		//checkState = new_state_type;
-		//currentState = states[new_state_type];
+		states[new_state_type]?.Enter();
+		checkState = new_state_type;
+		currentState = states[new_state_type];
 		return;
 	}
 	
