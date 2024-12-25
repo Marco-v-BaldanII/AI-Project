@@ -33,6 +33,9 @@ public class GrabAgent : Agent
 
 	public bool arrived = false;
 
+	Vector3 spawnPos;
+	StateMachine machine;
+
 	// Distinguish between training and gameplay modes
 	public bool isTraining = true;
 
@@ -42,6 +45,8 @@ public class GrabAgent : Agent
 		{
 			EpisodeManager.Instance.agents.Add(this);
 		}
+
+		StartCoroutine("changeSpawnPos");
 	}
 
 	public override void OnEpisodeBegin()
@@ -53,11 +58,12 @@ public class GrabAgent : Agent
 
 		myPikmin.rigid.angularVelocity = Vector3.zero;
 		myPikmin.rigid.velocity = Vector3.zero;
-		this.transform.position = new Vector3(Random.Range(-7,7), PikminManager.instance.transform.position.y, Random.Range(-7,7));
+		this.transform.position = spawnPos;
+		//this.transform.position = new Vector3(Random.Range(-7,7), Random.Range(-16,-11) , Random.Range(-7,7));
 
 		targetObject.transform.localPosition = new Vector3(Random.value * 8 - 4, targetObject.transform.localPosition.y, Random.value * 8 - 4);
 
-		var machine = this.GetComponent<StateMachine>();
+		machine = this.GetComponent<StateMachine>();
 		machine.Start();
 		machine.OnChildTransitionEvent(State.GRAB);
 
@@ -147,8 +153,13 @@ public class GrabAgent : Agent
 
 			if (isTraining && pellet.num_pikmin == PikminManager.instance.units.Count)
 			{
-				EpisodeManager.Instance.ResetEpisode(200f);
-				pellet.num_pikmin = 0;
+			 	EpisodeManager.Instance.ResetEpisode(200f);
+				    pellet.num_pikmin = 0;
+			}
+			else if (!isTraining)
+			{
+				if (!machine) { machine = this.GetComponent<StateMachine>(); }
+				 machine?.OnChildTransitionEvent(State.CARRYING);
 			}
 		}
 	}
@@ -167,4 +178,30 @@ public class GrabAgent : Agent
 		continuousActionsOut[0] = Input.GetAxis("Horizontal");
 		continuousActionsOut[1] = Input.GetAxis("Vertical");
 	}
+
+	private IEnumerator changeSpawnPos()
+	{
+		while (true)
+		{
+			yield return new WaitForSecondsRealtime(30);
+
+			spawnPos = new Vector3(0, 0, 0);
+
+            yield return new WaitForSecondsRealtime(30);
+            int id = Random.Range(0, 1);
+			if (id == 0)
+			{
+				spawnPos = new Vector3(Random.Range(-7, 7), -15, Random.Range(-7, 7));
+			}
+			yield return new WaitForSecondsRealtime(30);
+
+			int id2 = Random.Range(0, 1);
+			if(id2 == 0)
+			{
+                spawnPos = new Vector3(-8, -13, Random.Range(-7, 7));
+            }
+
+		}
+	}
+
 }

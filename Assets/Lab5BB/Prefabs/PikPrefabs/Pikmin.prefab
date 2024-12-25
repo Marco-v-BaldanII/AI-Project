@@ -616,7 +616,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2654472598560514855}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 429c505c298db0d49a6f3a47b974c955, type: 3}
   m_Name: 
@@ -630,7 +630,7 @@ MonoBehaviour:
   separationWeight: 200
   pursuitWeight: 100
   arrived: 0
-  isTraining: 1
+  isTraining: 0
 --- !u!114 &192563831592752698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,9 +662,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateTypes: 0400000001000000000000000500000003000000
-  startingState: 0
+  startingState: 4
   pikmin: {fileID: 192563831592752698}
-  checkState: 0
+  checkState: 4
 --- !u!54 &8378213532833567571
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -756,10 +756,10 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 18d4752944f20e84bb0a5daf74959fe6, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 2c6220a54082c144281f4c4e55fb2b1e, type: 3}
   m_InferenceDevice: 3
-  m_BehaviorType: 2
-  m_BehaviorName: Cheese
+  m_BehaviorType: 0
+  m_BehaviorName: Cheese6
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1

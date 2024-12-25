@@ -1,0 +1,29 @@
+{
+    "Cheese5": {
+        "checkpoints": [
+            {
+                "steps": 81309,
+                "file_path": "results\\Cheese5\\Cheese5\\Cheese5-81309.onnx",
+                "reward": null,
+                "creation_time": 1735128642.5787303,
+                "auxillary_file_paths": [
+                    "results\\Cheese5\\Cheese5\\Cheese5-81309.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 81309,
+            "file_path": "results\\Cheese5\\Cheese5.onnx",
+            "reward": null,
+            "creation_time": 1735128642.5787303,
+            "auxillary_file_paths": [
+                "results\\Cheese5\\Cheese5\\Cheese5-81309.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

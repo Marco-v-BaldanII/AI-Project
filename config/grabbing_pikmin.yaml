@@ -1,5 +1,5 @@
 behaviors:
-  Cheese:
+  Cheese6:
     trainer_type: ppo
     hyperparameters:
       batch_size: 64
