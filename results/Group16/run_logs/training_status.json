@@ -1,0 +1,29 @@
+{
+    "Group16": {
+        "checkpoints": [
+            {
+                "steps": 36237,
+                "file_path": "results\\Group16\\Group16\\Group16-36237.onnx",
+                "reward": -31375.24344889323,
+                "creation_time": 1735209351.4261215,
+                "auxillary_file_paths": [
+                    "results\\Group16\\Group16\\Group16-36237.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 36237,
+            "file_path": "results\\Group16\\Group16.onnx",
+            "reward": -31375.24344889323,
+            "creation_time": 1735209351.4261215,
+            "auxillary_file_paths": [
+                "results\\Group16\\Group16\\Group16-36237.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

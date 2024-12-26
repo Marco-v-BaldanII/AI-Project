@@ -1,0 +1,29 @@
+{
+    "Group15": {
+        "checkpoints": [
+            {
+                "steps": 27261,
+                "file_path": "results\\Group15\\Group15\\Group15-27261.onnx",
+                "reward": -44933.057291666664,
+                "creation_time": 1735208811.427343,
+                "auxillary_file_paths": [
+                    "results\\Group15\\Group15\\Group15-27261.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 27261,
+            "file_path": "results\\Group15\\Group15.onnx",
+            "reward": -44933.057291666664,
+            "creation_time": 1735208811.427343,
+            "auxillary_file_paths": [
+                "results\\Group15\\Group15\\Group15-27261.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

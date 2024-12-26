@@ -1,0 +1,29 @@
+{
+    "Group12": {
+        "checkpoints": [
+            {
+                "steps": 128202,
+                "file_path": "results\\Group12\\Group12\\Group12-128202.onnx",
+                "reward": null,
+                "creation_time": 1735204650.8648493,
+                "auxillary_file_paths": [
+                    "results\\Group12\\Group12\\Group12-128202.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 128202,
+            "file_path": "results\\Group12\\Group12.onnx",
+            "reward": null,
+            "creation_time": 1735204650.8648493,
+            "auxillary_file_paths": [
+                "results\\Group12\\Group12\\Group12-128202.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

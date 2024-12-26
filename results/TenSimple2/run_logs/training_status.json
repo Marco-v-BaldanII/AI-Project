@@ -1,0 +1,29 @@
+{
+    "TenSimple2": {
+        "checkpoints": [
+            {
+                "steps": 163040,
+                "file_path": "results\\TenSimple2\\TenSimple2\\TenSimple2-163040.onnx",
+                "reward": 0.02812749221920967,
+                "creation_time": 1735231282.2026565,
+                "auxillary_file_paths": [
+                    "results\\TenSimple2\\TenSimple2\\TenSimple2-163040.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 163040,
+            "file_path": "results\\TenSimple2\\TenSimple2.onnx",
+            "reward": 0.02812749221920967,
+            "creation_time": 1735231282.2026565,
+            "auxillary_file_paths": [
+                "results\\TenSimple2\\TenSimple2\\TenSimple2-163040.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

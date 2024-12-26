@@ -1,0 +1,29 @@
+{
+    "TenSimple": {
+        "checkpoints": [
+            {
+                "steps": 139740,
+                "file_path": "results\\TenSimple\\TenSimple\\TenSimple-139740.onnx",
+                "reward": null,
+                "creation_time": 1735230203.1398516,
+                "auxillary_file_paths": [
+                    "results\\TenSimple\\TenSimple\\TenSimple-139740.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 139740,
+            "file_path": "results\\TenSimple\\TenSimple.onnx",
+            "reward": null,
+            "creation_time": 1735230203.1398516,
+            "auxillary_file_paths": [
+                "results\\TenSimple\\TenSimple\\TenSimple-139740.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

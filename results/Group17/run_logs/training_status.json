@@ -1,0 +1,29 @@
+{
+    "Group17": {
+        "checkpoints": [
+            {
+                "steps": 107226,
+                "file_path": "results\\Group17\\Group17\\Group17-107226.onnx",
+                "reward": -13138.753921000163,
+                "creation_time": 1735210562.608251,
+                "auxillary_file_paths": [
+                    "results\\Group17\\Group17\\Group17-107226.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 107226,
+            "file_path": "results\\Group17\\Group17.onnx",
+            "reward": -13138.753921000163,
+            "creation_time": 1735210562.608251,
+            "auxillary_file_paths": [
+                "results\\Group17\\Group17\\Group17-107226.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

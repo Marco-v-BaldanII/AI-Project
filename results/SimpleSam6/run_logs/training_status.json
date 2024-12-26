@@ -1,0 +1,56 @@
+{
+    "SimpleSam6": {
+        "checkpoints": [
+            {
+                "steps": 178155,
+                "file_path": "results\\SimpleSam6\\SimpleSam6\\SimpleSam6-178155.onnx",
+                "reward": 10.956324642354792,
+                "creation_time": 1735216082.233042,
+                "auxillary_file_paths": [
+                    "results\\SimpleSam6\\SimpleSam6\\SimpleSam6-178155.pt"
+                ]
+            },
+            {
+                "steps": 185733,
+                "file_path": "results\\SimpleSam6\\SimpleSam6\\SimpleSam6-185733.onnx",
+                "reward": 8.010915396674987,
+                "creation_time": 1735216981.5933518,
+                "auxillary_file_paths": [
+                    "results\\SimpleSam6\\SimpleSam6\\SimpleSam6-185733.pt"
+                ]
+            },
+            {
+                "steps": 207216,
+                "file_path": "results\\SimpleSam6\\SimpleSam6\\SimpleSam6-207216.onnx",
+                "reward": 2.4688604209158154,
+                "creation_time": 1735217322.090663,
+                "auxillary_file_paths": [
+                    "results\\SimpleSam6\\SimpleSam6\\SimpleSam6-207216.pt"
+                ]
+            },
+            {
+                "steps": 267144,
+                "file_path": "results\\SimpleSam6\\SimpleSam6\\SimpleSam6-267144.onnx",
+                "reward": 2.03872719200902,
+                "creation_time": 1735218237.0396955,
+                "auxillary_file_paths": [
+                    "results\\SimpleSam6\\SimpleSam6\\SimpleSam6-267144.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 267144,
+            "file_path": "results\\SimpleSam6\\SimpleSam6.onnx",
+            "reward": 2.03872719200902,
+            "creation_time": 1735218237.0396955,
+            "auxillary_file_paths": [
+                "results\\SimpleSam6\\SimpleSam6\\SimpleSam6-267144.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

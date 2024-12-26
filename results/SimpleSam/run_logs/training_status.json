@@ -1,0 +1,29 @@
+{
+    "SimpleSam": {
+        "checkpoints": [
+            {
+                "steps": 41481,
+                "file_path": "results\\SimpleSam\\SimpleSam\\SimpleSam-41481.onnx",
+                "reward": -2183.1065305074058,
+                "creation_time": 1735211209.2566786,
+                "auxillary_file_paths": [
+                    "results\\SimpleSam\\SimpleSam\\SimpleSam-41481.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 41481,
+            "file_path": "results\\SimpleSam\\SimpleSam.onnx",
+            "reward": -2183.1065305074058,
+            "creation_time": 1735211209.2566786,
+            "auxillary_file_paths": [
+                "results\\SimpleSam\\SimpleSam\\SimpleSam-41481.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

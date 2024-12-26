@@ -5,6 +5,9 @@ using UnityEngine;
 public class EpisodeManager : MonoBehaviour
 {
 
+
+	public bool isTraining;
+	
 		// Static instance of the class
 		public static EpisodeManager Instance { get; private set; }
 
@@ -19,12 +22,12 @@ public class EpisodeManager : MonoBehaviour
 			// Ensure there's only one instance of EpisodeManager
 			if (Instance != null && Instance != this)
 			{
-				Destroy(gameObject); // Destroy any duplicate instances
+				    Destroy(gameObject); // Destroy any duplicate instances
 			}
 			else
 			{
-				Instance = this;
-				DontDestroyOnLoad(gameObject); // Make this persist across scenes
+			 	Instance = this;
+			 	DontDestroyOnLoad(gameObject); // Make this persist across scenes
 			}
 		}
 	
@@ -33,10 +36,24 @@ public class EpisodeManager : MonoBehaviour
 	{
 		for (int i = 0; i < agents.Count; ++i)
 		{
-		
-			agents[i].AddReward(points);
+			if (agents[i].lazy == false){
+			 	agents[i].AddReward(points);
+			}
 			agents[i].EndEpisode();
 		}
+	}
+	
+	public int RetrieveveWorkingPiks()
+	{
+		int num = 0;
+		for (int i = 0; i < agents.Count; ++i)
+		{
+			if (agents[i].lazy == false){
+				num++;
+			}
+		}
+		
+		return num;
 	}
 	
 	

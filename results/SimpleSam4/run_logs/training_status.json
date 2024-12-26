@@ -1,0 +1,29 @@
+{
+    "SimpleSam4": {
+        "checkpoints": [
+            {
+                "steps": 212901,
+                "file_path": "results\\SimpleSam4\\SimpleSam4\\SimpleSam4-212901.onnx",
+                "reward": 7.207536160945892,
+                "creation_time": 1735213907.029196,
+                "auxillary_file_paths": [
+                    "results\\SimpleSam4\\SimpleSam4\\SimpleSam4-212901.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 212901,
+            "file_path": "results\\SimpleSam4\\SimpleSam4.onnx",
+            "reward": 7.207536160945892,
+            "creation_time": 1735213907.029196,
+            "auxillary_file_paths": [
+                "results\\SimpleSam4\\SimpleSam4\\SimpleSam4-212901.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

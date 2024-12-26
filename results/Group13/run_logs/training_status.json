@@ -1,0 +1,29 @@
+{
+    "Group13": {
+        "checkpoints": [
+            {
+                "steps": 96387,
+                "file_path": "results\\Group13\\Group13\\Group13-96387.onnx",
+                "reward": -79999909.07320839,
+                "creation_time": 1735205976.2932248,
+                "auxillary_file_paths": [
+                    "results\\Group13\\Group13\\Group13-96387.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 96387,
+            "file_path": "results\\Group13\\Group13.onnx",
+            "reward": -79999909.07320839,
+            "creation_time": 1735205976.2932248,
+            "auxillary_file_paths": [
+                "results\\Group13\\Group13\\Group13-96387.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "Pellet": {
+        "checkpoints": [
+            {
+                "steps": 7236,
+                "file_path": "results\\Pellet\\Pellet\\Pellet-7236.onnx",
+                "reward": -271.31220626831055,
+                "creation_time": 1735156288.0198286,
+                "auxillary_file_paths": [
+                    "results\\Pellet\\Pellet\\Pellet-7236.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 7236,
+            "file_path": "results\\Pellet\\Pellet.onnx",
+            "reward": -271.31220626831055,
+            "creation_time": 1735156288.0198286,
+            "auxillary_file_paths": [
+                "results\\Pellet\\Pellet\\Pellet-7236.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

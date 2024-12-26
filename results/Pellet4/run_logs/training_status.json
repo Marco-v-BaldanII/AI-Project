@@ -1,0 +1,29 @@
+{
+    "Pellet4": {
+        "checkpoints": [
+            {
+                "steps": 90246,
+                "file_path": "results\\Pellet4\\Pellet4\\Pellet4-90246.onnx",
+                "reward": -732.9866943359375,
+                "creation_time": 1735158480.326009,
+                "auxillary_file_paths": [
+                    "results\\Pellet4\\Pellet4\\Pellet4-90246.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 90246,
+            "file_path": "results\\Pellet4\\Pellet4.onnx",
+            "reward": -732.9866943359375,
+            "creation_time": 1735158480.326009,
+            "auxillary_file_paths": [
+                "results\\Pellet4\\Pellet4\\Pellet4-90246.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

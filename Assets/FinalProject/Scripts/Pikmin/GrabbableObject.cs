@@ -23,13 +23,17 @@ public class  GrabbableObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-	    if (num_pikmin >= weight && is_moving)
+	    if (num_pikmin >= weight && is_moving && EpisodeManager.Instance.isTraining == false)
 	    {
 	    	Vector3 direction = goal.transform.position - transform.position; 
 		    direction.Normalize();
 		    transform.position +=  Time.deltaTime * direction * (speed * ( (float) num_pikmin/ (float) weight ) );
 	    }
 	    else{is_moving = false;}
+	    
+	    if (EpisodeManager.Instance.isTraining){
+		    weight = (uint)EpisodeManager.Instance.RetrieveveWorkingPiks();
+	    }
     }
     
     
@@ -37,7 +41,9 @@ public class  GrabbableObject : MonoBehaviour
     
 	public void AddPikmin(Pikmin pikmin)
 	{
-		pikmin.transform.parent = transform;
+		if (EpisodeManager.Instance != null && ! EpisodeManager.Instance.isTraining) {
+			//pikmin.transform.parent = transform;
+		}
 		num_pikmin++;
 		
 		if(num_pikmin >= weight)

@@ -1,0 +1,47 @@
+{
+    "Ten3": {
+        "checkpoints": [
+            {
+                "steps": 499906,
+                "file_path": "results\\Ten3\\Ten3\\Ten3-499906.onnx",
+                "reward": 0.07108006104826928,
+                "creation_time": 1735223453.4992013,
+                "auxillary_file_paths": [
+                    "results\\Ten3\\Ten3\\Ten3-499906.pt"
+                ]
+            },
+            {
+                "steps": 999892,
+                "file_path": "results\\Ten3\\Ten3\\Ten3-999892.onnx",
+                "reward": 0.14009677693247796,
+                "creation_time": 1735225373.0287912,
+                "auxillary_file_paths": [
+                    "results\\Ten3\\Ten3\\Ten3-999892.pt"
+                ]
+            },
+            {
+                "steps": 1000020,
+                "file_path": "results\\Ten3\\Ten3\\Ten3-1000020.onnx",
+                "reward": 0.14009677693247796,
+                "creation_time": 1735225373.174451,
+                "auxillary_file_paths": [
+                    "results\\Ten3\\Ten3\\Ten3-1000020.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000020,
+            "file_path": "results\\Ten3\\Ten3.onnx",
+            "reward": 0.14009677693247796,
+            "creation_time": 1735225373.174451,
+            "auxillary_file_paths": [
+                "results\\Ten3\\Ten3\\Ten3-1000020.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}
