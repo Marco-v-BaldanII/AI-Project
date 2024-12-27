@@ -54,14 +54,17 @@ public class GrabAgent : Agent
 
 	public override void CollectObservations(VectorSensor sensor)
 	{
-		Target = Vector3.zero;
+		// this is called everyframe to update these values
+		
 
+		if (!rBody){rBody = GetComponent<Rigidbody>();}
 
 		sensor.AddObservation(Target); // Target position
 		sensor.AddObservation(this.transform.localPosition); // Agent position
 
 		sensor.AddObservation(rBody.velocity.x); // Velocity along x-axis
 		sensor.AddObservation(rBody.velocity.z); // Velocity along z-axis
+
 	}
 
 	public override void OnActionReceived(ActionBuffers actionBuffers)

@@ -616,7 +616,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2654472598560514855}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 429c505c298db0d49a6f3a47b974c955, type: 3}
   m_Name: 
@@ -658,9 +658,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateTypes: 0400000001000000000000000500000003000000
-  startingState: 4
+  startingState: 0
   pikmin: {fileID: 192563831592752698}
-  checkState: 4
+  checkState: 0
 --- !u!54 &8378213532833567571
 Rigidbody:
   m_ObjectHideFlags: 0

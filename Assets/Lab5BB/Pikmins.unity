@@ -375,7 +375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 41c1475eb6ce6fa43b8d55b1e22bf3cc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.39
+      value: -11.24
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 41c1475eb6ce6fa43b8d55b1e22bf3cc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1751,7 +1751,7 @@ MonoBehaviour:
   isTraining: 1
   pellet: {fileID: 1600949118}
   agents: []
-  num_pikmin: 20
+  num_pikmin: 0
 --- !u!4 &1374217164
 Transform:
   m_ObjectHideFlags: 0
@@ -2168,8 +2168,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.49064133, y: 0.095259786, z: 0.55184555}
-  m_Center: {x: -0.0015297413, y: 0.12100734, z: 0.013147736}
+  m_Size: {x: 0.5037311, y: 0.095259786, z: 0.55184555}
+  m_Center: {x: -0.16501546, y: 0.12100734, z: 0.013147736}
 --- !u!1 &1637087535 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2861561377530544144, guid: 705a0b9cb1649cd4997a14c1d5cd9210, type: 3}
@@ -2764,7 +2764,7 @@ PrefabInstance:
       objectReference: {fileID: 1679656432}
     - target: {fileID: 9033323826639626387, guid: 705a0b9cb1649cd4997a14c1d5cd9210, type: 3}
       propertyPath: numPikmin
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9033323826639626387, guid: 705a0b9cb1649cd4997a14c1d5cd9210, type: 3}
       propertyPath: pikminCursor
