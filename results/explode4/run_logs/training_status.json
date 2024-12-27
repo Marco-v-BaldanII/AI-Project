@@ -1,0 +1,29 @@
+{
+    "explode4": {
+        "checkpoints": [
+            {
+                "steps": 235410,
+                "file_path": "results\\explode4\\explode4\\explode4-235410.onnx",
+                "reward": null,
+                "creation_time": 1735303568.1140912,
+                "auxillary_file_paths": [
+                    "results\\explode4\\explode4\\explode4-235410.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 235410,
+            "file_path": "results\\explode4\\explode4.onnx",
+            "reward": null,
+            "creation_time": 1735303568.1140912,
+            "auxillary_file_paths": [
+                "results\\explode4\\explode4\\explode4-235410.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

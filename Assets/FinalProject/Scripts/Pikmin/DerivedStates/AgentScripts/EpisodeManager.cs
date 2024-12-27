@@ -13,8 +13,16 @@ public class EpisodeManager : MonoBehaviour
 
 		// Flag to determine if the episode should end for all agents
 	public bool EpisodeEndFlag { get; private set; } = false;
+	
+	public GameObject pellet;
 		
 	public List<GrabAgent> agents;
+	
+	public int num_pikmin ;
+	
+	private const float EPISODE_LENGTH = 22f;
+	
+	float timer = 0f;
 
 		// Awake is called when the script instance is being loaded
 		private void Awake()
@@ -31,31 +39,128 @@ public class EpisodeManager : MonoBehaviour
 			}
 		}
 	
-	
-	public void ResetEpisode(float points)
+	private void Start()
 	{
-		for (int i = 0; i < agents.Count; ++i)
+		ResetEpisode();
+		PikminManager.instance.Spawn(num_pikmin);
+
+		foreach (Pikmin pik in PikminManager.instance.units)
 		{
-			if (agents[i].lazy == false){
-			 	agents[i].AddReward(points);
+			GrabAgent agent = pik.GetComponent<GrabAgent>();
+			if(agent != null)
+			{
+				agents.Add(agent);
 			}
-			agents[i].EndEpisode();
 		}
+	}
+	
+	public void ResetEpisode()
+	{
+		//for (int i = 0; i < agents.Count; ++i)
+		//{
+		//	if (agents[i].lazy == false){
+		//	 	agents[i].AddReward(points);
+		//	}
+		//	agents[i].EndEpisode();
+
+		//}
+		
+		//num_pikmin = RandomAgentAmount();
+		
+		//PikminManager.instance.DestroyAll();
+		//PikminManager.instance.Spawn(num_pikmin);
+		//agents.Clear();
+		
+		//foreach (Pikmin pik in PikminManager.instance.units)
+		//{
+		//	GrabAgent agent = pik.GetComponent<GrabAgent>();
+		//	if(agent != null)
+		//	{
+		//		agents.Add(agent);
+		//	}
+		//}
+		foreach (Pikmin pik in PikminManager.instance.units)
+		{
+			pik.transform.position = Vector3.zero;
+			GrabAgent agent = pik.GetComponent<GrabAgent>();
+				if(agent != null)
+				{
+					agent.EndEpisode();
+				}
+			
+		}
+		if (isTraining)
+		{
+			pellet.transform.position = new Vector3(Random.Range(-8f,8f), 0 , Random.Range(-8f,8f));
+		}
+		
+	}
+	
+	private void Update()
+	{
+		float radius = 2f;
+		
+		for(int i = 0; i < num_pikmin; ++i)
+		{
+			// Calculate the angle for this Pikmin
+			float angle = 2 * Mathf.PI * i / num_pikmin;
+
+			// Calculate the position based on polar coordinates
+			float x = Mathf.Cos(angle) * radius;
+			float z = Mathf.Sin(angle) * radius;
+
+			// Assign the Pikmin's position
+			Vector3 targetPosition = new Vector3(x, 0f, z);
+
+			// Set this Pikmin's target position 
+			GrabAgent agent = agents[i]; // position around the pellet
+			agent.Target = pellet.transform.position + targetPosition;
+			
+			Debug.DrawLine(new Vector3(agent.Target.x, 0, agent.Target.z), new Vector3(agent.Target.x, 10, agent.Target.z));
+		}
+		
+		timer += Time.deltaTime;
+		
+		int num_arrived = 0;
+		foreach (GrabAgent agent in agents)
+		{
+			if(agent.arrived)
+			{
+				num_arrived++;
+			}
+		}
+		if (num_arrived == agents.Count || timer > EPISODE_LENGTH)
+		{
+			if(num_arrived == agents.Count){print("success");}
+			ResetEpisode();
+			timer = 0f;
+		}
+		//timer += Time.deltaTime;
+		
+		//if ( timer > EPISODE_LENGTH)
+		//{
+		//	ResetEpisode();
+		//	timer = 0f;
+		//}
+		
 	}
 	
 	public int RetrieveveWorkingPiks()
 	{
 		int num = 0;
-		for (int i = 0; i < agents.Count; ++i)
-		{
-			if (agents[i].lazy == false){
-				num++;
-			}
-		}
+		//for (int i = 0; i < agents.Count; ++i)
+		//{
+		//	if (agents[i].lazy == false){
+		//		num++;
+		//	}
+		//}
 		
 		return num;
 	}
 	
-	
+	public int RandomAgentAmount()
+	{
+		return Random.Range(1,10);
+	}
 
 }

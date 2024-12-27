@@ -1,0 +1,29 @@
+{
+    "Smart3": {
+        "checkpoints": [
+            {
+                "steps": 136410,
+                "file_path": "results\\Smart3\\Smart3\\Smart3-136410.onnx",
+                "reward": null,
+                "creation_time": 1735290056.5769808,
+                "auxillary_file_paths": [
+                    "results\\Smart3\\Smart3\\Smart3-136410.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 136410,
+            "file_path": "results\\Smart3\\Smart3.onnx",
+            "reward": null,
+            "creation_time": 1735290056.5769808,
+            "auxillary_file_paths": [
+                "results\\Smart3\\Smart3\\Smart3-136410.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

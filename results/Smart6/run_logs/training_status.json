@@ -1,0 +1,47 @@
+{
+    "Smart6": {
+        "checkpoints": [
+            {
+                "steps": 259610,
+                "file_path": "results\\Smart6\\Smart6\\Smart6-259610.onnx",
+                "reward": null,
+                "creation_time": 1735298835.1132314,
+                "auxillary_file_paths": [
+                    "results\\Smart6\\Smart6\\Smart6-259610.pt"
+                ]
+            },
+            {
+                "steps": 499970,
+                "file_path": "results\\Smart6\\Smart6\\Smart6-499970.onnx",
+                "reward": 29.419994735717772,
+                "creation_time": 1735300337.8121338,
+                "auxillary_file_paths": [
+                    "results\\Smart6\\Smart6\\Smart6-499970.pt"
+                ]
+            },
+            {
+                "steps": 699620,
+                "file_path": "results\\Smart6\\Smart6\\Smart6-699620.onnx",
+                "reward": null,
+                "creation_time": 1735301365.2013464,
+                "auxillary_file_paths": [
+                    "results\\Smart6\\Smart6\\Smart6-699620.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 699620,
+            "file_path": "results\\Smart6\\Smart6.onnx",
+            "reward": null,
+            "creation_time": 1735301365.2013464,
+            "auxillary_file_paths": [
+                "results\\Smart6\\Smart6\\Smart6-699620.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

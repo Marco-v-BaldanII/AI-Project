@@ -1,0 +1,29 @@
+{
+    "Manager": {
+        "checkpoints": [
+            {
+                "steps": 4954,
+                "file_path": "results\\Manager\\Manager\\Manager-4954.onnx",
+                "reward": null,
+                "creation_time": 1735237124.4287593,
+                "auxillary_file_paths": [
+                    "results\\Manager\\Manager\\Manager-4954.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 4954,
+            "file_path": "results\\Manager\\Manager.onnx",
+            "reward": null,
+            "creation_time": 1735237124.4287593,
+            "auxillary_file_paths": [
+                "results\\Manager\\Manager\\Manager-4954.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

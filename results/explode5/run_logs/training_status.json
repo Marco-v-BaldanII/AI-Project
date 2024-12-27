@@ -1,0 +1,47 @@
+{
+    "explode5": {
+        "checkpoints": [
+            {
+                "steps": 499960,
+                "file_path": "results\\explode5\\explode5\\explode5-499960.onnx",
+                "reward": 5615.424029181985,
+                "creation_time": 1735306410.645262,
+                "auxillary_file_paths": [
+                    "results\\explode5\\explode5\\explode5-499960.pt"
+                ]
+            },
+            {
+                "steps": 999920,
+                "file_path": "results\\explode5\\explode5\\explode5-999920.onnx",
+                "reward": 5016.437599182129,
+                "creation_time": 1735308949.8631377,
+                "auxillary_file_paths": [
+                    "results\\explode5\\explode5\\explode5-999920.pt"
+                ]
+            },
+            {
+                "steps": 1000360,
+                "file_path": "results\\explode5\\explode5\\explode5-1000360.onnx",
+                "reward": 5625.460113525391,
+                "creation_time": 1735308950.0365467,
+                "auxillary_file_paths": [
+                    "results\\explode5\\explode5\\explode5-1000360.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000360,
+            "file_path": "results\\explode5\\explode5.onnx",
+            "reward": 5625.460113525391,
+            "creation_time": 1735308950.0365467,
+            "auxillary_file_paths": [
+                "results\\explode5\\explode5\\explode5-1000360.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

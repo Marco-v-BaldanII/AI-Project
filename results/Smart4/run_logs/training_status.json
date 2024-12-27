@@ -1,0 +1,65 @@
+{
+    "Smart4": {
+        "checkpoints": [
+            {
+                "steps": 743995,
+                "file_path": "results\\Smart4\\Smart4\\Smart4-743995.onnx",
+                "reward": null,
+                "creation_time": 1735294505.333547,
+                "auxillary_file_paths": [
+                    "results\\Smart4\\Smart4\\Smart4-743995.pt"
+                ]
+            },
+            {
+                "steps": 959405,
+                "file_path": "results\\Smart4\\Smart4\\Smart4-959405.onnx",
+                "reward": null,
+                "creation_time": 1735295895.27493,
+                "auxillary_file_paths": [
+                    "results\\Smart4\\Smart4\\Smart4-959405.pt"
+                ]
+            },
+            {
+                "steps": 999895,
+                "file_path": "results\\Smart4\\Smart4\\Smart4-999895.onnx",
+                "reward": 32.41249322891235,
+                "creation_time": 1735296235.2539077,
+                "auxillary_file_paths": [
+                    "results\\Smart4\\Smart4\\Smart4-999895.pt"
+                ]
+            },
+            {
+                "steps": 1000115,
+                "file_path": "results\\Smart4\\Smart4\\Smart4-1000115.onnx",
+                "reward": 32.29999408721924,
+                "creation_time": 1735296235.377599,
+                "auxillary_file_paths": [
+                    "results\\Smart4\\Smart4\\Smart4-1000115.pt"
+                ]
+            },
+            {
+                "steps": 1000115,
+                "file_path": "results\\Smart4\\Smart4\\Smart4-1000115.onnx",
+                "reward": null,
+                "creation_time": 1735296301.0867386,
+                "auxillary_file_paths": [
+                    "results\\Smart4\\Smart4\\Smart4-1000115.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000115,
+            "file_path": "results\\Smart4\\Smart4.onnx",
+            "reward": null,
+            "creation_time": 1735296301.0867386,
+            "auxillary_file_paths": [
+                "results\\Smart4\\Smart4\\Smart4-1000115.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

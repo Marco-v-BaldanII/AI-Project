@@ -43,17 +43,7 @@ public class PikminManager : MonoBehaviour
         instance = this;
 
 
-        for (int i = 0; i < numPikmin; ++i)
-        {
-            Vector3 random_vec = new Vector3(UnityEngine.Random.Range(10, -10), 0, UnityEngine.Random.Range(5, -5));
-
-	        units.Add ( Instantiate(
-		        PikminPrefs[ UnityEngine.Random.Range(0, PikminPrefs.Length) ],
-		        transform.position + random_vec, Quaternion.identity, floor.transform)
-		        .GetComponent<Pikmin>() );
-		        
-            Debug.Log("pikmin spawned");
-        }
+	    Spawn(numPikmin);
 
 
     }
@@ -87,6 +77,32 @@ public class PikminManager : MonoBehaviour
 	public Vector3 GetCursorPosition()
 	{
 		return pikminCursor.transform.position;
+	}
+	
+	public void DestroyAll()
+	{
+		for(int i = 0; i < units.Count; ++i)
+		{
+			Destroy(units[i].gameObject);
+		}
+		
+		units.Clear();
+		
+	}
+	
+	public void Spawn(int amount)
+	{
+		for (int i = 0; i < amount; ++i)
+		{
+			Vector3 random_vec = new Vector3(UnityEngine.Random.Range(10, -10), 0, UnityEngine.Random.Range(5, -5));
+
+			units.Add ( Instantiate(
+				PikminPrefs[ UnityEngine.Random.Range(0, PikminPrefs.Length) ],
+				transform.position + random_vec, Quaternion.identity, floor.transform)
+				.GetComponent<Pikmin>() );
+		        
+			Debug.Log("pikmin spawned");
+		}
 	}
 
 }

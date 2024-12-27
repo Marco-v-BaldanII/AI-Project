@@ -1,0 +1,29 @@
+{
+    "Smart5": {
+        "checkpoints": [
+            {
+                "steps": 75910,
+                "file_path": "results\\Smart5\\Smart5\\Smart5-75910.onnx",
+                "reward": -4.309999712556601,
+                "creation_time": 1735297176.5911205,
+                "auxillary_file_paths": [
+                    "results\\Smart5\\Smart5\\Smart5-75910.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 75910,
+            "file_path": "results\\Smart5\\Smart5.onnx",
+            "reward": -4.309999712556601,
+            "creation_time": 1735297176.5911205,
+            "auxillary_file_paths": [
+                "results\\Smart5\\Smart5\\Smart5-75910.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

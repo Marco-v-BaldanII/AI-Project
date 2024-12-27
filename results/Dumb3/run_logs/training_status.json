@@ -1,0 +1,29 @@
+{
+    "Dumb3": {
+        "checkpoints": [
+            {
+                "steps": 99200,
+                "file_path": "results\\Dumb3\\Dumb3\\Dumb3-99200.onnx",
+                "reward": null,
+                "creation_time": 1735257580.8059726,
+                "auxillary_file_paths": [
+                    "results\\Dumb3\\Dumb3\\Dumb3-99200.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 99200,
+            "file_path": "results\\Dumb3\\Dumb3.onnx",
+            "reward": null,
+            "creation_time": 1735257580.8059726,
+            "auxillary_file_paths": [
+                "results\\Dumb3\\Dumb3\\Dumb3-99200.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

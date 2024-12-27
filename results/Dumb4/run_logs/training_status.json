@@ -1,0 +1,29 @@
+{
+    "Dumb4": {
+        "checkpoints": [
+            {
+                "steps": 46205,
+                "file_path": "results\\Dumb4\\Dumb4\\Dumb4-46205.onnx",
+                "reward": null,
+                "creation_time": 1735268795.36951,
+                "auxillary_file_paths": [
+                    "results\\Dumb4\\Dumb4\\Dumb4-46205.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 46205,
+            "file_path": "results\\Dumb4\\Dumb4.onnx",
+            "reward": null,
+            "creation_time": 1735268795.36951,
+            "auxillary_file_paths": [
+                "results\\Dumb4\\Dumb4\\Dumb4-46205.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

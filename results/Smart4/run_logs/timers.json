@@ -1,0 +1,54 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1735296259",
+        "python_version": "3.10.12 | packaged by Anaconda, Inc. | (main, Jul  5 2023, 19:01:18) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\marco\\miniconda3\\envs\\CarryingEnv\\Scripts\\mlagents-learn config/grabbing_pikmin.yaml --run-id=Smart4 --resume",
+        "mlagents_version": "1.1.0",
+        "mlagents_envs_version": "1.1.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.5.1+cpu",
+        "numpy_version": "1.23.5",
+        "end_time_seconds": "1735296301"
+    },
+    "total": 42.096094100008486,
+    "count": 1,
+    "self": 0.012636100029340014,
+    "children": {
+        "run_training.setup": {
+            "total": 0.17770410000230186,
+            "count": 1,
+            "self": 0.17770410000230186
+        },
+        "TrainerController.start_learning": {
+            "total": 41.905753899976844,
+            "count": 1,
+            "self": 0.00020509999012574553,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 41.66824660002021,
+                    "count": 1,
+                    "self": 41.66824660002021
+                },
+                "trainer_threads": {
+                    "total": 1.7999846022576094e-06,
+                    "count": 1,
+                    "self": 1.7999846022576094e-06
+                },
+                "TrainerController._save_models": {
+                    "total": 0.23730039998190477,
+                    "count": 1,
+                    "self": 0.028728699981002137,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.20857170000090264,
+                            "count": 1,
+                            "self": 0.20857170000090264
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

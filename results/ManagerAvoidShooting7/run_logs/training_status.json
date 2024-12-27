@@ -1,0 +1,29 @@
+{
+    "ManagerAvoidShooting7": {
+        "checkpoints": [
+            {
+                "steps": 50056,
+                "file_path": "results\\ManagerAvoidShooting7\\ManagerAvoidShooting7\\ManagerAvoidShooting7-50056.onnx",
+                "reward": null,
+                "creation_time": 1735245071.333624,
+                "auxillary_file_paths": [
+                    "results\\ManagerAvoidShooting7\\ManagerAvoidShooting7\\ManagerAvoidShooting7-50056.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 50056,
+            "file_path": "results\\ManagerAvoidShooting7\\ManagerAvoidShooting7.onnx",
+            "reward": null,
+            "creation_time": 1735245071.333624,
+            "auxillary_file_paths": [
+                "results\\ManagerAvoidShooting7\\ManagerAvoidShooting7\\ManagerAvoidShooting7-50056.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

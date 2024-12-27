@@ -625,14 +625,8 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
-  myPikmin: {fileID: 192563831592752698}
-  targetObject: {fileID: 0}
-  separationWeight: 200
-  pursuitWeight: 100
-  time: 0
-  arrived: 0
-  isTraining: 1
-  lazy: 0
+  Target: {x: 0, y: 0, z: 0}
+  forceMultiplier: 40
 --- !u!114 &192563831592752698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,7 +669,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2654472598560514855}
   serializedVersion: 4
-  m_Mass: 10
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -749,7 +743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 7
+    VectorObservationSize: 8
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 2
@@ -758,10 +752,10 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: c3152d8605b8b6e4da8b604830a33c68, type: 3}
   m_InferenceDevice: 3
-  m_BehaviorType: 0
-  m_BehaviorName: time
+  m_BehaviorType: 2
+  m_BehaviorName: explode5
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1
