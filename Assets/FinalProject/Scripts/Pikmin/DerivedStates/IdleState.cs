@@ -47,6 +47,12 @@ public class IdleState : IState
 		if (collision.tag == "Pellet")
 		{
 			myPikmin.targetObject = collision.gameObject;
+			
+			//GrabAgent agent = myPikmin.GetComponent<GrabAgent>();
+			//agent.Target = collision.gameObject.transform.position;
+			
+			EpisodeManager.Instance.pellet = collision.gameObject;
+			
 			CallTransition(State.GRAB, this);
 		}
 	}

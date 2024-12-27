@@ -5,6 +5,8 @@ using UnityEngine;
 public class EpisodeManager : MonoBehaviour
 {
 
+	//TODO, if you want to be able to carry multiple objects youll have to make this into a regular C#class
+	// and make a singleton that manages instances of "carrying objecys (the class you have now)"
 
 	public bool isTraining;
 	
@@ -41,6 +43,8 @@ public class EpisodeManager : MonoBehaviour
 	
 	private void Start()
 	{
+		if(!isTraining){return;}
+		
 		ResetEpisode();
 		PikminManager.instance.Spawn(num_pikmin);
 
@@ -56,29 +60,8 @@ public class EpisodeManager : MonoBehaviour
 	
 	public void ResetEpisode()
 	{
-		//for (int i = 0; i < agents.Count; ++i)
-		//{
-		//	if (agents[i].lazy == false){
-		//	 	agents[i].AddReward(points);
-		//	}
-		//	agents[i].EndEpisode();
-
-		//}
-		
-		//num_pikmin = RandomAgentAmount();
-		
-		//PikminManager.instance.DestroyAll();
-		//PikminManager.instance.Spawn(num_pikmin);
-		//agents.Clear();
-		
-		//foreach (Pikmin pik in PikminManager.instance.units)
-		//{
-		//	GrabAgent agent = pik.GetComponent<GrabAgent>();
-		//	if(agent != null)
-		//	{
-		//		agents.Add(agent);
-		//	}
-		//}
+		if (!isTraining){return;}
+	
 		foreach (Pikmin pik in PikminManager.instance.units)
 		{
 			pik.transform.position = Vector3.zero;
@@ -100,10 +83,10 @@ public class EpisodeManager : MonoBehaviour
 	{
 		float radius = 2f;
 		
-		for(int i = 0; i < num_pikmin; ++i)
+		for(int i = 0; i < agents.Count; ++i)
 		{
 			// Calculate the angle for this Pikmin
-			float angle = 2 * Mathf.PI * i / num_pikmin;
+			float angle = 2 * Mathf.PI * i / agents.Count;
 
 			// Calculate the position based on polar coordinates
 			float x = Mathf.Cos(angle) * radius;
@@ -118,6 +101,8 @@ public class EpisodeManager : MonoBehaviour
 			
 			Debug.DrawLine(new Vector3(agent.Target.x, 0, agent.Target.z), new Vector3(agent.Target.x, 10, agent.Target.z));
 		}
+		
+		if (!isTraining){return;}
 		
 		timer += Time.deltaTime;
 		

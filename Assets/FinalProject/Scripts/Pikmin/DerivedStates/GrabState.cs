@@ -81,7 +81,7 @@ public class GrabState : IState{
 	public override void Exit()
 	{
 		GrabAgent agent = myPikmin.GetComponent<GrabAgent>();
-		//if (agent) agent.enabled = false;
+		if (agent) agent.enabled = false;
 	}
 
 }

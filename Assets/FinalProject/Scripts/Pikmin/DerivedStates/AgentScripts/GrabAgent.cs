@@ -9,7 +9,7 @@ public class GrabAgent : Agent
 {
 	Rigidbody rBody;
 
-	public Vector3 Target;
+	public Vector3 Target = Vector3.zero;
 	int closeness = 7;
 	int prev_closeness = 7;
 
@@ -26,12 +26,19 @@ public class GrabAgent : Agent
 		rBody = GetComponent<Rigidbody>(); 
 	}
 
+    protected override void OnEnable()
+    {
+		base.OnEnable();
+        EpisodeManager.Instance.agents.Add(this);
+    }
 
-	public override void OnEpisodeBegin()
+    public override void OnEpisodeBegin()
 	{
 		arrived = false;
 		if (!rBody){rBody = GetComponent<Rigidbody>(); }
-		
+
+		if (EpisodeManager.Instance.isTraining == false) { return; }
+
 		// If the Agent fell off the platform, reset its position and momentum
 		if (this.transform.localPosition.y < 0)
 		{
@@ -47,8 +54,9 @@ public class GrabAgent : Agent
 
 	public override void CollectObservations(VectorSensor sensor)
 	{
+		Target = Vector3.zero;
 
-		int ass = 5;
+
 		sensor.AddObservation(Target); // Target position
 		sensor.AddObservation(this.transform.localPosition); // Agent position
 
@@ -149,5 +157,11 @@ public class GrabAgent : Agent
 		{
             AddReward(-100);
 		}
+    }
+
+    protected override void OnDisable()
+    {
+        EpisodeManager.Instance.agents.Remove(this);
+		base.OnDisable();
     }
 }

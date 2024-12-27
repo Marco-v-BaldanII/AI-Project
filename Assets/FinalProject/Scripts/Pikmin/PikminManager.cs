@@ -33,6 +33,7 @@ public class PikminManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         animator = GetComponentInChildren<Animator>();
         units = new List<Pikmin>();
 
@@ -43,8 +44,7 @@ public class PikminManager : MonoBehaviour
         instance = this;
 
 
-	    Spawn(numPikmin);
-
+        Spawn(numPikmin);
 
     }
 
