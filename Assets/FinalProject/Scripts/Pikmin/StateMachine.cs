@@ -19,6 +19,8 @@ public class StateMachine : MonoBehaviour
 	[SerializeField] State checkState;
 
 	bool initialized = false;
+	
+	[SerializeField] public float debugSpeed = 0;
 
     // Start is called before the first frame update
     public void Start()

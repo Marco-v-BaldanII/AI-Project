@@ -61,6 +61,8 @@ public class InSquadState : IState
 	{
 		if (!myPikmin.followPos){ myPikmin.followPos = PikminManager.instance.GetFollowPosition();}
 
+        myPikmin.debugSpeed = speed;
+
         Vector3 vCohesion = Vector3.zero;
         Vector3 vSeparation = Vector3.zero;
         float vAlingment = speed;
@@ -78,7 +80,7 @@ public class InSquadState : IState
 	        vCaptain = myPikmin.followPos.transform.position - transform.position;
             Vector3 captainOffset = new Vector3(UnityEngine.Random.Range(-0.1f, 0.1f), 0, UnityEngine.Random.Range(-0.1f, 0.1f));
             vCaptain += captainOffset;
-            speed *= 0.4f;
+            //speed *= 0.4f;
         }
 
         foreach (Pikmin carrot in PikminManager.instance.units) /* Sumatorio */
@@ -111,7 +113,9 @@ public class InSquadState : IState
 
 		myPikmin.animator.SetFloat("velocity", Mathf.Abs(myPikmin.rigid.velocity.x) + Mathf.Abs(myPikmin.rigid.velocity.z) / 2.0f);
 
-
+        Debug.DrawLine(transform.position, myPikmin.followPos.transform.position , Color.blue);
+        //Debug.DrawLine(transform.position, transform.TransformPoint( vSeparation ), Color.red);
+        //Debug.DrawLine(transform.position, transform.TransformPoint( vCohesion ), Color.yellow);
 
         transform.LookAt(PikminManager.instance.transform.position);
     }
@@ -154,5 +158,6 @@ public class InSquadState : IState
 	public override void Exit(){}
 
     public override void Process(){}
+
 
 }

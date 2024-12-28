@@ -90,6 +90,7 @@ public class GrabAgent : Agent
 		}
 		else if (distanceToTarget < 1f)
 		{
+			arrived = true;
 			closeness = 2;
 			// Reward for reaching the target
 			AddReward(10f);
@@ -146,6 +147,7 @@ public class GrabAgent : Agent
 			rBody.velocity = Vector3.zero;
 		}
 	}
+	
 
 	public override void Heuristic(in ActionBuffers actionsOut)
 	{

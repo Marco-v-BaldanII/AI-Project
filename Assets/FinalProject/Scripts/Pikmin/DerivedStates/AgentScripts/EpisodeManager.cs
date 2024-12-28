@@ -45,17 +45,17 @@ public class EpisodeManager : MonoBehaviour
 	{
 		if(!isTraining){return;}
 		
-		ResetEpisode();
-		PikminManager.instance.Spawn(num_pikmin);
+		//ResetEpisode();
+		//PikminManager.instance.Spawn(num_pikmin);
 
-		foreach (Pikmin pik in PikminManager.instance.units)
-		{
-			GrabAgent agent = pik.GetComponent<GrabAgent>();
-			if(agent != null)
-			{
-				agents.Add(agent);
-			}
-		}
+		//foreach (Pikmin pik in PikminManager.instance.units)
+		//{
+		//	GrabAgent agent = pik.GetComponent<GrabAgent>();
+		//	if(agent != null)
+		//	{
+		//		agents.Add(agent);
+		//	}
+		//}
 	}
 	
 	public void ResetEpisode()
@@ -97,7 +97,7 @@ public class EpisodeManager : MonoBehaviour
 
 			// Set this Pikmin's target position 
 			GrabAgent agent = agents[i]; // position around the pellet
-			agent.Target = pellet.transform.position + targetPosition;
+			if (pellet) agent.Target = pellet.transform.position + targetPosition;
 			
 			Debug.DrawLine(new Vector3(agent.Target.x, 0, agent.Target.z), new Vector3(agent.Target.x, 10, agent.Target.z));
 		}

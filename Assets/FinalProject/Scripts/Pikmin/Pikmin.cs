@@ -16,6 +16,7 @@ public class Pikmin : MonoBehaviour
     public PikColor myColor;
 	public GameObject followPos;
 	
+	public float debugSpeed = 0;
 	
 	[Header("Grabing State fields")]
 	

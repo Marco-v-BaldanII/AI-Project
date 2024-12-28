@@ -9,7 +9,7 @@ public class GrabState : IState{
 	private GameObject targetObject;
 	private Transform transform;
 	private Rigidbody rigid;
-	
+	GrabAgent agent;
 	private const float GRAB_DISTANCE = 0.4f;
 	private  float speed = 5f; // TODO: change this to depend on pik color
     
@@ -20,7 +20,7 @@ public class GrabState : IState{
 	
     public override void Enter() 
     {
-	    GrabAgent agent = myPikmin.GetComponent<GrabAgent>();
+	    agent = myPikmin.GetComponent<GrabAgent>();
 	    agent.enabled = true;
 	    // from the pikmin assing to the state and the agent the target object
 	    //if ( myPikmin.targetObject != null) {
@@ -31,7 +31,12 @@ public class GrabState : IState{
 
     }
     public override void PhysicsProcess()
-    {
+	{
+		if (agent.arrived)
+		{
+			GrabObject();
+		}
+    	
 	    //Pursuit();
     }
     
@@ -62,7 +67,7 @@ public class GrabState : IState{
 	
 	private void GrabObject()
 	{
-		GrabbableObject grab_object  = targetObject.GetComponent<GrabbableObject>(); 
+		GrabbableObject grab_object  = myPikmin.targetObject.GetComponent<GrabbableObject>(); 
 		if ( grab_object != null)
 		{
 			CallTransition(State.CARRYING, this);

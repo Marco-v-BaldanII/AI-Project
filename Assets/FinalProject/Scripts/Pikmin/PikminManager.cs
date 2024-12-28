@@ -90,8 +90,10 @@ public class PikminManager : MonoBehaviour
 		
 	}
 	
+	// specify position else, spawned around captain character
 	public void Spawn(int amount)
 	{
+		
 		for (int i = 0; i < amount; ++i)
 		{
 			Vector3 random_vec = new Vector3(UnityEngine.Random.Range(10, -10), 0, UnityEngine.Random.Range(5, -5));
@@ -99,6 +101,23 @@ public class PikminManager : MonoBehaviour
 			units.Add ( Instantiate(
 				PikminPrefs[ UnityEngine.Random.Range(0, PikminPrefs.Length) ],
 				transform.position + random_vec, Quaternion.identity, floor.transform)
+				.GetComponent<Pikmin>() );
+		        
+			Debug.Log("pikmin spawned");
+		}
+	}
+	
+	
+	public void Spawn(int amount, Vector3 position)
+	{
+		
+		for (int i = 0; i < amount; ++i)
+		{
+			Vector3 random_vec = new Vector3(UnityEngine.Random.Range(10, -10), 0, UnityEngine.Random.Range(5, -5));
+
+			units.Add ( Instantiate(
+				PikminPrefs[ UnityEngine.Random.Range(0, PikminPrefs.Length) ],
+			position + random_vec, Quaternion.identity, floor.transform)
 				.GetComponent<Pikmin>() );
 		        
 			Debug.Log("pikmin spawned");
