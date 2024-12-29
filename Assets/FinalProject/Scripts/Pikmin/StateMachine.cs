@@ -51,7 +51,9 @@ public class StateMachine : MonoBehaviour
             case State.CARRYING:
 	            new_state = new CarryingState(pikmin);
 	            break;
-	            
+            case State.COMBAT:
+	            new_state = new CombatState(pikmin);
+	            break;
             	
             }
 	        // each state should subscribe to the OnChild Transition

@@ -55,6 +55,10 @@ public class IdleState : IState
 			
 			CallTransition(State.GRAB, this);
 		}
+		else if (collision.tag == "Enemy")
+		{
+			CallTransition(State.COMBAT, this);
+		}
 	}
 
 }
