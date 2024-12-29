@@ -599,6 +599,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 535db578411e6744e8d91d542692d418, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1400469826346907237}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 535db578411e6744e8d91d542692d418, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7352122505915503906}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 535db578411e6744e8d91d542692d418, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4763649180737417318}
   m_SourcePrefab: {fileID: 100100000, guid: 535db578411e6744e8d91d542692d418, type: 3}
 --- !u!1 &2745608367097547283 stripped
 GameObject:
@@ -654,7 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44a989b179dfc7341935b8a6a0e821ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateTypes: 0400000001000000000000000500000003000000
+  stateTypes: 040000000100000000000000050000000300000002000000
   startingState: 4
   pikmin: {fileID: 1975260969212942261}
   checkState: 4
@@ -784,7 +790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 0}
+  selectedEditorNode: {fileID: 4189386547610195055}
   repeatOnFinish: 1
   maxExecutionsPerTick: 1
   parent: {fileID: 0}
@@ -855,8 +861,8 @@ MonoBehaviour:
   title: Pursuit
   rect:
     serializedVersion: 2
-    x: 101.600006
-    y: 264
+    x: 100
+    y: 260
     width: 160
     height: 44
   parent: {fileID: 1453731315332504466}
@@ -865,7 +871,7 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   ghostRb: {fileID: 3846012446336086736}
-  slowDownRadius: 1.5
+  slowDownRadius: 5
   targetPos: {x: 0, y: 0, z: 0}
 --- !u!114 &4189386547610195055
 MonoBehaviour:
@@ -891,7 +897,7 @@ MonoBehaviour:
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
-  attck_trigger: 
+  attck_trigger: Attack
 --- !u!95 &1400469826346907237
 Animator:
   serializedVersion: 5
@@ -913,6 +919,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7352122505915503906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2745608367097547283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2217e4d35c0c94ea02cf2166c17e4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variables:
+  - {fileID: 4763649180737417318}
+  masterBlackboard: {fileID: 0}
+--- !u!114 &4763649180737417318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2745608367097547283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbc98ff6538275b4c9a8383882546ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: target
+  val: {fileID: 0}
 --- !u!4 &3265546166426718377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 535db578411e6744e8d91d542692d418, type: 3}

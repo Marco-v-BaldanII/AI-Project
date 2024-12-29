@@ -28,7 +28,7 @@ public class MBT_Pursuit : Leaf
     	
 		targetPos = board.GetVariable<TransformVariable>("target").Value.position;
     	
-	    Vector3 direction = (targetPos - transform.position).normalized;
+	    Vector3 direction = (targetPos - ghostRb.transform.position).normalized;
 
 
 	    ghostRb.velocity = new Vector3(direction.x, Mathf.Clamp(ghostRb.velocity.y, -2.0f, 0.01f), direction.z) * 5;

@@ -31,7 +31,7 @@ public class MBT_BulborbAttack : Leaf
 		AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 
 		// Check if the animation is complete
-		if (stateInfo.IsName("Eat") && stateInfo.normalizedTime >= 0.95f)
+		if (stateInfo.IsName(attck_trigger) && stateInfo.normalizedTime >= 0.95f)
 		{
 			Debug.Log("Animation Finished!");
 			

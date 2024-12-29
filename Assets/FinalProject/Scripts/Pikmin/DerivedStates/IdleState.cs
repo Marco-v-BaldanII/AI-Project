@@ -41,8 +41,13 @@ public class IdleState : IState
 	{
 		CheckIfGrabObject(collision);
 	}
-	
-	private void CheckIfGrabObject(Collider collision)
+
+    public override void OnBodyStay(Collider collison)
+    {
+		CheckIfGrabObject(collison);
+    }
+
+    private void CheckIfGrabObject(Collider collision)
 	{
 		if (collision.tag == "Pellet")
 		{
@@ -57,6 +62,7 @@ public class IdleState : IState
 		}
 		else if (collision.tag == "Enemy")
 		{
+			myPikmin.targetObject = collision.gameObject;
 			CallTransition(State.COMBAT, this);
 		}
 	}
