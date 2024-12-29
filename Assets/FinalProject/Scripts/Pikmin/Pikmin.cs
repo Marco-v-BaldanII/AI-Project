@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -40,6 +41,26 @@ public class Pikmin : MonoBehaviour
         //((rigid.velocity = Vector3.right * 20;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "EnemyBite")
+        {
+            // Death
+            rigid.velocity = Vector3.zero; /* connect the destroyu method to the OnComplete via a lmba function */
+            transform.DOMove(other.gameObject.transform.position + new Vector3(0,0.4f,0), 0.5f).OnComplete((/*no parameters*/) => Destroy(this.gameObject));
+            transform.DORotate(transform.eulerAngles + new Vector3(115, 0, 0), 0.48f);
+            transform.DOScale(transform.localScale * 0.3f, 0.48f);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (PikminManager.instance.units.Contains(this))
+        {
+            PikminManager.instance.units.Remove(this);
+
+        }
+    }
 
 }
 

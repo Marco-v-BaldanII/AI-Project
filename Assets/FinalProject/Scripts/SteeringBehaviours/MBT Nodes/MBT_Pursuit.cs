@@ -42,6 +42,7 @@ public class MBT_Pursuit : Leaf
 		    if (distance < slowDownRadius / 2)
 		    {
 			    ghostRb.velocity = Vector3.zero;
+				return NodeResult.failure; /* this way atk can execute */
 			    // it should go into atk state
 			    
 		    }
