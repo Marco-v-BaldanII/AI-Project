@@ -88,5 +88,13 @@ public class GrabState : IState{
 		GrabAgent agent = myPikmin.GetComponent<GrabAgent>();
 		if (agent) agent.enabled = false;
 	}
+	
+	public override void OnAreaStay(Collider collision)
+	{
+		if (collision.tag == "Captain" && collision.gameObject != PikminManager.instance.gameObject) /* touched by whistle or captain = rejoin group */
+		{
+			CallTransition(State.IN_SQUAD, this);
+		}
+	}
 
 }

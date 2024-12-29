@@ -5,11 +5,19 @@ using UnityEngine;
 public class Whistle : MonoBehaviour
 {
 	int layerMask; 
+	
+	public float whistleIncrementSpeed = 1;
+	
+	public Sprite aimSprite;
+	public Sprite whistleSprite;
+	
+	private SpriteRenderer renderer;
+	
     // Start is called before the first frame update
     void Start()
     {
 	    layerMask =  ~LayerMask.GetMask("Pikmin");
-	
+	    renderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -37,6 +45,19 @@ public class Whistle : MonoBehaviour
 	    	}
 	    	
 	    }
+	    if (Input.GetMouseButton(1))
+	    {
+	    	float speed = whistleIncrementSpeed * Time.deltaTime;
+	    	transform.localScale = new Vector3(transform.localScale.x + speed, transform.localScale.y + speed, transform.localScale.z + speed);
+	    	renderer.sprite = whistleSprite;
+	    }
+	    else
+	    {
+	    	renderer.sprite = aimSprite;
+	    	transform.localScale = new Vector3(transform.localScale.x -0.1f, transform.localScale.y -0.1f, transform.localScale.z - 0.1f);
+	    }
+	    
+	    transform.localScale = new Vector3(Mathf.Clamp(transform.localScale.x, 0.7f, 5), Mathf.Clamp(transform.localScale.x, 0.7f, 5), Mathf.Clamp(transform.localScale.z, 0.7f, 5));
         
     }
     

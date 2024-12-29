@@ -65,6 +65,10 @@ public class IdleState : IState
 			myPikmin.targetObject = collision.gameObject;
 			CallTransition(State.COMBAT, this);
 		}
+		else if (collision.tag == "Captain") /* touched by whistle or captain = rejoin group */
+		{
+			CallTransition(State.IN_SQUAD, this);
+		}
 	}
 
 }

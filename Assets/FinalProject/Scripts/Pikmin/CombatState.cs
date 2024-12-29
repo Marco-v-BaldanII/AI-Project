@@ -40,5 +40,14 @@ public class CombatState : IState
 	{
 		tree.Tick();
 	}
+	
+	public override void OnAreaStay(Collider collision)
+	{
+		if (collision.tag == "Captain") /* touched by whistle or captain = rejoin group */
+		{
+			CallTransition(State.IN_SQUAD, this);
+		}
+	}
+	
 
 }
