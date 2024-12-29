@@ -25,8 +25,12 @@ public class MBT_DetectTarget : Leaf
 	public override NodeResult Execute()
     {
 	    bool detect = false;
+		Transform detectTrasnform = null;
+        TransformVariable trs = board.GetVariable<TransformVariable>("target");
 
-	    Collider[] colliders = Physics.OverlapSphere(transform.position, frustum.farClipPlane, mask);
+        
+
+        Collider[] colliders = Physics.OverlapSphere(transform.position, frustum.farClipPlane, mask);
 	    Plane[] planes = GeometryUtility.CalculateFrustumPlanes(frustum);
 	    foreach (Collider col in colliders)
 	    {
@@ -43,28 +47,21 @@ public class MBT_DetectTarget : Leaf
 
 			    if (Physics.Raycast(ray, out hit, frustum.farClipPlane, mask))
 			    {
-
-				    TransformVariable trs =  board.GetVariable<TransformVariable>("target");
-				 
-				    trs.Value =  hit.collider.transform;
 				    //targetTransform = hit.collider.transform;
-				    detect = true;
 
-				   
+					detectTrasnform = hit.collider.transform;
 
-				 
 
-			    }
-			    else
-			    {
-				    TransformVariable trs =  board.GetVariable<TransformVariable>("target");
-				 
-				    trs.Value =  null;
-			    }
+
+
+
+                }
 		    }
 
 	    }
 	    
+
+		trs.Value = detectTrasnform;
 	    return NodeResult.failure;
     }
 }

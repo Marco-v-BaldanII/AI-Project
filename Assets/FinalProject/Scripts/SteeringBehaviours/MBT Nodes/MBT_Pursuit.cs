@@ -34,7 +34,7 @@ public class MBT_Pursuit : Leaf
 	    ghostRb.velocity = new Vector3(direction.x, Mathf.Clamp(ghostRb.velocity.y, -2.0f, 0.01f), direction.z) * 5;
 
 	    // ARRIVE
-	    var distance = Vector3.Distance(targetPos, transform.position);
+	    var distance = Vector3.Distance(targetPos, ghostRb.transform.position);
 
 	    if (distance < slowDownRadius) /*Slow down when get closer than "slowDownRadius" */
 	    {

@@ -501,6 +501,22 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4010755014762539795, guid: 710563d1d6495fe4d81ee632e5e11545, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4815851299830195392, guid: 710563d1d6495fe4d81ee632e5e11545, type: 3}
+      propertyPath: slowDownRadius
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348528690192939770, guid: 710563d1d6495fe4d81ee632e5e11545, type: 3}
+      propertyPath: rect.x
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348528690192939770, guid: 710563d1d6495fe4d81ee632e5e11545, type: 3}
+      propertyPath: rect.y
+      value: 420
+      objectReference: {fileID: 0}
     - target: {fileID: 6823115923080953281, guid: 710563d1d6495fe4d81ee632e5e11545, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.880808
