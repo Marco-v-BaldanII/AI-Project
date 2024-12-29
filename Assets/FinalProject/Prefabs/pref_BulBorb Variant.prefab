@@ -104,9 +104,7 @@ PrefabInstance:
       propertyPath: far clip plane
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2701475810270565294, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
-    - {fileID: 4086675702648777372, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -137,6 +135,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3669949027635826502, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3942555148132224941}
+    - targetCorrespondingSourceObject: {fileID: 3669949027635826502, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4815851299830195392}
+    - targetCorrespondingSourceObject: {fileID: 3669949027635826502, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6846400293539856326}
     - targetCorrespondingSourceObject: {fileID: 1416123817380647070, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 860645461745680452}
@@ -155,6 +159,11 @@ GameObject:
 --- !u!195 &472654911526367903 stripped
 NavMeshAgent:
   m_CorrespondingSourceObject: {fileID: 6574339743256147520, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
+  m_PrefabInstance: {fileID: 6751892038747981023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &501020822119622451 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 6575380530724807660, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
   m_PrefabInstance: {fileID: 6751892038747981023}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &4615183908802168104 stripped
@@ -248,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 7124537815525601605}
+  selectedEditorNode: {fileID: 4815851299830195392}
   repeatOnFinish: 1
   maxExecutionsPerTick: 1
   parent: {fileID: 0}
@@ -292,12 +301,13 @@ MonoBehaviour:
   title: Is Set Condition
   rect:
     serializedVersion: 2
-    x: 280
-    y: 300
+    x: 118.40001
+    y: 415.2
     width: 160
     height: 44
   parent: {fileID: 2680575648870431207}
-  children: []
+  children:
+  - {fileID: 4815851299830195392}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -366,8 +376,8 @@ MonoBehaviour:
   title: Patroll
   rect:
     serializedVersion: 2
-    x: 120
-    y: 300
+    x: 300
+    y: 340
     width: 160
     height: 44
   parent: {fileID: 2680575648870431207}
@@ -407,8 +417,9 @@ MonoBehaviour:
   parent: {fileID: 6660794958374010119}
   children:
   - {fileID: 7124537815525601605}
-  - {fileID: 786364742009343758}
+  - {fileID: 6846400293539856326}
   - {fileID: 6348528690192939770}
+  - {fileID: 786364742009343758}
   behaviourTree: {fileID: 0}
   runtimePriority: 0
   breakpoint: 0
@@ -428,8 +439,8 @@ MonoBehaviour:
   title: FollowGhost
   rect:
     serializedVersion: 2
-    x: 0
-    y: 240
+    x: -60
+    y: 220
     width: 160
     height: 44
   parent: {fileID: 2680575648870431207}
@@ -451,6 +462,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monoBehaviourTree: {fileID: 4397750888579172959}
+--- !u!114 &4815851299830195392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8024795764521339801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09bf2723cc66d847ad5fda7e46f646e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Pursuit
+  rect:
+    serializedVersion: 2
+    x: 100
+    y: 560
+    width: 160
+    height: 44
+  parent: {fileID: 6348528690192939770}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  ghostRb: {fileID: 501020822119622451}
+  slowDownRadius: 0.3
+  targetPos: {x: 0, y: 0, z: 0}
+--- !u!114 &6846400293539856326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8024795764521339801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fcdbadefe7a4de4d83b5dcb74609ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: DetectTarget
+  rect:
+    serializedVersion: 2
+    x: -0
+    y: 340
+    width: 160
+    height: 44
+  parent: {fileID: 2680575648870431207}
+  children: []
+  behaviourTree: {fileID: 0}
+  runtimePriority: 0
+  breakpoint: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &8741282868455002285 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2665229920433296498, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}

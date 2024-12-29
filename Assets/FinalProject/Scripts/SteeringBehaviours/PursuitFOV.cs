@@ -61,7 +61,7 @@ public class PursuitFOV : MonoBehaviour
 						// Seek
 					Arrive(hit.collider.transform.position);
 						
-					navMesh.destination = hit.collider.transform.position;
+					//navMesh.destination = hit.collider.transform.position;
 
 						Debug.DrawLine(ray.origin, hit.collider.transform.position);
                         
