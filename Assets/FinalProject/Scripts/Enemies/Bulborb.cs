@@ -19,7 +19,8 @@ public class Bulborb : MonoBehaviour
     {
         if (other.tag == "PikminAttack")
         {
-	        hp -= 1;
+	        hp--;
+	        print("Enemy hurt, hp is now " + hp);
 	        
 	        img.fillAmount = (1f / maxHP) * hp;
 	        

@@ -9,6 +9,7 @@ TagManager:
   - Onnion
   - EnemyBite
   - Enemy
+  - PikminAttack
   layers:
   - Default
   - TransparentFX

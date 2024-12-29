@@ -50,7 +50,7 @@ public class MBT_DetectTarget : Leaf
 				    //targetTransform = hit.collider.transform;
 
 					detectTrasnform = hit.collider.transform;
-
+					break;
 
 
 
