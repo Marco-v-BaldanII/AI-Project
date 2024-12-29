@@ -117,6 +117,10 @@ public class StateMachine : MonoBehaviour
 
     private void OnTriggerStay(Collider collision)
     {
+		if (collision.tag == "Respawn")
+		{
+			print("whistle");
+		}
         currentState?.OnAreaStay(collision);
     }
 

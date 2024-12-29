@@ -12,12 +12,14 @@ public class Whistle : MonoBehaviour
 	public Sprite whistleSprite;
 	
 	private SpriteRenderer renderer;
+	private Collider collider;
 	
     // Start is called before the first frame update
     void Start()
     {
-	    layerMask =  ~LayerMask.GetMask("Pikmin");
+	    layerMask =  ~LayerMask.GetMask("Pikmin", "UI");
 	    renderer = GetComponent<SpriteRenderer>();
+	    collider = GetComponent<Collider>();
     }
 
     // Update is called once per frame
@@ -27,8 +29,10 @@ public class Whistle : MonoBehaviour
 	    if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
         {
 
-            transform.position = hit.point; // Snap cursor to terrain
-            transform.position = new Vector3(transform.position.x, transform.position.y + 0.05f, transform.position.z);
+		    
+        			    transform.position = hit.point; // Snap cursor to terrain
+			    transform.position = new Vector3(transform.position.x, transform.position.y + 0.05f, transform.position.z);
+		    
         }
         
 	    // TODO , change this to use new input system
@@ -47,12 +51,14 @@ public class Whistle : MonoBehaviour
 	    }
 	    if (Input.GetMouseButton(1))
 	    {
+	    	collider.enabled = true;
 	    	float speed = whistleIncrementSpeed * Time.deltaTime;
 	    	transform.localScale = new Vector3(transform.localScale.x + speed, transform.localScale.y + speed, transform.localScale.z + speed);
 	    	renderer.sprite = whistleSprite;
 	    }
 	    else
 	    {
+	    	collider.enabled = false;
 	    	renderer.sprite = aimSprite;
 	    	transform.localScale = new Vector3(transform.localScale.x -0.1f, transform.localScale.y -0.1f, transform.localScale.z - 0.1f);
 	    }

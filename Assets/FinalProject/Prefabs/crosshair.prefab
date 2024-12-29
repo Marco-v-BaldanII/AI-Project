@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2171005612782810634}
   - component: {fileID: 8559684044086075279}
   - component: {fileID: 7808651426660425918}
-  m_Layer: 0
+  - component: {fileID: 8456266293388399105}
+  m_Layer: 5
   m_Name: crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9a484fcfe4deb0e4cacf26a7a90cd325, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 11905a8d7befeb34fb4af2702d984d6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,3 +98,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c10cc525179e82458e4fbaf37067d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  whistleIncrementSpeed: 5
+  aimSprite: {fileID: 21300000, guid: 11905a8d7befeb34fb4af2702d984d6c, type: 3}
+  whistleSprite: {fileID: 21300000, guid: 3a4789d2b9e836443999a00c3c42657e, type: 3}
+--- !u!135 &8456266293388399105
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6666233457886594904}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.8
+  m_Center: {x: 0, y: 0, z: 0}
