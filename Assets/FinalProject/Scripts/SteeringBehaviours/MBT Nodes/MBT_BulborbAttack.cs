@@ -11,22 +11,33 @@ public class MBT_BulborbAttack : Leaf
 	
 	private Animator animator;
 	public string attck_trigger;
+	private Blackboard board;
+	
+	public TransformVariable target;
 	
 
     // Start is called before the first frame update
 	void Awake()
     {
 	    animator = GetComponent<Animator>();
+	    board = GetComponent<Blackboard>();
     }
 
 	public override void  OnEnter()
 	{
 		animator.SetTrigger(attck_trigger);
+		target = board.GetVariable<TransformVariable>("target");
 	}
 
 	public override NodeResult Execute()
 	{
-    	
+		
+		
+		if (target != null && target.Value != null)
+		{
+			Quaternion targetRotation = Quaternion.LookRotation(target.Value.position - transform.position);
+			transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 8f);
+		}
     	
 		AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 

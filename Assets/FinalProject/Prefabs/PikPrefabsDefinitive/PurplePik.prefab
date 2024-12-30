@@ -648,6 +648,7 @@ MonoBehaviour:
   followPos: {fileID: 0}
   debugSpeed: 0
   targetObject: {fileID: 0}
+  grabbing: 0
 --- !u!114 &6205387827004989519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,7 +791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25af8627659c6949b60949c3aa8d91d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEditorNode: {fileID: 4189386547610195055}
+  selectedEditorNode: {fileID: 1453731315332504466}
   repeatOnFinish: 1
   maxExecutionsPerTick: 1
   parent: {fileID: 0}
@@ -835,7 +836,7 @@ MonoBehaviour:
   rect:
     serializedVersion: 2
     x: 200
-    y: 120
+    y: 140
     width: 160
     height: 44
   parent: {fileID: 1223206124417355998}
@@ -898,6 +899,7 @@ MonoBehaviour:
   runtimePriority: 0
   breakpoint: 0
   attck_trigger: Attack
+  target: {fileID: 0}
 --- !u!95 &1400469826346907237
 Animator:
   serializedVersion: 5
@@ -1057,7 +1059,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.65129536
   m_Center: {x: 0.15129542, y: 0.000000010142966, z: 0.000000050278608}
