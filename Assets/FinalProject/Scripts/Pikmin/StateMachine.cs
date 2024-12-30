@@ -85,6 +85,7 @@ public class StateMachine : MonoBehaviour
 	// Call sparingly from non-state classes , be careful
 	public void OnChildTransitionEvent(State new_state_type )
 	{
+		if (states == null) { Start(); }
 
 		currentState?.Exit();
 		states[new_state_type]?.Enter();

@@ -123,6 +123,16 @@ public class PikminManager : MonoBehaviour
 			Debug.Log("pikmin spawned");
 		}
 	}
+	
+	public void ThrowAt(Vector3 position)
+	{
+		position.x += UnityEngine.Random.Range(-0.5f,0.5f);
+		position.y += UnityEngine.Random.Range(-0.5f, 0.5f);
+        pikminCursor.transform.position = position;
+		
+		pikminCursor.Throw();
+		
+	}
 
 
 }

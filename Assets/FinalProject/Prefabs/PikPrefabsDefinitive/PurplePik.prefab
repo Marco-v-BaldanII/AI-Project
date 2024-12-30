@@ -618,7 +618,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2745608367097547283}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 429c505c298db0d49a6f3a47b974c955, type: 3}
   m_Name: 
@@ -629,6 +629,7 @@ MonoBehaviour:
   MaxStep: 0
   Target: {x: 0, y: 0, z: 0}
   forceMultiplier: 40
+  inGrabState: 0
 --- !u!114 &1975260969212942261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -748,7 +749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 8
+    VectorObservationSize: 11
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 2
@@ -757,10 +758,10 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 27a61088afefc4d4687dd9413a8c93e3, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 3
-  m_BehaviorType: 2
-  m_BehaviorName: Arlo3
+  m_BehaviorType: 0
+  m_BehaviorName: Demon
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1

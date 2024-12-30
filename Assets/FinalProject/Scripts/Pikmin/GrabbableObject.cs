@@ -27,7 +27,7 @@ public class  GrabbableObject : MonoBehaviour
     void Update()
     {
 		//TODO Change this to navmesh or something
-	    if (num_pikmin >= weight && is_moving && EpisodeManager.Instance.isTraining == false)
+	    if (num_pikmin >= weight && is_moving && ThrowManager.Instance.isTraining == false)
 	    {
 	    	Vector3 direction = goal.transform.position - transform.position;
 			direction.y = 0;
@@ -36,9 +36,9 @@ public class  GrabbableObject : MonoBehaviour
 	    }
 	    else{is_moving = false;}
 	    
-	    if (EpisodeManager.Instance.isTraining){
-		    weight = (uint)EpisodeManager.Instance.RetrieveveWorkingPiks();
-	    }
+	    //if (ThrowManager.Instance.isTraining){
+		//    weight = (uint)EpisodeManager.Instance.RetrieveveWorkingPiks();
+	    //}
     }
     
     
@@ -46,7 +46,7 @@ public class  GrabbableObject : MonoBehaviour
     
 	public void AddPikmin(Pikmin pikmin)
 	{
-		if (EpisodeManager.Instance != null && ! EpisodeManager.Instance.isTraining) {
+		if (ThrowManager.Instance != null && ! ThrowManager.Instance.isTraining) {
 			pikmin.transform.parent = transform;
 			pikmins.Add(pikmin);
 		}

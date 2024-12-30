@@ -16,7 +16,7 @@ public class GrabAgent : Agent
 	public float forceMultiplier = 500f;
 	
 	public bool arrived { get; private set; } = false;
-
+	public bool inGrabState = false;
 
 
 	// Start is called before the first frame update
@@ -29,7 +29,7 @@ public class GrabAgent : Agent
     protected override void OnEnable()
     {
 		base.OnEnable();
-        EpisodeManager.Instance.agents.Add(this);
+        //EpisodeManager.Instance.agents.Add(this);
     }
 
     public override void OnEpisodeBegin()
@@ -37,7 +37,7 @@ public class GrabAgent : Agent
 		arrived = false;
 		if (!rBody){rBody = GetComponent<Rigidbody>(); }
 
-		if (EpisodeManager.Instance.isTraining == false) { return; }
+		if (ThrowManager.Instance.isTraining == false) { return; }
 
 		// If the Agent fell off the platform, reset its position and momentum
 		if (this.transform.localPosition.y < 0)
@@ -70,9 +70,13 @@ public class GrabAgent : Agent
 	public override void OnActionReceived(ActionBuffers actionBuffers)
 	{
 		// Get the actions (force to apply along x and z)
+		
+	
+		
 		Vector3 controlSignal = Vector3.zero;
 		controlSignal.x = actionBuffers.ContinuousActions[0];
 		controlSignal.z = actionBuffers.ContinuousActions[1];
+		if (!inGrabState){return;}
 		if (arrived) { rBody.velocity = Vector3.zero; return; }
 
 		print("control signal" + controlSignal);
@@ -81,7 +85,7 @@ public class GrabAgent : Agent
 		Target.y = transform.position.y;
 
 		float distanceToTarget = Vector3.Distance(this.transform.position, Target);
-		if (distanceToTarget < 0.5f)
+		if (distanceToTarget < 0.2f)
 		{
 			closeness = 1;
 			
@@ -91,7 +95,7 @@ public class GrabAgent : Agent
 			//EndEpisode();
 
 		}
-		else if (distanceToTarget < 1f)
+		else if (distanceToTarget < 0.9f)
 		{
 			//arrived = true;
 			closeness = 2;
@@ -169,7 +173,7 @@ public class GrabAgent : Agent
 
     protected override void OnDisable()
     {
-        EpisodeManager.Instance.agents.Remove(this);
+        ThrowManager.Instance.agents.Remove(this);
 		base.OnDisable();
     }
 }
