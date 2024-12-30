@@ -126,8 +126,17 @@ public class PikminManager : MonoBehaviour
 	
 	public void ThrowAt(Vector3 position)
 	{
-		position.x += UnityEngine.Random.Range(-4f,4f);
-		position.z += UnityEngine.Random.Range(-4f, 4f);
+		float x_offset = UnityEngine.Random.Range(1.5f,3f);
+		float z_offset = UnityEngine.Random.Range(1.5f, 3f);
+		
+		int negative = UnityEngine.Random.Range(0,1);
+		int negative2 = UnityEngine.Random.Range(0,1);
+		
+		if(negative == 0){x_offset *= -1;}
+		if(negative2 == 0){z_offset*=-1;}
+		
+		position.x += x_offset; position.z += z_offset;
+		
 		pikminCursor.transform.position = position;
 		
 		pikminCursor.Throw();

@@ -1,0 +1,65 @@
+{
+    "Satan": {
+        "checkpoints": [
+            {
+                "steps": 111548,
+                "file_path": "results\\explode\\Satan\\Satan-111548.onnx",
+                "reward": 1916.6869876695716,
+                "creation_time": 1735568358.9884684,
+                "auxillary_file_paths": [
+                    "results\\explode\\Satan\\Satan-111548.pt"
+                ]
+            },
+            {
+                "steps": 499918,
+                "file_path": "results\\explode\\Satan\\Satan-499918.onnx",
+                "reward": 3971.8182893232865,
+                "creation_time": 1735570795.8996923,
+                "auxillary_file_paths": [
+                    "results\\explode\\Satan\\Satan-499918.pt"
+                ]
+            },
+            {
+                "steps": 499918,
+                "file_path": "results\\explode\\Satan\\Satan-499918.onnx",
+                "reward": null,
+                "creation_time": 1735572056.719306,
+                "auxillary_file_paths": [
+                    "results\\explode\\Satan\\Satan-499918.pt"
+                ]
+            },
+            {
+                "steps": 699737,
+                "file_path": "results\\explode\\Satan\\Satan-699737.onnx",
+                "reward": 5340.449993896485,
+                "creation_time": 1735573790.8217494,
+                "auxillary_file_paths": [
+                    "results\\explode\\Satan\\Satan-699737.pt"
+                ]
+            },
+            {
+                "steps": 892513,
+                "file_path": "results\\explode\\Satan\\Satan-892513.onnx",
+                "reward": null,
+                "creation_time": 1735575913.1279159,
+                "auxillary_file_paths": [
+                    "results\\explode\\Satan\\Satan-892513.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 892513,
+            "file_path": "results\\explode\\Satan.onnx",
+            "reward": null,
+            "creation_time": 1735575913.1279159,
+            "auxillary_file_paths": [
+                "results\\explode\\Satan\\Satan-892513.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.5.1+cpu"
+    }
+}

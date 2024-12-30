@@ -86,31 +86,45 @@ public class GrabAgent : Agent
 		Target.y = transform.position.y;
 
 		float distanceToTarget = Vector3.Distance(this.transform.position, Target);
-		if (distanceToTarget < 0.2f)
+		if (distanceToTarget < 2f)
 		{
 			closeness = 1;
 			
 			// Reward for reaching the target
-			AddReward(1000f);
+			AddReward(500f);
 			arrived = true;
 			//EndEpisode();
 
 		}
-		else if (distanceToTarget < 0.9f)
-		{
-			//arrived = true;
-			closeness = 2;
-			// Reward for reaching the target
-			AddReward(10f);
+		//else if (distanceToTarget < 0.9f)
+		//{
+		//	//arrived = true;
+		//	closeness = 2;
+		//	// Reward for reaching the target
+		//	AddReward(10f);
 
-		}
-		else if (distanceToTarget < 2f)
-		{
-			closeness = 3;
-            // Reward for reaching the target
-            AddReward(1f);
+		//}
+		//else if (distanceToTarget < 1.2f)
+		//{
+		//	closeness = 3;
+		//	// Reward for reaching the target
+		//	AddReward(7f);
 
-		}
+		//}
+		//else if (distanceToTarget < 1.4f)
+		//{
+		//	closeness = 3;
+		//	// Reward for reaching the target
+		//	AddReward(5f);
+
+		//}
+		//else if (distanceToTarget < 2f)
+		//{
+		//	closeness = 3;
+        //    // Reward for reaching the target
+        //    AddReward(1f);
+
+		//}
 		else if (distanceToTarget < 3f)
 		{
 			closeness = 4;
@@ -142,7 +156,7 @@ public class GrabAgent : Agent
 		
 		if ( closeness > prev_closeness)
 		{
-			AddReward(-50);
+			AddReward(-30);
 			
 		}
 		prev_closeness = closeness;

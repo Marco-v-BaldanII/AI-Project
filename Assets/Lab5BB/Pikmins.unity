@@ -2517,7 +2517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed8270de962ea046b58891df52928c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isTraining: 1
+  isTraining: 0
   pellet: {fileID: 1600949118}
   agents: []
   num_pikmin: 0
@@ -3797,6 +3797,10 @@ PrefabInstance:
       propertyPath: floor
       value: 
       objectReference: {fileID: 1679656432}
+    - target: {fileID: 9033323826639626387, guid: 705a0b9cb1649cd4997a14c1d5cd9210, type: 3}
+      propertyPath: numPikmin
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 9033323826639626387, guid: 705a0b9cb1649cd4997a14c1d5cd9210, type: 3}
       propertyPath: pikminCursor
       value: 

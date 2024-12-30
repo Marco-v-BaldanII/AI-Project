@@ -734,7 +734,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.011084957
+  m_Radius: 0.017
   m_Center: {x: 0, y: 0, z: -0.0032221123}
 --- !u!114 &8019359409549328915
 MonoBehaviour:
@@ -758,10 +758,10 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: ba551fd3f891c074abf6c9f18382e165, type: 3}
   m_InferenceDevice: 3
-  m_BehaviorType: 0
-  m_BehaviorName: Devil
+  m_BehaviorType: 2
+  m_BehaviorName: Puff
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1
