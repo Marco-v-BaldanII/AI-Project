@@ -118,23 +118,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PikminPrefs:
-  - {fileID: 2654472598560514855, guid: 5ae50051367d87645986417829c92f07, type: 3}
-  - {fileID: 1354089000411895258, guid: e6471f28e3bdb044999d2884c2f789de, type: 3}
-  - {fileID: 6651586078871778389, guid: 2d4d787f1166b4e42bb66f29866dd009, type: 3}
-  - {fileID: 3464381643593147506, guid: 09b4bede3ccce1c4eb5c15257c7a8f58, type: 3}
+  - {fileID: 2745608367097547283, guid: e4be7ca798b2865499ac1cd80f67abc9, type: 3}
   floor: {fileID: 0}
   followPositions:
   - {fileID: 785243197299628640}
   - {fileID: 3181091504724450080}
   - {fileID: 5472150655094041154}
   forwardObject: {fileID: 0}
-  numPikmin: 0
+  numPikmin: 10
   speedMultiplier: 0
   units: []
-  wSeparation: 1400
+  pikminCursor: {fileID: 0}
+  wSeparation: 134400
   wAlignment: 15
-  wCohesion: 12
-  wCaptain: 10
+  wCohesion: 24
+  wCaptain: 15
 --- !u!114 &9158503190900990255
 MonoBehaviour:
   m_ObjectHideFlags: 0

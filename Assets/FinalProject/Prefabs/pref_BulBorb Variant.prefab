@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -476,6 +476,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 717640839525852442, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 11365da7fddd9cd488ec71a1d9c1c12f, type: 2}
     - target: {fileID: 1416123817380647070, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
       propertyPath: m_TagString
       value: Enemy
@@ -484,6 +488,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2233074865721748047, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 11365da7fddd9cd488ec71a1d9c1c12f, type: 2}
     - target: {fileID: 2515807419778127190, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
       propertyPath: m_Name
       value: pref_BulBorb Variant
@@ -532,6 +540,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5346831129418047380, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 405f7e2834d6ac34eaa03de66afdc955, type: 2}
     - target: {fileID: 6393861650403971983, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
       propertyPath: m_Layer
       value: 2
