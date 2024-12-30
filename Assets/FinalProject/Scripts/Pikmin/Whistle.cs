@@ -26,7 +26,7 @@ public class Whistle : MonoBehaviour
     void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-	    if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
+	    if ( Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask))
         {
 
 		    

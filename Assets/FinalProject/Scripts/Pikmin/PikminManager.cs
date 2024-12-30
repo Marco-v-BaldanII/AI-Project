@@ -126,9 +126,9 @@ public class PikminManager : MonoBehaviour
 	
 	public void ThrowAt(Vector3 position)
 	{
-		position.x += UnityEngine.Random.Range(-0.5f,0.5f);
-		position.y += UnityEngine.Random.Range(-0.5f, 0.5f);
-        pikminCursor.transform.position = position;
+		position.x += UnityEngine.Random.Range(-4f,4f);
+		position.z += UnityEngine.Random.Range(-4f, 4f);
+		pikminCursor.transform.position = position;
 		
 		pikminCursor.Throw();
 		

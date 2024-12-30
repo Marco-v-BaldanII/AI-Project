@@ -4,6 +4,7 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
+using static Codice.Client.Common.EventTracking.TrackFeatureUseEvent.Features.DesktopGUI.Filters;
 
 public class GrabAgent : Agent
 {
@@ -40,12 +41,12 @@ public class GrabAgent : Agent
 		if (ThrowManager.Instance.isTraining == false) { return; }
 
 		// If the Agent fell off the platform, reset its position and momentum
-		if (this.transform.localPosition.y < 0)
-		{
-			this.rBody.angularVelocity = Vector3.zero;
-			this.rBody.velocity = Vector3.zero;
-			this.transform.localPosition = new Vector3(0, 0.5f, 0); // Reset position
-		}
+		//if (this.transform.localPosition.y < 0)
+		//{
+		//	this.rBody.angularVelocity = Vector3.zero;
+		//	this.rBody.velocity = Vector3.zero;
+		//	this.transform.localPosition = new Vector3(0, 0.5f, 0); // Reset position
+		//}
 
 
 		//Target.localPosition = new Vector3(Random.value * 8 - 4, 0.5f, Random.value * 8 - 4);
@@ -160,16 +161,23 @@ public class GrabAgent : Agent
 	{
 		var continuousActionsOut = actionsOut.ContinuousActions;
 		continuousActionsOut[0] = Input.GetAxis("Horizontal"); 
-		continuousActionsOut[1] = Input.GetAxis("Vertical"); 
-	}
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Pellet")
-		{
-            AddReward(-100);
-		}
+		continuousActionsOut[1] = Input.GetAxis("Vertical");
     }
+
+    //public void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.collider.tag == "Pellet")
+    //    {
+    //        AddReward(-100);
+    //    }
+    //}
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if(other.tag == "Pellet")
+	//	{
+    //        AddReward(-100);
+	//	}
+    //}
 
     protected override void OnDisable()
     {

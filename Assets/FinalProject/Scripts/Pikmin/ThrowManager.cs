@@ -22,7 +22,7 @@ public class ThrowManager : MonoBehaviour
 	
 	public int num_pikmin ;
 	
-	private const float EPISODE_LENGTH = 10f;
+	private const float EPISODE_LENGTH = 22f;
 	
 	float timer = 0f;
 
@@ -88,7 +88,7 @@ public class ThrowManager : MonoBehaviour
 		}
 		
 		// reset if captain and pellet are too close
-		while (Vector3.Distance( PikminManager.instance.transform.position, pellet.transform.position) > 2f)
+		while (Vector3.Distance( PikminManager.instance.transform.position, pellet.transform.position) < 2f)
 		{
 			Vector2 randomOffset2 = new Vector2(Random.Range(-7,7), Random.Range(-7,7));
 			pellet.transform.position =  new Vector3(-13 + randomOffset2.x, 0, -7.5f + randomOffset2.y);
