@@ -23,6 +23,7 @@ public class EpisodeManager : MonoBehaviour
 	private const float EPISODE_LENGTH = 22f;
 	
 	float timer = 0f;
+	float radius = 2f;
 
 		// Awake is called when the script instance is being loaded
 		private void Awake()
@@ -79,6 +80,8 @@ public class EpisodeManager : MonoBehaviour
 		//		agents.Add(agent);
 		//	}
 		//}
+		radius = Random.Range(1f, 4f);
+		
 		foreach (Pikmin pik in PikminManager.instance.units)
 		{
 			pik.transform.position = Vector3.zero;
@@ -92,13 +95,20 @@ public class EpisodeManager : MonoBehaviour
 		if (isTraining)
 		{
 			pellet.transform.position = new Vector3(Random.Range(-8f,8f), 0 , Random.Range(-8f,8f));
+			//pellet.transform.localScale = new Vector3(Random.Range(3f,7f), Random.Range(3f, 7f), Random.Range(3f,7f) ));
+			
+			float scale = Random.Range(3f,6f);
+			if(scale > 5.2f)
+			{
+				radius = 4f;
+			}
 		}
 		
 	}
 	
 	private void Update()
 	{
-		float radius = 2f;
+
 		
 		for(int i = 0; i < num_pikmin; ++i)
 		{
@@ -115,6 +125,10 @@ public class EpisodeManager : MonoBehaviour
 			// Set this Pikmin's target position 
 			GrabAgent agent = agents[i]; // position around the pellet
 			agent.Target = pellet.transform.position + targetPosition;
+
+			// Tells the pikmin how big the object is
+			Collider col = pellet.GetComponent<Collider>();
+			if (col != null) { agent.bounds = col.bounds.size; }
 			
 			Debug.DrawLine(new Vector3(agent.Target.x, 0, agent.Target.z), new Vector3(agent.Target.x, 10, agent.Target.z));
 		}

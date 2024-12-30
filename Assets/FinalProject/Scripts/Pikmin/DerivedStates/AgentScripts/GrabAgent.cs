@@ -4,12 +4,14 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
+using static Codice.Client.Common.EventTracking.TrackFeatureUseEvent.Features.DesktopGUI.Filters;
 
 public class GrabAgent : Agent
 {
 	Rigidbody rBody;
 
 	public Vector3 Target;
+	public Vector3 bounds;
 	int closeness = 7;
 	int prev_closeness = 7;
 
@@ -48,10 +50,10 @@ public class GrabAgent : Agent
 	public override void CollectObservations(VectorSensor sensor)
 	{
 
-		int ass = 5;
+
 		sensor.AddObservation(Target); // Target position
 		sensor.AddObservation(this.transform.localPosition); // Agent position
-
+		sensor.AddObservation(bounds);
 		sensor.AddObservation(rBody.velocity.x); // Velocity along x-axis
 		sensor.AddObservation(rBody.velocity.z); // Velocity along z-axis
 	}
@@ -77,8 +79,9 @@ public class GrabAgent : Agent
 			//EndEpisode();
 
 		}
-		else if (distanceToTarget < 1f)
+		else if (distanceToTarget < 0.8f)
 		{
+			arrived = true;
 			closeness = 2;
 			// Reward for reaching the target
 			AddReward(10f);
@@ -140,14 +143,21 @@ public class GrabAgent : Agent
 	{
 		var continuousActionsOut = actionsOut.ContinuousActions;
 		continuousActionsOut[0] = Input.GetAxis("Horizontal"); 
-		continuousActionsOut[1] = Input.GetAxis("Vertical"); 
-	}
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Pellet")
-		{
-            AddReward(-100);
-		}
+		continuousActionsOut[1] = Input.GetAxis("Vertical");
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Pellet")
+        {
+            AddReward(-100);
+        }
+    }
+  //  private void OnTriggerEnter(Collider other)
+  //  {
+  //      if(other.tag == "Pellet")
+		//{
+  //          AddReward(-100);
+		//}
+  //  }
 }
