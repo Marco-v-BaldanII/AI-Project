@@ -23,6 +23,8 @@ public class Pikmin : MonoBehaviour
 	
 	public GameObject targetObject;
 
+    public bool grabbing = false;
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();

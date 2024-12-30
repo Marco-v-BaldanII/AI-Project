@@ -17,10 +17,11 @@ public class CarryingState : IState
 
 	}
 
-	void Exit()
+	public override void Exit()
 	{
-
-	}
+        GrabAgent agent = myPikmin.GetComponent<GrabAgent>();
+        if (agent) agent.enabled = false;
+    }
 
 	void Process()
 	{

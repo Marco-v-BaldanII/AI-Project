@@ -56,6 +56,11 @@ public class  GrabbableObject : MonoBehaviour
 		{
 			is_moving = true;
 		}
+		
+		
+		pikmin.transform.DORotate( Quaternion.LookRotation(this.transform.position - pikmin.transform.position).eulerAngles, 0.3f );
+		
+		
 	}
 
     private void OnTriggerEnter(Collider other)

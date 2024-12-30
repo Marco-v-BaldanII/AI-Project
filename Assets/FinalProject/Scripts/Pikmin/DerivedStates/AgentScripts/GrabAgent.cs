@@ -77,11 +77,14 @@ public class GrabAgent : Agent
 
 		print("control signal" + controlSignal);
 		rBody.AddForce(controlSignal * forceMultiplier);
+		
+		Target.y = transform.position.y;
 
 		float distanceToTarget = Vector3.Distance(this.transform.position, Target);
-		if (distanceToTarget < 0.3f)
+		if (distanceToTarget < 0.5f)
 		{
 			closeness = 1;
+			
 			// Reward for reaching the target
 			AddReward(1000f);
 			arrived = true;
@@ -90,7 +93,7 @@ public class GrabAgent : Agent
 		}
 		else if (distanceToTarget < 1f)
 		{
-			arrived = true;
+			//arrived = true;
 			closeness = 2;
 			// Reward for reaching the target
 			AddReward(10f);

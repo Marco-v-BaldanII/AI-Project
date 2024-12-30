@@ -17,11 +17,15 @@ public class GrabState : IState{
 	{
 		myPikmin = pikmin;
 	}
-	
+
+    bool isCarrying = false;
     public override void Enter() 
     {
 	    agent = myPikmin.GetComponent<GrabAgent>();
 	    agent.enabled = true;
+
+
+		isCarrying = false;
 	    // from the pikmin assing to the state and the agent the target object
 	    //if ( myPikmin.targetObject != null) {
 	    //	targetObject = myPikmin.targetObject; 
@@ -55,10 +59,15 @@ public class GrabState : IState{
 
 		transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 50 * Time.deltaTime);
 
-		if ( Vector3.Distance(transform.position , targetObject.transform.position) < GRAB_DISTANCE)
+		//if ( Vector3.Distance(transform.position , targetObject.transform.position) < GRAB_DISTANCE)
+		//{
+		//	GrabObject();
+		//	//state_machine.ChangeState(state_machine.Hide);
+		//}
+
+		if (myPikmin.grabbing)
 		{
-			GrabObject();
-			//state_machine.ChangeState(state_machine.Hide);
+
 		}
 
 		Debug.Log(Vector3.Distance(transform.position, targetObject.transform.position));
@@ -70,7 +79,8 @@ public class GrabState : IState{
 		GrabbableObject grab_object  = myPikmin.targetObject.GetComponent<GrabbableObject>(); 
 		if ( grab_object != null)
 		{
-			CallTransition(State.CARRYING, this);
+            isCarrying = true;
+            CallTransition(State.CARRYING, this);
 			grab_object.AddPikmin(myPikmin);
 		}
 	}
@@ -85,8 +95,11 @@ public class GrabState : IState{
 
 	public override void Exit()
 	{
-		GrabAgent agent = myPikmin.GetComponent<GrabAgent>();
-		if (agent) agent.enabled = false;
+		if (!isCarrying)
+		{
+			GrabAgent agent = myPikmin.GetComponent<GrabAgent>();
+			if (agent) agent.enabled = false;
+		}
 	}
 	
 	public override void OnAreaStay(Collider collision)

@@ -81,7 +81,15 @@ public class EpisodeManager : MonoBehaviour
 	
 	private void Update()
 	{
-		float radius = 2f;
+		float multiplier = 0f;
+		if (pellet != null) {
+			Renderer col = pellet.GetComponentInChildren<Renderer>();
+			multiplier = col.bounds.size.x + col.bounds.size.z;
+			multiplier *= 0.25f;
+		}
+		
+	
+		float radius = 1f * multiplier ;
 		
 		for(int i = 0; i < agents.Count; ++i)
 		{
