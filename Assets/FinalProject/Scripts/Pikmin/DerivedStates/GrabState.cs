@@ -76,12 +76,15 @@ public class GrabState : IState{
 	
 	private void GrabObject()
 	{
+		if (myPikmin.targetObject){
+		
 		GrabbableObject grab_object  = myPikmin.targetObject.GetComponent<GrabbableObject>(); 
 		if ( grab_object != null)
 		{
             isCarrying = true;
             CallTransition(State.CARRYING, this);
 			grab_object.AddPikmin(myPikmin);
+		}
 		}
 	}
 
