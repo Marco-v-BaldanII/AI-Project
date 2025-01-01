@@ -53,12 +53,14 @@ public class IdleState : IState
 		{
 			myPikmin.targetObject = collision.gameObject;
 			
-			//GrabAgent agent = myPikmin.GetComponent<GrabAgent>();
+			GrabAgent agent = myPikmin.GetComponent<GrabAgent>();
 			//agent.Target = collision.gameObject.transform.position;
 			
-			EpisodeManager.Instance.pellet = collision.gameObject;
+			
+			//ThrowManager.Instance.pellet = collision.gameObject;
 			
 			CallTransition(State.GRAB, this);
+			ThrowManager.Instance.AddPikmin(collision.gameObject, agent);
 		}
 		else if (collision.tag == "Enemy")
 		{

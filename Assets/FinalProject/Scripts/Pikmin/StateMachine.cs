@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,6 +22,8 @@ public class StateMachine : MonoBehaviour
 	bool initialized = false;
 	
 	[SerializeField] public float debugSpeed = 0;
+	
+	public event Action<Pikmin, State> OnTransition;
 
     // Start is called before the first frame update
     public void Start()
@@ -86,7 +89,7 @@ public class StateMachine : MonoBehaviour
 	public void OnChildTransitionEvent(State new_state_type )
 	{
 		if (states == null) { Start(); }
-
+		OnTransition?.Invoke(pikmin, new_state_type);
 		currentState?.Exit();
 		states[new_state_type]?.Enter();
 		checkState = new_state_type;
@@ -100,7 +103,8 @@ public class StateMachine : MonoBehaviour
 		if (currentState != prev_state) {return;}
 
 		prev_state.Exit();
-		states[new_state_type]?.Enter();
+        OnTransition?.Invoke(pikmin, new_state_type);
+        states[new_state_type]?.Enter();
 		checkState = new_state_type;
 		currentState = states[new_state_type];
 		

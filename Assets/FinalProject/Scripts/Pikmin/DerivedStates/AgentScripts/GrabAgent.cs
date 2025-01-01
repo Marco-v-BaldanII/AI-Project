@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 using Unity.MLAgents;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgents.Actuators;
@@ -19,6 +20,7 @@ public class GrabAgent : Agent
 	public bool arrived { get; private set; } = false;
 	public bool inGrabState = false;
 
+	float time = 2f;
 
 	// Start is called before the first frame update
 	void Start()
@@ -167,6 +169,15 @@ public class GrabAgent : Agent
 		if (arrived)
 		{
 			rBody.velocity = Vector3.zero;
+		}
+		if (inGrabState)
+		{
+			time -= Time.deltaTime;
+			if (time <= 0)
+			{
+				time = 3;
+				transform.DOMove(Target, 0.9f);
+			}
 		}
 	}
 	
