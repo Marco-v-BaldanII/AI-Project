@@ -25,7 +25,8 @@ public class CarryingState : IState
 
 	void Process()
 	{
-
+		Quaternion targetRotation = Quaternion.LookRotation(myPikmin.rigid.velocity.normalized, Vector3.up);
+		myPikmin.transform.rotation = Quaternion.Slerp(myPikmin.transform.rotation, targetRotation, Time.deltaTime * 10f);
 	}
 
 	void PhysicsProcess()

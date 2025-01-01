@@ -40,6 +40,7 @@ public class Pikmin : MonoBehaviour
 
     private void Update()
     {
+
         //((rigid.velocity = Vector3.right * 20;
     }
 

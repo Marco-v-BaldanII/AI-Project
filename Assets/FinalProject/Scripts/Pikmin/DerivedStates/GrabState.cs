@@ -26,6 +26,7 @@ public class GrabState : IState{
 		agent.inGrabState = true;
 	    ThrowManager.Instance.agents.Add(agent);
 		isCarrying = false;
+		agent.done = false;
 	    // from the pikmin assing to the state and the agent the target object
 	    //if ( myPikmin.targetObject != null) {
 	    //	targetObject = myPikmin.targetObject; 

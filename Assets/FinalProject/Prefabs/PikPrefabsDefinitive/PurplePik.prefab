@@ -630,6 +630,7 @@ MonoBehaviour:
   Target: {x: 0, y: 0, z: 0}
   forceMultiplier: 40
   inGrabState: 0
+  done: 0
 --- !u!114 &1975260969212942261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,8 +735,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.017
-  m_Center: {x: 0, y: 0, z: -0.0032221123}
+  m_Radius: 0.01
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8019359409549328915
 MonoBehaviour:
   m_ObjectHideFlags: 0

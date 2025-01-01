@@ -70,6 +70,8 @@ public class GrabAgent : Agent
 
 	}
 
+	public bool done = false;
+
 	public override void OnActionReceived(ActionBuffers actionBuffers)
 	{
 		// Get the actions (force to apply along x and z)
@@ -88,13 +90,18 @@ public class GrabAgent : Agent
 		Target.y = transform.position.y;
 
 		float distanceToTarget = Vector3.Distance(this.transform.position, Target);
-		if (distanceToTarget < 2f)
+		if (distanceToTarget < 2f && ! done)
 		{
+			done = true;
 			closeness = 1;
-			
-			// Reward for reaching the target
-			AddReward(500f);
-			arrived = true;
+            transform.DOMove(Target, 0.9f).OnComplete(() =>
+            {
+                AddReward(500f);
+                arrived = true;
+            });
+            // Reward for reaching the target
+   //         AddReward(500f);
+			//arrived = true;
 			//EndEpisode();
 
 		}
@@ -170,7 +177,7 @@ public class GrabAgent : Agent
 		{
 			rBody.velocity = Vector3.zero;
 		}
-		if (inGrabState)
+		else if (inGrabState)
 		{
 			time -= Time.deltaTime;
 			if (time <= 0)

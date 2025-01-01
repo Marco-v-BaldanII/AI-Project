@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿using log4net.Util;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ThrownState : IState{
 	public Pikmin myPikmin;
-	
+
 	private const float ANGLE = 45;
 
 	public ThrownState(Pikmin pikmin)
@@ -28,19 +29,19 @@ public class ThrownState : IState{
 
 	public override void Process()
 	{
-
-	}
-
-	public override void PhysicsProcess()
-	{
-		//if(myPikmin.rigid.velocity.y == 0) /* I've landed */
-		//{
-		//	CallTransition(State.IDLE, this);
-		//}
+        Quaternion targetRotation = Quaternion.LookRotation(myPikmin.rigid.velocity.normalized, Vector3.up);
+        myPikmin.transform.rotation = Quaternion.Slerp(myPikmin.transform.rotation, targetRotation, Time.deltaTime * 10f);
+    }
+    public override void PhysicsProcess()
+    {
+        //if(myPikmin.rigid.velocity.y == 0) /* I've landed */
+        //{
+        //	CallTransition(State.IDLE, this);
+        //}
 	}
 	
-	public Transform target; // Assign the target position in the Unity Inspector
-	public Transform launchPoint; // Point from where the projectile is launched
+	public UnityEngine.Transform target; // Assign the target position in the Unity Inspector
+	public UnityEngine.Transform launchPoint; // Point from where the projectile is launched
 	public Rigidbody projectile; // Rigidbody of the projectile
 	float gravity = Mathf.Abs(Physics.gravity.y) ; // Gravity value (default Earth gravity)
 

@@ -14,6 +14,8 @@ public class  GrabbableObject : MonoBehaviour
 	public Transform goal;
 	
 	private bool is_moving = false;
+	
+	public float GrabRadius = 3f;
 
 	HashSet<Pikmin> pikmins;
 	
@@ -60,10 +62,14 @@ public class  GrabbableObject : MonoBehaviour
 		
 		pikmin.transform.DORotate( Quaternion.LookRotation(this.transform.position - pikmin.transform.position).eulerAngles, 0.3f );
 		
-		if(Vector3.Distance(pikmin.transform.position, this.transform.position) > 3f)
+		if(Vector3.Distance(pikmin.transform.position, this.transform.position) > GrabRadius)
 		{
-			Vector3 new_pos = pikmin.transform.position + (this.transform.position - pikmin.transform.position).normalized * 2;
-			pikmin.transform.DOMove(new_pos, 0.4f);
+			//while (Vector3.Distance(pikmin.transform.position, this.transform.position) > GrabRadius)
+			//{
+			//	pikmin.transform.position += (this.transform.position - pikmin.transform.position).normalized;
+
+   //         }
+
 		}
 	}
 
