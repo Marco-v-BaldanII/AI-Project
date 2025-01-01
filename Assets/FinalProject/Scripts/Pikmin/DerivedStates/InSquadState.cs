@@ -41,6 +41,7 @@ public class InSquadState : IState
     {
 	    rigid = myPikmin.rigid;
 	    animator = myPikmin.animator;
+        PikminManager.instance.pikminInSquad++;
 
 	    //PikminManager.instance.units.Add(this);
 
@@ -155,7 +156,7 @@ public class InSquadState : IState
         return 1;
     }
     
-	public override void Exit(){}
+	public override void Exit() { PikminManager.instance.pikminInSquad--; }
 
     public override void Process(){}
 

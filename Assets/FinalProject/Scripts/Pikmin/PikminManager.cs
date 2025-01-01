@@ -30,6 +30,8 @@ public class PikminManager : MonoBehaviour
 
     private Animator animator;
 
+	public int pikminInSquad = 0;
+
     // Start is called before the first frame update
     void Start()
     {

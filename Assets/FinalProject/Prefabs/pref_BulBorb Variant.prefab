@@ -680,11 +680,6 @@ Rigidbody:
   m_CorrespondingSourceObject: {fileID: 6575380530724807660, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
   m_PrefabInstance: {fileID: 6751892038747981023}
   m_PrefabAsset: {fileID: 0}
---- !u!20 &4010755014762539795 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 7645593084106190796, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
-  m_PrefabInstance: {fileID: 6751892038747981023}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4615183908802168104 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2143686318467318263, guid: f27eab8fdb45cb043aaaab86d487dfb0, type: 3}
@@ -790,7 +785,6 @@ MonoBehaviour:
   maxHP: 13
   timeToDestroy: 0
   components_to_disable:
-  - {fileID: 4010755014762539795}
   - {fileID: 3942555148132224941}
   - {fileID: 4778329805737753172}
   destroyObject: 0
@@ -941,6 +935,7 @@ MonoBehaviour:
   - {fileID: 6848393286756124071}
   moveSpeed: 4
   averageWaitTime: 2
+  closenessThreshold: 2.1
   ghost: {fileID: 362545552036910928}
   nav_mesh_agent: {fileID: 472654911526367903}
   controlPointStrenght: 0.1

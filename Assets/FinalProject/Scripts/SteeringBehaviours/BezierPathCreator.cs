@@ -51,8 +51,8 @@ public class BezierPathCreator
 
 		while (t != 1){
 
-			Debug.DrawLine(startPoint, control_point, Color.green);
-			Debug.DrawLine(control_point, endPoint, Color.green);
+			//Debug.DrawLine(startPoint, control_point, Color.green);
+			//Debug.DrawLine(control_point, endPoint, Color.green);
 
 			var l1 = Vector3.Lerp(startPoint, control_point, t);
 			var l2 = Vector3.Lerp(control_point, endPoint, t);
@@ -64,7 +64,7 @@ public class BezierPathCreator
 			{
 			 	if (index > 1)
 			 	{
-			 		Debug.DrawLine(points[index - 1], points[index], Color.cyan);
+			 		//Debug.DrawLine(points[index - 1], points[index], Color.cyan);
 			 	}
 			}
 
