@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHurtPart : MonoBehaviour
 {
-	public Bulborb enemy;
+	public DefeatableEntity enemy;
 	
 	public void OnTriggerEnter(Collider other)
 	{

@@ -13,10 +13,17 @@ public class BezierPathCreator
 	private Vector3 control_point;
 
 	private float t = 0.05f;
+	private float closeThreshold = 2f;
 
 	private Vector3 bezier;
 	List<Vector3> points;
 	
+
+	public BezierPathCreator(float closenessThreshold)
+	{
+		this.closeThreshold = closenessThreshold;
+	}
+
 	CancellationTokenSource tokenSource;
 
 	bool init = false;
@@ -44,8 +51,8 @@ public class BezierPathCreator
 
 		while (t != 1){
 
-			//Debug.DrawLine(startPoint, control_point, Color.green);
-			//Debug.DrawLine(control_point, endPoint, Color.green);
+			Debug.DrawLine(startPoint, control_point, Color.green);
+			Debug.DrawLine(control_point, endPoint, Color.green);
 
 			var l1 = Vector3.Lerp(startPoint, control_point, t);
 			var l2 = Vector3.Lerp(control_point, endPoint, t);
@@ -57,7 +64,7 @@ public class BezierPathCreator
 			{
 			 	if (index > 1)
 			 	{
-			 		//Debug.DrawLine(points[index - 1], points[index], Color.cyan);
+			 		Debug.DrawLine(points[index - 1], points[index], Color.cyan);
 			 	}
 			}
 
@@ -91,8 +98,9 @@ public class BezierPathCreator
 
 			Debug.Log("finding new_point");
 		}
+		var dist = Vector3.Distance(body.position, points[index]);
 
-		if ( Vector3.Distance( body.position, points[index]) < 2) /* When close to the point, target the next */
+        if ( Vector3.Distance( body.position, points[index]) < closeThreshold) /* When close to the point, target the next */
 		{
 			index++;
 			index = Mathf.Clamp(index, 0, points.Count - 1);

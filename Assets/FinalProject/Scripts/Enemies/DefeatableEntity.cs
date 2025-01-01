@@ -3,20 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Bulborb : MonoBehaviour
+public class DefeatableEntity : MonoBehaviour
 {
 	
 	public Image img;
 	private  float hp;
 	public float maxHP;
-	private Animator animator;
+	public float timeToDestroy;
+	private Animator animator = null;
 	public Component[] components_to_disable;
 	private GrabbableObject grab_object;
+
+	public bool destroyObject = false;
 	
 	private void Awake()
 	{
 		hp = maxHP;
 		grab_object = GetComponent<GrabbableObject>();
+		if (!grab_object) { grab_object = GetComponentInChildren<GrabbableObject>(); }
 		animator = GetComponent<Animator>();
 	}
 
@@ -25,7 +29,7 @@ public class Bulborb : MonoBehaviour
         if (other.tag == "PikminAttack")
         {
 	        hp--;
-	        animator.SetFloat("hp", hp);
+	        if (animator) animator?.SetFloat("hp", hp);
 	        print("Enemy hurt, hp is now " + hp);
 	        
 	        img.fillAmount = (1f / maxHP) * hp;
@@ -47,9 +51,10 @@ public class Bulborb : MonoBehaviour
 		        }
 		        
 		        // Change tag so can be grabbed
-		        this.gameObject.tag = "Pellet";
-		        
-		        Destroy(this);
+		        grab_object.gameObject.tag = "Pellet";
+
+				if (!destroyObject) { Destroy(this, timeToDestroy); }
+				else { Destroy(this.gameObject, timeToDestroy); }
 	        }
             
         }

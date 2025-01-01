@@ -13,6 +13,8 @@ public class MBT_Pursuit : Leaf
 	public float slowDownRadius;
 	
 	public Vector3 targetPos;
+
+	public string targetVarName = "target";
 	
 	private Blackboard board;
 	
@@ -26,11 +28,12 @@ public class MBT_Pursuit : Leaf
 	public override NodeResult Execute()
 	{
     	
-		if (board.GetVariable<TransformVariable>("target").Value != null){
-				targetPos = board.GetVariable<TransformVariable>("target").Value.position;
+		if (board.GetVariable<TransformVariable>(targetVarName).Value != null){
+				targetPos = board.GetVariable<TransformVariable>(targetVarName).Value.position;
 	    	
 		    Vector3 direction = (targetPos - ghostRb.transform.position).normalized;
 			
+			//Add somethinf to retrieve the radius from the target
 		
 	
 		    ghostRb.velocity = new Vector3(direction.x, Mathf.Clamp(ghostRb.velocity.y, -2.0f, 0.01f), direction.z) * 5;

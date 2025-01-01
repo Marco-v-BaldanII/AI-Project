@@ -48,7 +48,11 @@ public class MBT_BulborbAttack : Leaf
 			
 			return NodeResult.success;
 		}
-    	
-	    return NodeResult.running;
+        if (! stateInfo.IsName(attck_trigger))
+		{
+			animator.SetTrigger(attck_trigger);	
+		}
+
+        return NodeResult.running;
     }
 }

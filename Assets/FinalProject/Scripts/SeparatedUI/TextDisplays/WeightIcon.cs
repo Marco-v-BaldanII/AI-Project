@@ -21,6 +21,6 @@ public class WeightIcon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		text.text = grab_object.num_pikmin.ToString() + "\n" + "_\n\n\n" + grab_object.weight.ToString();
+		if (text )text.text = grab_object.num_pikmin.ToString() + "\n" + "_\n\n\n" + grab_object.weight.ToString();
     }
 }

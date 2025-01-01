@@ -12,6 +12,7 @@ public class PatrollingAI : MonoBehaviour
 	private float max_speed ;
 	public float moveSpeed;
 	public float averageWaitTime = 1f;
+	public float closenessThreshold = 2.1f;
 	private int currentWaypointIndex;
 	public  GameObject ghost;
 	const int MAX_WIDTH = 28;
@@ -28,7 +29,7 @@ public class PatrollingAI : MonoBehaviour
 	{
 		max_speed = moveSpeed;
 		num_generator = new UniqueNumberGenerator();
-		bezier = new BezierPathCreator();
+		bezier = new BezierPathCreator(closenessThreshold);
 
 		// Pick random waypoint
 		new_destination();

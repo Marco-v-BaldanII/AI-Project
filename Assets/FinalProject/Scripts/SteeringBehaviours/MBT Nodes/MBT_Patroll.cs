@@ -17,6 +17,7 @@ public class MBT_Patroll : Leaf
 	public float moveSpeed;
 	public float averageWaitTime = 1f;
 	private int currentWaypointIndex;
+	public float closenessThreshold = 2.1f;
 	public  GameObject ghost;
 	const int MAX_WIDTH = 28;
 	public NavMeshAgent nav_mesh_agent;
@@ -32,7 +33,7 @@ public class MBT_Patroll : Leaf
     {
         max_speed = moveSpeed;
         num_generator = new UniqueNumberGenerator();
-        bezier = new BezierPathCreator();
+        bezier = new BezierPathCreator(closenessThreshold);
 
         // Pick random waypoint
         new_destination();
@@ -83,7 +84,8 @@ public class MBT_Patroll : Leaf
 
 	private void Arrive()
 	{
-		if (Vector3.Distance(transform.position, waypoints[currentWaypointIndex].position) < WAY_POINT_STOP_DISTANCE) /* I'm close , so decelerate */
+		Vector3 position = new Vector3(transform.position.x, 0, transform.position.z); Vector3 wP = new Vector3(waypoints[currentWaypointIndex].position.x, 0, waypoints[currentWaypointIndex].position.z);
+		if (Vector3.Distance(position, wP) < WAY_POINT_STOP_DISTANCE) /* I'm close , so decelerate */
 		{
 			if (far_away)
 			{

@@ -47,6 +47,10 @@ public class CombatState : IState
 		{
 			CallTransition(State.IN_SQUAD, this);
 		}
+		if(collision.tag == "Pellet")
+		{
+			CallTransition(State.IDLE, this);
+		}
 	}
 	
 
