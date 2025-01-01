@@ -651,7 +651,7 @@ MonoBehaviour:
   speed: 200
   rigid: {fileID: 5437531240356500791}
   animator: {fileID: 0}
-  myColor: 0
+  myColor: 1
   followPos: {fileID: 0}
   debugSpeed: 0
   targetObject: {fileID: 0}
@@ -969,6 +969,10 @@ PrefabInstance:
     - target: {fileID: 1260135485619546714, guid: fb5916ec2aad1b143ac23dd470644cc0, type: 3}
       propertyPath: m_Name
       value: Pik0400_00_Lod0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2428468829244507762, guid: fb5916ec2aad1b143ac23dd470644cc0, type: 3}
+      propertyPath: m_TagString
+      value: PikminAttack
       objectReference: {fileID: 0}
     - target: {fileID: 6270416821558816495, guid: fb5916ec2aad1b143ac23dd470644cc0, type: 3}
       propertyPath: m_LocalScale.x

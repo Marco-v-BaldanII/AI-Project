@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pik0400_00_Lod0
       objectReference: {fileID: 0}
+    - target: {fileID: 5532998940722114797, guid: e6471f28e3bdb044999d2884c2f789de, type: 3}
+      propertyPath: m_TagString
+      value: PikminAttack
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4472183469295142149, guid: e6471f28e3bdb044999d2884c2f789de, type: 3}
     - {fileID: 5902648412213310958, guid: e6471f28e3bdb044999d2884c2f789de, type: 3}
@@ -766,7 +770,7 @@ MonoBehaviour:
   speed: 200
   rigid: {fileID: 2965841929710987927}
   animator: {fileID: 0}
-  myColor: 0
+  myColor: 4
   followPos: {fileID: 0}
   debugSpeed: 0
   targetObject: {fileID: 0}

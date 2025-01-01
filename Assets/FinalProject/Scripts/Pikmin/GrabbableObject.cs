@@ -23,6 +23,8 @@ public class  GrabbableObject : MonoBehaviour
     void Start()
     {
 	    pikmins = new	HashSet<Pikmin>();
+
+		if (goal == null) { goal = GameObject.Find("Onion").transform; }
     }
 
     // Update is called once per frame

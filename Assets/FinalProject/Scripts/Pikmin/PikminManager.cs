@@ -31,6 +31,11 @@ public class PikminManager : MonoBehaviour
     private Animator animator;
 
 	public int pikminInSquad = 0;
+	
+	
+	private TypeAmount yellowAmount = new TypeAmount();
+	private TypeAmount purpleAmount = new TypeAmount();
+    private TypeAmount whiteAmount = new TypeAmount();
 
     // Start is called before the first frame update
     void Start()
@@ -106,6 +111,21 @@ public class PikminManager : MonoBehaviour
 				.GetComponent<Pikmin>() );
 		        
 			Debug.Log("pikmin spawned");
+			
+			switch (units[i].myColor)
+			{
+			case PikColor.PURPLE:
+			
+					units[i].brothersAmount = purpleAmount;
+				break;
+			case PikColor.YELLOW:
+                    units[i].brothersAmount = yellowAmount;
+                    break;
+			case PikColor.WHITE:
+                    units[i].brothersAmount = whiteAmount;
+                    break;
+			}
+			
 		}
 	}
 	
@@ -143,6 +163,21 @@ public class PikminManager : MonoBehaviour
 		
 		pikminCursor.Throw();
 		
+	}
+	
+	public TypeAmount GetTypeAmount(PikColor color)
+	{
+		switch (color)
+		{
+		case PikColor.PURPLE:
+			return purpleAmount;
+		case PikColor.WHITE:
+			return whiteAmount;
+		case PikColor.YELLOW:
+			return yellowAmount;
+		}
+		
+		return null;
 	}
 
 

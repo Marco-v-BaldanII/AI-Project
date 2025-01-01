@@ -18,4 +18,19 @@ public class PelletPosy : MonoBehaviour
 
 
     }
+
+    private void Start()
+    {
+        scaleUp();
+    }
+
+    public void scaleUp()
+    {
+        transform.DOScaleY(1.08f, 1.4f).OnComplete(scaleDown);
+    }
+
+    public void scaleDown()
+    {
+        transform.DOScaleY(0.92f, 1.4f).OnComplete(scaleUp);
+    }
 }

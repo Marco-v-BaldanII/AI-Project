@@ -646,7 +646,7 @@ MonoBehaviour:
   speed: 200
   rigid: {fileID: 3846012446336086736}
   animator: {fileID: 0}
-  myColor: 0
+  myColor: 3
   followPos: {fileID: 0}
   debugSpeed: 0
   targetObject: {fileID: 0}

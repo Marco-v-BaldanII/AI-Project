@@ -16,16 +16,7 @@ public class InSquadState : IState
 
     private Rigidbody rigid;
     private Animator animator;
-    public enum PikColor
-    {
-        RED,
-        YELLOW,
-        BLUE,
-        PURPLE,
-        WHITE,
-        PINK,
-        ROCK
-    }
+
 
     public PikColor myColor;
 
@@ -42,6 +33,13 @@ public class InSquadState : IState
 	    rigid = myPikmin.rigid;
 	    animator = myPikmin.animator;
         PikminManager.instance.pikminInSquad++;
+        myColor = myPikmin.myColor;
+        if (myPikmin.brothersAmount == null)
+        {
+            myPikmin.brothersAmount = PikminManager.instance.GetTypeAmount(myPikmin.myColor);
+        }
+
+        myPikmin.brothersAmount++;
 
 	    //PikminManager.instance.units.Add(this);
 
@@ -156,7 +154,7 @@ public class InSquadState : IState
         return 1;
     }
     
-	public override void Exit() { PikminManager.instance.pikminInSquad--; }
+	public override void Exit() { PikminManager.instance.pikminInSquad--; myPikmin.brothersAmount--; }
 
     public override void Process(){}
 

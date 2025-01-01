@@ -22,6 +22,8 @@ public class Pikmin : MonoBehaviour
 	[Header("Grabing State fields")]
 	
 	public GameObject targetObject;
+	
+	public TypeAmount brothersAmount; // the amount of other pikmin from my same type
 
     public bool grabbing = false;
 
@@ -77,3 +79,29 @@ public enum PikColor
 	    PINK,
 	    ROCK
     }
+
+
+public class TypeAmount
+{
+	public TypeAmount(){amount = 0;}
+	
+	public int amount = 0;
+    
+	public static TypeAmount operator ++(TypeAmount obj)
+	{
+		obj.amount++;
+		return obj;
+	}
+
+	public static TypeAmount operator --(TypeAmount obj)
+	{
+		obj.amount--;
+		return obj;
+	}
+
+
+	public override string ToString()
+	{
+		return amount.ToString();
+	}
+}

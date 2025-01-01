@@ -1,4 +1,4 @@
-using DG.Tweening;
+﻿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,7 +30,7 @@ public class PikminSelectHUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+	    if (Input.GetMouseButtonDown(2))
         {
             index++;
 
@@ -42,10 +42,14 @@ public class PikminSelectHUD : MonoBehaviour
 
                 if (pik.index % pikIcons.Count == 1)
                 {
+                	pik.showText = true;
+                	pik.label.enabled = true;
                     pik.transform.DOScale(beegSize, 0.4f);
                 }
                 else
                 {
+                	pik.label.enabled = false;
+                	pik.showText = false;
                     pik.transform.DOScale(smolSize, 0.4f);
                 }
             }
