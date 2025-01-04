@@ -5095,7 +5095,8 @@ PrefabInstance:
       propertyPath: PikminPrefs.Array.data[2]
       value: 
       objectReference: {fileID: 3975860508305817477, guid: 9c145f5dc7ac8054bb30032b1bcf767e, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2363014666243575049, guid: 705a0b9cb1649cd4997a14c1d5cd9210, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

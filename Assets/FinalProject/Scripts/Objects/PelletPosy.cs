@@ -7,7 +7,11 @@ public class PelletPosy : MonoBehaviour
 {
     public GameObject pellet;
     public GameObject pelletCanvas;
-    private void OnDisable()
+
+    DefeatableEntity flower;
+ 
+
+    private void PopPosy()
     {
         pellet.transform.parent = this.transform.parent;
         pellet.AddComponent<Rigidbody>();
@@ -15,12 +19,20 @@ public class PelletPosy : MonoBehaviour
 
         this.gameObject.transform.DOScale(new Vector3(.01f, .01f, .01f), 0.8f);
 
+    }
 
-
+    private void OnDestroy()
+    {
+        // unsubscribe
+        if (flower) { flower.OnDefeated -= PopPosy; }
     }
 
     private void Start()
     {
+
+        flower = GetComponent<DefeatableEntity>();
+        if (flower) { flower.OnDefeated += PopPosy; }
+
         scaleUp();
     }
 

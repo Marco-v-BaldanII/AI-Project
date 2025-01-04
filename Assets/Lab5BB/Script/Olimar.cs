@@ -51,7 +51,7 @@ public class Olimar : MonoBehaviour
         if (input != Vector2.zero)
         {
             pik_manager.speedMultiplier = 1;
-            animator.SetBool("walking", true);
+            //animator.SetBool("walking", true);
 
             Quaternion targetRotation = Quaternion.LookRotation(direction * speed, Vector3.up);
 
@@ -61,7 +61,7 @@ public class Olimar : MonoBehaviour
         else
         {
             pik_manager.speedMultiplier = 0.5f;
-            animator.SetBool("walking", false);
+            //animator.SetBool("walking", false);
         }
     }
 }

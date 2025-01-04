@@ -40,7 +40,6 @@ public class MBT_Patroll : Leaf
     }
     public override void  OnEnter()
 	{
-		print("enter");
 
 		// Assign random starting position withtin the bounds of the map
 		//transform.position = new Vector3  (Random.RandomRange(-MAX_WIDTH, MAX_WIDTH) , transform.position.y , Random.RandomRange(-MAX_WIDTH, MAX_WIDTH) );

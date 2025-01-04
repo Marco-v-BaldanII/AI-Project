@@ -110,7 +110,7 @@ public class InSquadState : IState
 
 		myPikmin.rigid.velocity = new Vector3( vFlocking.x,  myPikmin.rigid.velocity.y, vFlocking.z);
 
-		myPikmin.animator.SetFloat("velocity", Mathf.Abs(myPikmin.rigid.velocity.x) + Mathf.Abs(myPikmin.rigid.velocity.z) / 2.0f);
+		//myPikmin.animator.SetFloat("velocity", Mathf.Abs(myPikmin.rigid.velocity.x) + Mathf.Abs(myPikmin.rigid.velocity.z) / 2.0f);
 
         Debug.DrawLine(transform.position, myPikmin.followPos.transform.position , Color.blue);
         //Debug.DrawLine(transform.position, transform.TransformPoint( vSeparation ), Color.red);

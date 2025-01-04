@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,8 @@ public class DefeatableEntity : MonoBehaviour
 	private GrabbableObject grab_object;
 
 	public bool destroyObject = false;
+
+	public event Action OnDefeated;
 	
 	private void Awake()
 	{
@@ -36,6 +39,7 @@ public class DefeatableEntity : MonoBehaviour
 	        
 	        if (hp <= 0)
 	        {
+				OnDefeated?.Invoke();
 		        grab_object.enabled = true;
 		        
 		        foreach (Component component in components_to_disable)
