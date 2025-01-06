@@ -56,6 +56,9 @@ public class  GrabbableObject : MonoBehaviour
 		}
 		num_pikmin++;
 		
+		StateMachine machine = pikmin.GetComponent<StateMachine>();
+		machine.OnTransition += RemovePikmin;
+		
 		if(num_pikmin >= weight)
 		{
 			is_moving = true;
@@ -72,6 +75,24 @@ public class  GrabbableObject : MonoBehaviour
 
    //         }
 
+		}
+	}
+	
+	void RemovePikmin(Pikmin pik, State newState)
+	{
+		if (newState == State.IN_SQUAD)
+		{
+			num_pikmin--;
+			if(pikmins.Contains(pik))
+			{
+				pikmins.Remove(pik);
+			}
+			if(num_pikmin >= weight)
+			{
+				is_moving = true;
+			}
+			else{is_moving = false;}
+		
 		}
 	}
 

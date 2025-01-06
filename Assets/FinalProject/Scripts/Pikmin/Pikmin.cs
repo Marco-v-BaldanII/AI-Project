@@ -64,6 +64,7 @@ public class Pikmin : MonoBehaviour
         {
             PikminManager.instance.units.Remove(this);
 
+
         }
     }
 

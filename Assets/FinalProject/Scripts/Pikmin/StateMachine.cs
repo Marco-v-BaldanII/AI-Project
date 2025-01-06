@@ -7,7 +7,6 @@ public class StateMachine : MonoBehaviour
 {
 
     [SerializeField] State[] stateTypes;
-
 	
 	private Dictionary<State, IState> states;
 	
@@ -150,5 +149,13 @@ public class StateMachine : MonoBehaviour
 		
 		return State.IDLE;
 	}
+
+    private void OnDestroy()
+    {
+        if (GetCurrentState() == State.IN_SQUAD)
+		{
+			pikmin.brothersAmount--;
+		}
+    }
 
 }

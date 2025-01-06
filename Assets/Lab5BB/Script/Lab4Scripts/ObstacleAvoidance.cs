@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using MBT;
 
+
 public class ObstacleAvoidance : MonoBehaviour
 {
 
@@ -40,8 +41,9 @@ public class ObstacleAvoidance : MonoBehaviour
 
 
             float forwardProjection = Vector3.Dot(transform.forward, distance);
-
-            rigid.velocity += (-transform.right * forwardProjection) * avoidanceWeight;
+          
+                rigid.velocity += (-transform.right * forwardProjection) * avoidanceWeight;
+            rigid.velocity = Vector3.ClampMagnitude(rigid.velocity, 5);
             time = 0.5f;
         }
 
