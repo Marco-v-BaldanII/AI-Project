@@ -35,7 +35,10 @@ public class PikminManager : MonoBehaviour
 	
 	private TypeAmount yellowAmount = new TypeAmount();
 	private TypeAmount purpleAmount = new TypeAmount();
-    private TypeAmount whiteAmount = new TypeAmount();
+	private TypeAmount whiteAmount = new TypeAmount();
+    
+
+	public PikColor selectedColor = PikColor.NONE;
 
     // Start is called before the first frame update
     void Start()
@@ -161,7 +164,7 @@ public class PikminManager : MonoBehaviour
 		
 		pikminCursor.transform.position = position;
 		
-		pikminCursor.Throw();
+		pikminCursor.Throw(selectedColor);
 		
 	}
 	

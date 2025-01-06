@@ -77,7 +77,8 @@ public enum PikColor
 	    PURPLE,
 	    WHITE,
 	    PINK,
-	    ROCK
+	    ROCK,
+	    NONE
     }
 
 

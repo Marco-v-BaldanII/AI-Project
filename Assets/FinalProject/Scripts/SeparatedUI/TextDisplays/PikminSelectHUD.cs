@@ -12,6 +12,9 @@ public class PikminSelectHUD : MonoBehaviour
     private Vector3 beegSize;
 
     private int index = 0;
+
+    public PikColor currentColor { get; private set; }
+
     void Awake()
     {
         PikminInfoContainer[] piks = GetComponentsInChildren<PikminInfoContainer>();
@@ -25,6 +28,30 @@ public class PikminSelectHUD : MonoBehaviour
         }
         smolSize = new Vector3(1, 1, 1);
         beegSize = new Vector3(1.5f, 1.5f, 1.5f);
+
+    }
+
+    private void Start()
+    {
+        foreach (PikminInfoContainer pik in pikIcons)
+        {
+
+
+            if (pik.index % pikIcons.Count == 1)
+            {
+                pik.showText = true;
+                pik.label.enabled = true;
+                pik.transform.DOScale(beegSize, 0.4f);
+                currentColor = pik.color;
+                PikminManager.instance.selectedColor = currentColor;
+            }
+            else
+            {
+                pik.label.enabled = false;
+                pik.showText = false;
+                pik.transform.DOScale(smolSize, 0.4f);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -45,6 +72,8 @@ public class PikminSelectHUD : MonoBehaviour
                 	pik.showText = true;
                 	pik.label.enabled = true;
                     pik.transform.DOScale(beegSize, 0.4f);
+	                currentColor = pik.color;
+	                PikminManager.instance.selectedColor = currentColor;
                 }
                 else
                 {

@@ -38,7 +38,7 @@ public class Whistle : MonoBehaviour
 	    // TODO , change this to use new input system
 	    if (Input.GetMouseButtonDown(0))
 	    {
-	    	Throw();
+	    	Throw(PikminManager.instance.selectedColor);
 	    	
 	    }
 	    if (Input.GetMouseButton(1))
@@ -59,12 +59,12 @@ public class Whistle : MonoBehaviour
         
     }
     
-	public void Throw()
+	public void Throw(PikColor color)
 	{
 		foreach (var pikmin in PikminManager.instance.units)
 		{
 			StateMachine state_machine = pikmin.GetComponent<StateMachine>();
-			if (state_machine.GetCurrentState() == State.IN_SQUAD)
+			if (state_machine.GetCurrentState() == State.IN_SQUAD && pikmin.myColor == color)
 			{
 				state_machine.OnChildTransitionEvent(State.THROWN);
 				break;
