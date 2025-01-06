@@ -1,9 +1,12 @@
+﻿using MBT;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
-public class Wander : MonoBehaviour, FSM_State
+[AddComponentMenu("")]
+[MBTNode(name = "Wander")]
+public class MBT_Wander : Leaf
 {
     public float wanderRadius;
     public float wanderDistance;
@@ -23,16 +26,8 @@ public class Wander : MonoBehaviour, FSM_State
 
         rigid = GetComponent<Rigidbody>();
     }
-
-    private void Update()
+    public override NodeResult Execute()
     {
-        //Move(); /*Un comment for the wander to move only with this script */
- 
-    }
-
-    public void Move() /* Custom wander method according to Craig Reynold's vehicle model */
-    {
-
         float angleOffset = Random.Range(-0.10f, 0.10f);
 
         Vector3 projection = new Vector3();
@@ -46,7 +41,8 @@ public class Wander : MonoBehaviour, FSM_State
         angle += angleOffset;
 
         // Adding the sphere's pos shifts the vector to start at it
-        Vector3 endPoint = wander_shpere.transform.position + projection;
+	    Vector3 endPoint = wander_shpere.transform.position + projection;
+
 
         Debug.DrawLine(wander_shpere.transform.position, endPoint, Color.red);
 
@@ -56,17 +52,9 @@ public class Wander : MonoBehaviour, FSM_State
         Quaternion targetRotation = Quaternion.LookRotation(rigid.velocity, Vector3.up);
 
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 50 * Time.deltaTime);
-    }
 
-    public void OnExit()
-    {
-
-    }
-
-    public void OnEnter()
-    {
+        return NodeResult.success;
 
     }
 
 }
-
