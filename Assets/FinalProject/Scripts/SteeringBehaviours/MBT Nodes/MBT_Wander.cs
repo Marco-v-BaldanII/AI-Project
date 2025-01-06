@@ -34,7 +34,7 @@ public class MBT_Wander : Leaf
 
         projection.x = Mathf.Cos(angle);
         projection.z = Mathf.Sin(angle);
-        // these unit circle values work for the origin (0,0)
+        // these unit circle values work from the origin (0,0)
 
         projection *= wanderRadius;
 

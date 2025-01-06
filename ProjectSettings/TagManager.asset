@@ -10,6 +10,7 @@ TagManager:
   - EnemyBite
   - Enemy
   - PikminAttack
+  - ground
   layers:
   - Default
   - TransparentFX
