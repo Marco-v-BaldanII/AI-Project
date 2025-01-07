@@ -11,6 +11,7 @@ TagManager:
   - Enemy
   - PikminAttack
   - ground
+  - EnemyHome
   layers:
   - Default
   - TransparentFX

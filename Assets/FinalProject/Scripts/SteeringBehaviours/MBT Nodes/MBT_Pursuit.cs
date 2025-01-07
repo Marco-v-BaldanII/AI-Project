@@ -18,6 +18,8 @@ public class MBT_Pursuit : Leaf
 	
 	private Blackboard board;
 	
+	public float speed = 5f;
+	
 
 	void Awake()
     {
@@ -36,7 +38,7 @@ public class MBT_Pursuit : Leaf
 			//Add somethinf to retrieve the radius from the target
 		
 	
-		    ghostRb.velocity = new Vector3(direction.x, Mathf.Clamp(ghostRb.velocity.y, -2.0f, 0.01f), direction.z) * 5;
+			ghostRb.velocity = new Vector3(direction.x, Mathf.Clamp(ghostRb.velocity.y, -2.0f, 0.01f), direction.z) * speed;
 	
 		    // ARRIVE
 		    var distance = Vector3.Distance(targetPos, transform.position);

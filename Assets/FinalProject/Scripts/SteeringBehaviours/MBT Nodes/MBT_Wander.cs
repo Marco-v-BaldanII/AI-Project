@@ -1,4 +1,5 @@
-﻿using MBT;
+﻿using Codice.Client.Common;
+using MBT;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,13 +20,22 @@ public class MBT_Wander : Leaf
 
     public GameObject wander_shpere;
 
-    public float angle = 0;
+	public float angle = 0;
+    
+	public Collider home;
 
     private void Awake()
     {
-
+	    //home = GetComponentInParent<Collider>();
         rigid = GetComponent<Rigidbody>();
     }
+    
+	public override void OnEnter()
+	{
+		base.OnEnter();
+		//angle = 0;
+	}
+    
     public override NodeResult Execute()
     {
         float angleOffset = Random.Range(-0.10f, 0.10f);
@@ -38,10 +48,25 @@ public class MBT_Wander : Leaf
 
         projection *= wanderRadius;
 
-        angle += angleOffset;
-
+	    angle += angleOffset;
         // Adding the sphere's pos shifts the vector to start at it
 	    Vector3 endPoint = wander_shpere.transform.position + projection;
+
+
+	    int i = 0;
+	    // keeps the wander point inside home area
+	    //while (home.bounds.Contains(endPoint) == false)
+	    //{
+	    //	angle += 5f;
+	    //	projection.x = Mathf.Cos(angle);
+		//    projection.z = Mathf.Sin(angle);
+		//    projection *= wanderRadius;
+	    //	endPoint = wander_shpere.transform.position + projection;
+	    //	i++;
+	    //	if(i > 600){
+        //        break;
+        //    }
+	    //}
 
 
         Debug.DrawLine(wander_shpere.transform.position, endPoint, Color.red);
@@ -51,10 +76,28 @@ public class MBT_Wander : Leaf
 
         Quaternion targetRotation = Quaternion.LookRotation(rigid.velocity, Vector3.up);
 
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 50 * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 50 * UnityEngine.Time.deltaTime);
 
         return NodeResult.success;
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "EnemyHome")
+        {
+            int sum = 0;
+            int rand = Random.Range(0, 2);
+            if(rand == 0)
+            {
+                sum = 170;
+            }
+            else
+            {
+                sum = -170;
+            }
+            angle += sum;
+        }
     }
 
 }

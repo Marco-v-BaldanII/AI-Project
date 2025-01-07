@@ -82,7 +82,11 @@ public class  GrabbableObject : MonoBehaviour
 	{
 		if (newState == State.IN_SQUAD)
 		{
-			num_pikmin--;
+
+            StateMachine machine = pik.GetComponent<StateMachine>();
+            machine.OnTransition -= RemovePikmin;
+
+            num_pikmin--;
 			if(pikmins.Contains(pik))
 			{
 				pikmins.Remove(pik);

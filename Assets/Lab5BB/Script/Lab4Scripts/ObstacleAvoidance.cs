@@ -26,10 +26,7 @@ public class ObstacleAvoidance : MonoBehaviour
         rigid = GetComponentInParent<Rigidbody>();
         executor = GetComponentInParent<MBTExecutor>();
         wanderer = GetComponent<MBT_Wander>();
-        int u = 0;
     }
-
-
 
     private void OnTriggerStay(Collider other)
     {
@@ -42,12 +39,10 @@ public class ObstacleAvoidance : MonoBehaviour
 
             float forwardProjection = Vector3.Dot(transform.forward, distance);
           
-                rigid.velocity += (-transform.right * forwardProjection) * avoidanceWeight;
+            rigid.velocity += (-transform.right * forwardProjection) * avoidanceWeight;
             rigid.velocity = Vector3.ClampMagnitude(rigid.velocity, 5);
             time = 0.5f;
         }
-
-
     }
 
     private void Update()
@@ -56,7 +51,7 @@ public class ObstacleAvoidance : MonoBehaviour
         if (buff != Vector3.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(buff.normalized, Vector3.up);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 2f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f);
             //transform.rotation = targetRotation;
         }
 
