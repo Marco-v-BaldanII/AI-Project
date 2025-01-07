@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class  GrabbableObject : MonoBehaviour
 {
@@ -18,12 +19,14 @@ public class  GrabbableObject : MonoBehaviour
 	public float GrabRadius = 3f;
 
 	HashSet<Pikmin> pikmins;
+
+	NavMeshAgent agent;
 	
     // Start is called before the first frame update
     void Start()
     {
 	    pikmins = new	HashSet<Pikmin>();
-
+		agent = GetComponent<NavMeshAgent>();
 		if (goal == null) { goal = GameObject.Find("Onion").transform; }
     }
 
@@ -33,10 +36,13 @@ public class  GrabbableObject : MonoBehaviour
 		//TODO Change this to navmesh or something
 	    if (num_pikmin >= weight && is_moving && ThrowManager.Instance.isTraining == false)
 	    {
-	    	Vector3 direction = goal.transform.position - transform.position;
-			direction.y = 0;
-		    direction.Normalize();
-		    transform.position +=  Time.deltaTime * direction * (speed * ( (float) num_pikmin/ (float) weight ) );
+
+			agent.destination = goal.transform.position;
+
+	  //  	Vector3 direction = goal.transform.position - transform.position;
+			//direction.y = 0;
+		 //   direction.Normalize();
+		 //   transform.position +=  Time.deltaTime * direction * (speed * ( (float) num_pikmin/ (float) weight ) );
 	    }
 	    else{is_moving = false;}
 	    
@@ -51,6 +57,7 @@ public class  GrabbableObject : MonoBehaviour
 	public void AddPikmin(Pikmin pikmin)
 	{
 		if (ThrowManager.Instance != null && ! ThrowManager.Instance.isTraining) {
+			if (pikmins == null) { pikmins = new HashSet<Pikmin>(); }
 			pikmin.transform.parent = transform;
 			pikmins.Add(pikmin);
 		}

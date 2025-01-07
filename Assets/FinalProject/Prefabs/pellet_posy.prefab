@@ -1873,6 +1873,7 @@ GameObject:
   - component: {fileID: 5380773095397381086}
   - component: {fileID: 7331369963645961651}
   - component: {fileID: 3267743756142431110}
+  - component: {fileID: 3990803389644585533}
   m_Layer: 0
   m_Name: Pellet1
   m_TagString: Untagged
@@ -1984,6 +1985,28 @@ MonoBehaviour:
   speed: 5
   goal: {fileID: 0}
   GrabRadius: 3
+--- !u!195 &3990803389644585533
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3610143796401568305}
+  m_Enabled: 0
+  m_AgentTypeID: 0
+  m_Radius: 0.4346616
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.68681705
+  m_BaseOffset: 0.34340852
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &3944834324369516826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2140,7 +2163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pellet: {fileID: 3610143796401568305}
-  pelletCanvas: {fileID: 0}
+  pelletCanvas: {fileID: 1555461252250811000}
 --- !u!1 &4775579688552014547
 GameObject:
   m_ObjectHideFlags: 0
@@ -2507,6 +2530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2870766489779126199, guid: d6d12474b4f1ca34f806c28b0baf0210, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 7850949477293089937, guid: d6d12474b4f1ca34f806c28b0baf0210, type: 3}
@@ -2517,6 +2544,11 @@ PrefabInstance:
 --- !u!224 &1322692884528373368 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2313230656754817975, guid: d6d12474b4f1ca34f806c28b0baf0210, type: 3}
+  m_PrefabInstance: {fileID: 3621203256751556047}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1555461252250811000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2870766489779126199, guid: d6d12474b4f1ca34f806c28b0baf0210, type: 3}
   m_PrefabInstance: {fileID: 3621203256751556047}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4209405178243274245
@@ -2569,7 +2601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2313230656754817975, guid: d6d12474b4f1ca34f806c28b0baf0210, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.469446
+      value: 0.31
       objectReference: {fileID: 0}
     - target: {fileID: 2313230656754817975, guid: d6d12474b4f1ca34f806c28b0baf0210, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2589,11 +2621,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2313230656754817975, guid: d6d12474b4f1ca34f806c28b0baf0210, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1774.8057
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2313230656754817975, guid: d6d12474b4f1ca34f806c28b0baf0210, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 248.77422
+      value: 3.53
       objectReference: {fileID: 0}
     - target: {fileID: 2313230656754817975, guid: d6d12474b4f1ca34f806c28b0baf0210, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
