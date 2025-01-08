@@ -37,14 +37,19 @@ public class  GrabbableObject : MonoBehaviour
 	    if (num_pikmin >= weight && is_moving && ThrowManager.Instance.isTraining == false)
 	    {
 
-			if (agent == null) { agent = gameObject.AddComponent<NavMeshAgent>(); }
+		    if (agent){
 
 			agent.destination = goal.transform.position;
-
-	  //  	Vector3 direction = goal.transform.position - transform.position;
-			//direction.y = 0;
-		 //   direction.Normalize();
-		 //   transform.position +=  Time.deltaTime * direction * (speed * ( (float) num_pikmin/ (float) weight ) );
+		    }
+		    else
+		    {
+		    	
+		    
+	           Vector3 direction = goal.transform.position - transform.position;
+			   direction.y = 0;
+		       direction.Normalize();
+			   transform.position +=  Time.deltaTime * direction * (speed * ( (float) num_pikmin/ (float) weight ) );
+		    }
 	    }
 	    else{is_moving = false;}
 	    
