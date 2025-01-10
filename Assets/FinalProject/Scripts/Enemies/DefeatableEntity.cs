@@ -18,11 +18,12 @@ public class DefeatableEntity : MonoBehaviour
 	public bool destroyObject = false;
 
 	public event Action OnDefeated;
-	
+	private AudioSource source;
 	private void Awake()
 	{
 		hp = maxHP;
 		grab_object = GetComponent<GrabbableObject>();
+		source = GetComponent<AudioSource>();
 		if (!grab_object) { grab_object = GetComponentInChildren<GrabbableObject>(); }
 		animator = GetComponent<Animator>();
 	}
@@ -32,6 +33,7 @@ public class DefeatableEntity : MonoBehaviour
         if (other.tag == "PikminAttack")
         {
 	        hp--;
+			source?.Play();
 	        if (animator) animator?.SetFloat("hp", hp);
 	        print("Enemy hurt, hp is now " + hp);
 	        
