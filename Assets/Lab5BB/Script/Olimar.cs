@@ -22,10 +22,11 @@ public class Olimar : MonoBehaviour
     // Update is called once per frame
     void Update()
 	{
-        Vector2 input;
+		Vector2 input = Vector2.zero;
         input.x = Input.GetAxisRaw("Horizontal");
-        input.y = Input.GetAxisRaw("Vertical");
-
+		input.y = Input.GetAxisRaw("Vertical");
+		print("Olimar input " + input);
+		animator.SetFloat("input", Mathf.Abs( input.x)  + Mathf.Abs( input.y) );
 
         Vector3 cameraForward = camera.transform.forward;
         Vector3 cameraRight = camera.transform.right;
@@ -44,7 +45,10 @@ public class Olimar : MonoBehaviour
 
         direction = (cameraForward * input.y + cameraRight * input.x).normalized;
 
-
+		if (Input.GetMouseButtonDown(0))
+		{
+			animator.SetTrigger("Throw");
+		}
 
         // Debug.DrawLine(transform.position, transform.position + transform.forward  * 10);
 

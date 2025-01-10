@@ -134,10 +134,13 @@ public class  GrabbableObject : MonoBehaviour
 	{
         foreach (Pikmin p in pikmins)
         {
-            p.transform.parent = PikminManager.instance.floor.transform;
+			if (p)
+			{
+				p.transform.parent = PikminManager.instance.floor.transform;
 
-            StateMachine machine = p.GetComponent<StateMachine>();
-            machine.OnChildTransitionEvent(State.IDLE);
+				StateMachine machine = p.GetComponent<StateMachine>();
+				machine.OnChildTransitionEvent(State.IDLE);
+			}
         }
         pikmins.Clear();
 

@@ -27,11 +27,14 @@ public class Pikmin : MonoBehaviour
 
     public bool grabbing = false;
 
+    public AudioClip throwSfx;
+    public AudioSource source;
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
-        
+        source = GetComponent<AudioSource>();
 
     }
 

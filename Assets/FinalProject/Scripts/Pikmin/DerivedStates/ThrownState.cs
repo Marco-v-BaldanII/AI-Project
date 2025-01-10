@@ -15,6 +15,7 @@ public class ThrownState : IState{
 	
 	public override void Enter() 
 	{
+		myPikmin.source?.Play();
 		Vector3 startPos = PikminManager.instance.transform.position;
 		myPikmin.transform.position = startPos;
 		//myPikmin.rigid.velocity = CalculateVelocityGivenTime(startPos, PikminManager.instance.GetCursorPosition(), ANGLE,  0.4f ) ;
@@ -34,10 +35,7 @@ public class ThrownState : IState{
     }
     public override void PhysicsProcess()
     {
-        //if(myPikmin.rigid.velocity.y == 0) /* I've landed */
-        //{
-        //	CallTransition(State.IDLE, this);
-        //}
+
 	}
 	
 	public UnityEngine.Transform target; // Assign the target position in the Unity Inspector
@@ -51,15 +49,13 @@ public class ThrownState : IState{
 	// Method to calculate velocity
 	public Vector3 CalculateVelocity(Vector3 start, Vector3 end, float angle)
 	{
-		// Distance in x and y
+
 		Vector3 direction = end - start;
 		float distance = direction.magnitude; // Total distance to the target
 		float heightDifference = end.y - start.y;
 
-		// Convert angle to radians
 		float angleRad = angle * Mathf.Deg2Rad;
 
-		// Calculate velocity using kinematic equations
 		float v0Squared = (gravity * distance * distance) / 
 		(2 * (distance * Mathf.Tan(angleRad) - heightDifference) * Mathf.Cos(angleRad) * Mathf.Cos(angleRad));
 
@@ -72,10 +68,10 @@ public class ThrownState : IState{
 		float v0 = Mathf.Sqrt(v0Squared);
 
 		// Decompose the velocity into x, y, and z components
-		Vector3 velocity = direction.normalized; // Normalize to get direction
-		velocity.y = 0; // Ignore y for now
-		velocity *= Mathf.Cos(angleRad) * v0; // Horizontal velocity
-		velocity.y = Mathf.Sin(angleRad) * v0; // Vertical velocity
+		Vector3 velocity = direction.normalized; 
+		velocity.y = 0; 
+		velocity *= Mathf.Cos(angleRad) * v0; 
+		velocity.y = Mathf.Sin(angleRad) * v0; 
 
 		return velocity;
 	}

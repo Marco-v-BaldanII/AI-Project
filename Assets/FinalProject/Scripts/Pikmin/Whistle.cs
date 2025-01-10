@@ -13,12 +13,15 @@ public class Whistle : MonoBehaviour
 	
 	private SpriteRenderer renderer;
 	private Collider collider;
+
+	private AudioSource auidoSource;
 	
     // Start is called before the first frame update
     void Start()
     {
 	    layerMask =  ~LayerMask.GetMask("Pikmin", "UI");
 	    renderer = GetComponent<SpriteRenderer>();
+		auidoSource = GetComponent<AudioSource>();
 	    collider = GetComponent<Collider>();
     }
 
@@ -41,8 +44,13 @@ public class Whistle : MonoBehaviour
 	    	Throw(PikminManager.instance.selectedColor);
 	    	
 	    }
+		if(Input.GetMouseButtonDown(1))
+		{
+            auidoSource?.Play();
+        }
 	    if (Input.GetMouseButton(1))
 	    {
+			
 	    	collider.enabled = true;
 	    	float speed = whistleIncrementSpeed * Time.deltaTime;
 	    	transform.localScale = new Vector3(transform.localScale.x + speed, transform.localScale.y + speed, transform.localScale.z + speed);

@@ -96,7 +96,7 @@ public class BezierPathCreator
 			index = Mathf.Clamp(index, 0, points.Count - 1);
 			if (index == points.Count - 1) { break; }
 
-			Debug.Log("finding new_point");
+			//Debug.Log("finding new_point");
 		}
 		var dist = Vector3.Distance(body.position, points[index]);
 

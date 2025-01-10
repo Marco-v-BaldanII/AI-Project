@@ -52,23 +52,6 @@ public class MBT_Wander : Leaf
         // Adding the sphere's pos shifts the vector to start at it
 	    Vector3 endPoint = wander_shpere.transform.position + projection;
 
-
-	    int i = 0;
-	    // keeps the wander point inside home area
-	    //while (home.bounds.Contains(endPoint) == false)
-	    //{
-	    //	angle += 5f;
-	    //	projection.x = Mathf.Cos(angle);
-		//    projection.z = Mathf.Sin(angle);
-		//    projection *= wanderRadius;
-	    //	endPoint = wander_shpere.transform.position + projection;
-	    //	i++;
-	    //	if(i > 600){
-        //        break;
-        //    }
-	    //}
-
-
         Debug.DrawLine(wander_shpere.transform.position, endPoint, Color.red);
 
         var speed = (endPoint - transform.position).normalized * movementSpeed;
