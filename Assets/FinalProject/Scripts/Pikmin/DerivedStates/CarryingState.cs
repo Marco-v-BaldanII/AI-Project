@@ -14,7 +14,8 @@ public class CarryingState : IState
 	
 	void Enter()
 	{
-
+		myPikmin.source.clip = myPikmin.heySfx;
+		myPikmin.source.Play();
 	}
 
 	public override void Exit()

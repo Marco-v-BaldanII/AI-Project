@@ -29,7 +29,11 @@ public class InSquadState : IState
 	}
 
 	public override void Enter()
-    {
+	{
+		myPikmin.source.clip = myPikmin.heySfx;
+		myPikmin.source.Play();
+    	
+    	
 	    rigid = myPikmin.rigid;
 	    animator = myPikmin.animator;
         PikminManager.instance.pikminInSquad++;

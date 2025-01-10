@@ -778,7 +778,8 @@ MonoBehaviour:
   debugSpeed: 0
   targetObject: {fileID: 0}
   grabbing: 0
-  throwSfx: {fileID: 0}
+  throwSfx: {fileID: 8300000, guid: 11678d42adb8d45458f0373ca1415279, type: 3}
+  heySfx: {fileID: 8300000, guid: a1c1463117a239741930432280a71ccd, type: 3}
   source: {fileID: 0}
 --- !u!114 &4653136826818923193
 MonoBehaviour:
@@ -1094,7 +1095,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 11678d42adb8d45458f0373ca1415279, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

@@ -15,6 +15,7 @@ public class ThrownState : IState{
 	
 	public override void Enter() 
 	{
+		myPikmin.source.clip = myPikmin.throwSfx;
 		myPikmin.source?.Play();
 		Vector3 startPos = PikminManager.instance.transform.position;
 		myPikmin.transform.position = startPos;

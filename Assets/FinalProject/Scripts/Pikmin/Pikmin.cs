@@ -28,6 +28,7 @@ public class Pikmin : MonoBehaviour
     public bool grabbing = false;
 
     public AudioClip throwSfx;
+    public AudioClip heySfx;
     public AudioSource source;
 
     private void Awake()
