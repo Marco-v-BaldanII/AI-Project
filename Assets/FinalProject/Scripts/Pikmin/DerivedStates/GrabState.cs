@@ -105,6 +105,11 @@ public class GrabState : IState{
 			GrabAgent agent = myPikmin.GetComponent<GrabAgent>();
 			if (agent) agent.enabled = false;
 		}
+        else
+        {
+	        GrabAgent agent = myPikmin.GetComponent<GrabAgent>();
+	        myPikmin.transform.position = agent.Target;
+        }
 	}
 	
 	public override void OnAreaStay(Collider collision)
