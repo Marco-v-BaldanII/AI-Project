@@ -40,7 +40,7 @@ public class GrabAgent : Agent
 		arrived = false;
 		if (!rBody){rBody = GetComponent<Rigidbody>(); }
 
-		if (ThrowManager.Instance.isTraining == false) { return; }
+		if (ThrowManager.Instance && ThrowManager.Instance.isTraining == false) { return; }
 
 		// If the Agent fell off the platform, reset its position and momentum
 		//if (this.transform.localPosition.y < 0)

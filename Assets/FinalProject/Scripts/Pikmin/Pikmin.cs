@@ -41,7 +41,7 @@ public class Pikmin : MonoBehaviour
 
     private void Start()
     {
-        followPos = PikminManager.instance.GetFollowPosition();
+        if(PikminManager.instance) followPos = PikminManager.instance.GetFollowPosition();
     }
 
     private void Update()
@@ -64,7 +64,7 @@ public class Pikmin : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (PikminManager.instance.units.Contains(this))
+        if (PikminManager.instance && PikminManager.instance.units.Contains(this))
         {
             PikminManager.instance.units.Remove(this);
 

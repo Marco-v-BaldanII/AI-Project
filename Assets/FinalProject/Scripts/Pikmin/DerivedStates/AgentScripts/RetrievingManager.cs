@@ -143,7 +143,8 @@ public class RetrievingManager
 
             // Set this Pikmin's target position 
             GrabAgent agent = agents[i]; // position around the pellet
-            if (pellet) agent.Target = pellet.transform.position + targetPosition;
+	        if (pellet) agent.Target = pellet.transform.position + targetPosition;
+            
 
             Debug.DrawLine(new Vector3(agent.Target.x, 0, agent.Target.z), new Vector3(agent.Target.x, 10, agent.Target.z));
         }

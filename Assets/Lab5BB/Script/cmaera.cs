@@ -15,6 +15,8 @@ public class cmaera : MonoBehaviour
 
     Quaternion bufferRotation;
 
+    bool start = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,9 +33,10 @@ public class cmaera : MonoBehaviour
 
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || start == false)
         {
             MoveCameraBehind();
+            start = true;
         }
 
     }

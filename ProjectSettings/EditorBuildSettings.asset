@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/FinalProject/TitleScreen.unity
+    guid: 3f8b21e9cd04c364b941d726599f7798
+  - enabled: 1
+    path: Assets/FinalProject/Pikmins.unity
+    guid: 6e75fe9afba5c454db71dd9177b57e04
   m_configObjects: {}

@@ -21,12 +21,16 @@ public class MBT_NotifyPartners : Leaf
         PursuitDistance = 100f;
 
         for (int i = 0; i < boards.Length; ++i) {
-            TransformVariable tV = boards[i].GetVariable<TransformVariable>("target");
-            GameObject dumple = boards[i].gameObject;
-            if (Vector3.Distance(dumple.transform.position, target.position) < PursuitDistance)
+            if (boards[i] != null)
             {
-                //Notify other dumples
-                //tV.Value = target;
+
+                TransformVariable tV = boards[i].GetVariable<TransformVariable>("target");
+                GameObject dumple = boards[i].gameObject;
+                if (Vector3.Distance(dumple.transform.position, target.position) < PursuitDistance)
+                {
+                    //Notify other dumples
+                    tV.Value = target;
+                }
             }
             
         }

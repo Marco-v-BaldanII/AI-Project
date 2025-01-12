@@ -63,6 +63,11 @@ public class  GrabbableObject : MonoBehaviour
     
 	public void AddPikmin(Pikmin pikmin)
 	{
+		if(num_pikmin >= weight * 2)
+		{
+			return;
+		}
+
 		if (ThrowManager.Instance != null && ! ThrowManager.Instance.isTraining) {
 			if (pikmins == null) { pikmins = new HashSet<Pikmin>(); }
 			pikmin.transform.parent = transform;
@@ -132,11 +137,13 @@ public class  GrabbableObject : MonoBehaviour
 	
 	private void FreePikmin()
 	{
+		if(pikmins == null) { return; }
+
         foreach (Pikmin p in pikmins)
         {
 			if (p)
 			{
-				p.transform.parent = PikminManager.instance.floor.transform;
+				if(PikminManager.instance) p.transform.parent = PikminManager.instance.floor.transform;
 
 				StateMachine machine = p.GetComponent<StateMachine>();
 				machine.OnChildTransitionEvent(State.IDLE);
