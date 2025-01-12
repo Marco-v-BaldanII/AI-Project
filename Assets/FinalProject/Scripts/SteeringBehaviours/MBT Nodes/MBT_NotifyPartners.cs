@@ -14,11 +14,15 @@ public class MBT_NotifyPartners : Leaf
 
     public float PursuitDistance = 1000f;
 
+    public Transform homeTansform;
+
     // Start is called before the first frame update
     public override void OnEnter()
     {
         Transform target = myBoard.GetVariable<TransformVariable>("target").Value;
         PursuitDistance = 100f;
+
+        if(target == homeTansform) { return; }
 
         for (int i = 0; i < boards.Length; ++i) {
             if (boards[i] != null)
@@ -26,7 +30,7 @@ public class MBT_NotifyPartners : Leaf
 
                 TransformVariable tV = boards[i].GetVariable<TransformVariable>("target");
                 GameObject dumple = boards[i].gameObject;
-                if (Vector3.Distance(dumple.transform.position, target.position) < PursuitDistance)
+                if (Vector3.Distance(dumple.transform.position, target.position) < PursuitDistance && tV != null)
                 {
                     //Notify other dumples
                     tV.Value = target;

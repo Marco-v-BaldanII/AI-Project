@@ -2583,6 +2583,7 @@ MonoBehaviour:
   - {fileID: 4734323045288687812}
   - {fileID: 1296309787}
   PursuitDistance: 10
+  homeTansform: {fileID: 1445107856}
 --- !u!65 &442932084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6072,6 +6073,7 @@ MonoBehaviour:
   - {fileID: 4734323045288687812}
   - {fileID: 442932095}
   PursuitDistance: 10
+  homeTansform: {fileID: 1445107856}
 --- !u!65 &1296309796
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6422,6 +6424,10 @@ PrefabInstance:
     - target: {fileID: 509826010007847795, guid: 16adb84e1dd29a146b6beea008944dc2, type: 3}
       propertyPath: m_Name
       value: Water Dumple (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 509826010007847795, guid: 16adb84e1dd29a146b6beea008944dc2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 509826010007847795, guid: 16adb84e1dd29a146b6beea008944dc2, type: 3}
       propertyPath: m_TagString
@@ -8167,6 +8173,10 @@ PrefabInstance:
       value: Water Dumple (1)
       objectReference: {fileID: 0}
     - target: {fileID: 509826010007847795, guid: 16adb84e1dd29a146b6beea008944dc2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 509826010007847795, guid: 16adb84e1dd29a146b6beea008944dc2, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -8909,7 +8919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6666233457886594904, guid: 5baa8d77a9be02044b0429bfe4e37701, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6666233457886594904, guid: 5baa8d77a9be02044b0429bfe4e37701, type: 3}
       propertyPath: m_TagString
@@ -9381,7 +9391,7 @@ PrefabInstance:
       objectReference: {fileID: 1679656432}
     - target: {fileID: 9033323826639626387, guid: 705a0b9cb1649cd4997a14c1d5cd9210, type: 3}
       propertyPath: numPikmin
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9033323826639626387, guid: 705a0b9cb1649cd4997a14c1d5cd9210, type: 3}
       propertyPath: pikminCursor
@@ -9430,6 +9440,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1749109134929669222, guid: 5a4c715bd1f85704090b31da0c92c086, type: 3}
+      propertyPath: rect.x
+      value: 420
+      objectReference: {fileID: 0}
+    - target: {fileID: 1749109134929669222, guid: 5a4c715bd1f85704090b31da0c92c086, type: 3}
+      propertyPath: rect.y
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 5379854879073497032, guid: 5a4c715bd1f85704090b31da0c92c086, type: 3}
       propertyPath: goal
       value: 
@@ -9474,6 +9492,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7960952884752673099, guid: 5a4c715bd1f85704090b31da0c92c086, type: 3}
+      propertyPath: homeTansform
+      value: 
+      objectReference: {fileID: 1445107856}
     - target: {fileID: 7960952884752673099, guid: 5a4c715bd1f85704090b31da0c92c086, type: 3}
       propertyPath: boards.Array.size
       value: 2
